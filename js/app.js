@@ -308,6 +308,18 @@
     return { total: ls.length, done: nd, first: ls[0] };
   }
 
+  var LAT = {paket: 104, soal: 1342, pemula: 28, menengah: 42, lanjutan: 34};
+  var HOME_GROUPS = [
+    { judul: 'Dasar-dasar', ket: 'Mulai dari sini bila kamu baru memakai Excel.', from: 0, to: 4 },
+    { judul: 'Fungsi menurut kebutuhan', ket: 'Pilih sesuai pekerjaan: teks, pencarian data, tanggal, hitungan, dan keuangan.', from: 4, to: 10 },
+    { judul: 'Otomatisasi dan praktik', ket: 'Macro, VBA, dan studi kasus pekerjaan kantor.', from: 10, to: 99 }
+  ];
+  function catRow(c) {
+    var p = catProgress(c);
+    return '<a class="catrow' + (p.total && p.done === p.total ? ' full' : '') + '" href="#/kategori/' + c.id + '"><span class="col" aria-hidden="true">' + XL.numToCol(cats.indexOf(c) + 1) + '</span><span class="ct"><strong>' + esc(c.nama) + '</strong><span class="d">' + esc(c.ket) +
+      '</span><span class="bar" aria-hidden="true"><i style="width:' + (p.total ? Math.round(p.done / p.total * 100) : 0) + '%"></i></span></span><span class="cnt">' + p.done + ' dari ' + p.total + '<small>selesai</small></span></a>';
+  }
+
   function viewHome() {
     setTitle('');
     var last = store.get('be_last', null), nextL = null;
@@ -317,19 +329,26 @@
     var started = done.size > 0 || last;
     app.innerHTML =
       '<section class="hero"><div>' +
+      '<p class="eyebrow">Gratis, bahasa Indonesia</p>' +
       '<h1 tabindex="-1">Belajar rumus Excel dengan mengetiknya sendiri</h1>' +
       '<p class="lead">Setiap materi punya lembar kerja mini yang bisa kamu ubah, langkah praktik, dan tangkapan layar dari Excel yang sebenarnya.</p>' +
       '<div class="starts"><a class="btn" href="#/materi/' + primary.id + '">' + (started ? 'Lanjutkan: ' + esc(primary.judul.split(':')[0]) : 'Mulai belajar') + '</a>' +
       '<a class="btn ghost" href="#/lab">Buka lab rumus</a></div>' +
-      '<p class="statline"><span><b>' + lessons.length + '</b> materi</span><span><b>' + totalImgs + '</b> tangkapan layar</span><span><b>' + XL.functions.length + '</b> fungsi bisa dicoba</span><span><b>' + done.size + '</b> selesai</span></p>' +
+      '<p class="statline"><span><b data-count="' + lessons.length + '">' + lessons.length + '</b> materi</span><span><b data-count="' + totalImgs + '">' + totalImgs + '</b> tangkapan layar</span><span><b data-count="' + XL.functions.length + '">' + XL.functions.length + '</b> fungsi bisa dicoba</span><span><b data-count="' + done.size + '">' + done.size + '</b> selesai</span></p>' +
       '</div><div id="heroSheet"></div></section>' +
-      '<h2>Pilih topik</h2><div class="catlist">' +
-      cats.map(function (c) {
-        var p = catProgress(c);
-        return '<a class="catrow' + (p.total && p.done === p.total ? ' full' : '') + '" href="#/kategori/' + c.id + '"><span class="col" aria-hidden="true">' + XL.numToCol(cats.indexOf(c) + 1) + '</span><span class="ct"><strong>' + esc(c.nama) + '</strong><span class="d">' + esc(c.ket) +
-          '</span><span class="bar" aria-hidden="true"><i style="width:' + (p.total ? Math.round(p.done / p.total * 100) : 0) + '%"></i></span></span><span class="cnt">' + p.done + ' dari ' + p.total + '<small>selesai</small></span></a>';
-      }).join('') + '</div>' +
-      '<h2>Latihan administrasi</h2><div class="catlist"><a class="catrow" href="latihan.html"><span class="col" aria-hidden="true">+</span><span class="ct"><strong>Latihan administrasi perkantoran</strong><span class="d">Soal absensi, stok, gaji, faktur, komisi sales, PPDB, sampai laporan laba rugi. Unduh file Excel atau CSV, lalu cocokkan dengan kunci.</span></span><span class="cnt">24 paket<small>295 soal</small></span></a></div>';
+      '<section class="path" aria-labelledby="pathH"><h2 class="sr" id="pathH">Cara belajar</h2><ol class="path-list">' +
+      '<li><a href="#/materi/' + primary.id + '"><span class="n">1</span><b>Pelajari materi</b><span class="t">' + lessons.length + ' materi dengan lembar kerja mini dan langkah praktik.</span></a></li>' +
+      '<li><a href="#/lab"><span class="n">2</span><b>Coba di lab rumus</b><span class="t">Ketik rumus sendiri dan lihat hasilnya langsung.</span></a></li>' +
+      '<li><a href="latihan.html"><span class="n">3</span><b>Kerjakan latihan</b><span class="t">' + LAT.paket + ' paket soal admin, bisa diunduh sebagai Excel atau CSV.</span></a></li></ol></section>' +
+      HOME_GROUPS.map(function (g) {
+        var list = cats.slice(g.from, g.to);
+        if (!list.length) return '';
+        return '<div class="grp"><h2>' + g.judul + '</h2><p>' + g.ket + '</p></div><div class="catlist">' + list.map(catRow).join('') + '</div>';
+      }).join('') +
+      '<section class="latbanner" aria-labelledby="latH"><div><h2 id="latH">Latihan administrasi perkantoran</h2>' +
+      '<p>' + LAT.paket + ' paket soal dari pekerjaan admin sehari-hari, total ' + LAT.soal + ' soal. Unduh file Excel atau CSV, kerjakan dengan rumus, lalu cocokkan dengan kunci.</p>' +
+      '<ul class="levels"><li><b>' + LAT.pemula + '</b> Pemula</li><li><b>' + LAT.menengah + '</b> Menengah</li><li><b>' + LAT.lanjutan + '</b> Lanjutan</li></ul></div>' +
+      '<a class="btn" href="latihan.html">Lihat semua latihan</a></section>';
     mountSheet($('#heroSheet'), {
       data: [['Barang', 'Harga', 'Jumlah'], ['Pensil', 3000, 5], ['Buku', 8000, 3], ['Penggaris', 5000, 2]],
       sel: 'D2', rumus: '=B2*C2',
@@ -357,13 +376,15 @@
     setTitle(l.judul);
     var h = '<article class="lesson"><nav class="crumbs" aria-label="Jejak halaman"><a href="#/">Beranda</a> / <a href="#/kategori/' + c.id + '">' + esc(c.nama) + '</a></nav>' +
       '<h1 tabindex="-1">' + esc(l.judul) + '</h1><p class="lead">' + esc(l.ringkas) + '</p>';
+    if (l.intinya) h += '<div class="callout intinya"><b class="k">Intinya</b><p>' + esc(l.intinya) + '</p></div>';
+    if (l.analogi) h += '<div class="callout analogi"><b class="k">Bayangkan begini</b><p>' + esc(l.analogi) + '</p></div>';
     if (l.sintaks) h += '<div class="syntax"><button type="button" class="chip copy" id="copyBtn">Salin</button><pre>' + esc(l.sintaks) + '</pre></div>';
     if (l.argumen) h += '<table class="args"><tbody>' + l.argumen.map(function (a) { return '<tr><th scope="row">' + esc(a[0]) + '</th><td>' + esc(a[1]) + '</td></tr>'; }).join('') + '</tbody></table>';
     if (l.demo) h += '<h2>Coba sendiri</h2><div id="demoHost"></div>';
     if (l.langkah) h += '<h2>Langkah praktik <span class="stepcount" id="stepCount"></span></h2><ol class="steps">' + l.langkah.map(function (s, k) { return '<li><label><input type="checkbox" data-k="' + k + '"><span>' + esc(s) + '</span></label></li>'; }).join('') + '</ol>';
     if (l.tips) h += '<div class="tips" role="note">' + l.tips.map(function (t) { return '<p>' + esc(t) + '</p>'; }).join('') + '</div>';
     if (l.gambar.length) {
-      h += '<h2>Tangkapan layar praktik (' + l.gambar.length + ')</h2><div class="shots">' + l.gambar.map(function (g, k) {
+      h += '<h2>Gambar bantu (' + l.gambar.length + ')</h2><div class="shots">' + l.gambar.map(function (g, k) {
         return '<figure class="shot"><button type="button" data-k="' + k + '" aria-label="Perbesar gambar ' + (k + 1) + '"><img loading="lazy" decoding="async" src="images/' + g + '" alt="Tangkapan layar praktik ' + esc(l.judul) + ', gambar ' + (k + 1) + '"></button><figcaption>Gambar ' + (k + 1) + ' dari ' + l.gambar.length + '</figcaption></figure>';
       }).join('') + '</div>';
     }
@@ -512,6 +533,7 @@
     var a = parts[0], b = decodeURIComponent(parts[1] || '');
     setNav(false);
     $$('.toplinks a, .sidelinks a').forEach(function (x) { x.removeAttribute('aria-current'); if (x.getAttribute('href') === '#/' + a) x.setAttribute('aria-current', 'page'); });
+    /*fx-tab*/ $$('.tabbar a').forEach(function (x) { var k = a === '' || a === 'materi' || a === 'kategori' ? 'materi' : a; if (x.getAttribute('data-tab') === k) x.setAttribute('aria-current', 'page'); else x.removeAttribute('aria-current'); });
     if (a === 'materi') viewLesson(b);
     else if (a === 'kategori') viewCategory(b);
     else if (a === 'lab') viewLab();
@@ -519,7 +541,8 @@
     else if (a === 'galeri') viewGallery();
     else if (a === '' ) { viewHome(); renderTree(null); }
     else viewNotFound();
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    /*fx-enter*/ app.classList.remove('enter'); void app.offsetWidth; app.classList.add('enter');
     document.body.setAttribute('data-page', a || 'home'); readUpdate();
     emit('route', { name: a || 'home', id: b });
     var h1 = $('h1', app); if (h1 && a !== '') { h1.setAttribute('tabindex', '-1'); }

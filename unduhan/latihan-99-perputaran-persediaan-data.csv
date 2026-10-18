@@ -1,0 +1,31 @@
+﻿Kode,Nama Barang,Kategori,Persediaan Awal,Pembelian,Persediaan Akhir
+BRG-01,Beras Premium 5 kg,Beras dan Tepung,2100000,24400000,2200000
+BRG-02,Beras Medium 25 kg,Beras dan Tepung,5400000,51400000,5500000
+BRG-03,Tepung Terigu 1 kg,Beras dan Tepung,5200000,45400000,5100000
+BRG-04,Tepung Tapioka 500 g,Beras dan Tepung,4400000,71200000,4100000
+BRG-05,Gula Pasir 1 kg,Beras dan Tepung,1200000,3000000,900000
+BRG-06,Gula Merah 500 g,Beras dan Tepung,6700000,83000000,6400000
+BRG-07,Tepung Beras 500 g,Beras dan Tepung,900000,5300000,1100000
+BRG-08,Minyak Goreng 2 L,Minyak dan Bumbu,1800000,16300000,1400000
+BRG-09,Minyak Goreng 5 L,Minyak dan Bumbu,5700000,9600000,5400000
+BRG-10,Garam Halus 250 g,Minyak dan Bumbu,2800000,15700000,2600000
+BRG-11,Kecap Manis 600 ml,Minyak dan Bumbu,3300000,14000000,3700000
+BRG-12,Saus Sambal 340 ml,Minyak dan Bumbu,4000000,12300000,5200000
+BRG-13,Kaldu Bubuk 100 g,Minyak dan Bumbu,3500000,64600000,3900000
+BRG-14,Merica Bubuk 50 g,Minyak dan Bumbu,3200000,8900000,3000000
+BRG-15,Santan Instan 200 ml,Minyak dan Bumbu,5800000,107300000,6100000
+BRG-16,Air Mineral 600 ml,Minuman,2400000,12700000,2200000
+BRG-17,Air Mineral Galon,Minuman,5000000,76700000,5600000
+BRG-18,Teh Celup 25 pcs,Minuman,3100000,71500000,4100000
+BRG-19,Kopi Sachet 10 pcs,Minuman,2200000,4300000,1900000
+BRG-20,Susu UHT 1 L,Minuman,2900000,33800000,3000000
+BRG-21,Sirup Jeruk 500 ml,Minuman,4600000,56300000,4800000
+BRG-22,Minuman Isotonik 500 ml,Minuman,2500000,22900000,3000000
+BRG-23,Keripik Singkong 200 g,Makanan Ringan,5000000,22000000,4900000
+BRG-24,Biskuit Kelapa 300 g,Makanan Ringan,1500000,12800000,1500000
+BRG-25,Wafer Cokelat 150 g,Makanan Ringan,4000000,27400000,3400000
+BRG-26,Mi Instan Goreng Dus,Makanan Ringan,3500000,7600000,3500000
+BRG-27,Kacang Atom 250 g,Makanan Ringan,2800000,9500000,2300000
+BRG-28,Kerupuk Udang 250 g,Makanan Ringan,3600000,40700000,3600000
+BRG-29,Permen Mint 100 g,Makanan Ringan,2700000,40300000,2500000
+BRG-30,Cokelat Batang 80 g,Makanan Ringan,3500000,77600000,4100000

@@ -1,0 +1,28 @@
+﻿Kode,Nama Bahan,Kategori,Satuan,Harga per Satuan,Stok Minimum,Stok Awal,Barang Masuk,Pemakaian
+B-01,Bawang Merah,Sayur,kg,38000,2.0,10,10.0,8.0
+B-02,Cabai Rawit,Sayur,kg,60000,6.0,10,10.0,8.5
+B-03,Tomat,Sayur,kg,14000,6.0,6.5,0.0,3.5
+B-04,Kol,Sayur,kg,9000,4.0,4,0.0,2.5
+B-05,Wortel,Sayur,kg,12000,10.0,8.5,15.0,11.5
+B-06,Daun Bawang,Sayur,kg,22000,5.0,6.5,5.0,10.0
+B-07,Kentang,Sayur,kg,16000,4.0,12,0.0,7.0
+B-08,Daging Ayam,Daging dan Ikan,kg,38000,5.0,25,5.0,13.5
+B-09,Daging Sapi,Daging dan Ikan,kg,130000,10.0,12.5,15.0,25.5
+B-10,Ikan Nila,Daging dan Ikan,kg,32000,3.0,12,15.0,9.0
+B-11,Telur Ayam,Daging dan Ikan,kg,28000,5.0,15.5,15.0,22.5
+B-12,Udang,Daging dan Ikan,kg,70000,8.0,4,15.0,9.0
+B-13,Tahu,Daging dan Ikan,kg,15000,10.0,15,5.0,8.0
+B-14,Garam,Bumbu,kg,8000,8.0,12.5,10.0,22.5
+B-15,Kecap Manis,Bumbu,liter,24000,8.0,6,10.0,12.5
+B-16,Saus Tomat,Bumbu,liter,20000,8.0,4,15.0,16.5
+B-17,Kunyit,Bumbu,kg,18000,3.0,12.5,10.0,9.5
+B-18,Jahe,Bumbu,kg,24000,5.0,8,15.0,12.0
+B-19,Merica Bubuk,Bumbu,kg,90000,4.0,10.5,0.0,10.0
+B-20,Santan,Bumbu,liter,26000,5.0,15,0.0,10.0
+B-21,Beras,Sembako,kg,14000,5.0,20.5,5.0,12.0
+B-22,Minyak Goreng,Sembako,liter,18000,2.0,8.5,0.0,5.5
+B-23,Gula Pasir,Sembako,kg,17000,4.0,25,10.0,20.0
+B-24,Tepung Terigu,Sembako,kg,12000,8.0,20.5,0.0,15.5
+B-25,Mie Kering,Sembako,kg,20000,10.0,12.5,15.0,12.0
+B-26,Kopi Bubuk,Sembako,kg,85000,5.0,8,10.0,7.5
+B-27,Teh Celup,Sembako,kg,60000,3.0,12,10.0,7.5

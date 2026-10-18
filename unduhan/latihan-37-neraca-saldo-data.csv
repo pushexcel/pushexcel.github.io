@@ -1,0 +1,44 @@
+﻿No Bukti,Tanggal,Kode Akun,Keterangan,Debit,Kredit
+JU-001,2026-07-01,1101,Setoran modal awal,100000000,0
+JU-001,2026-07-01,1102,Setoran modal awal,50000000,0
+JU-001,2026-07-01,3101,Setoran modal awal,0,150000000
+JU-002,2026-07-03,5201,Pembayaran gaji,3125000,0
+JU-002,2026-07-03,1101,Pembayaran gaji,0,3125000
+JU-003,2026-07-04,1201,Penjualan kredit,2000000,0
+JU-003,2026-07-04,4101,Penjualan kredit,0,2000000
+JU-004,2026-07-08,1201,Penjualan kredit,2000000,0
+JU-004,2026-07-08,4101,Penjualan kredit,0,2000000
+JU-005,2026-07-11,5202,Pembayaran listrik dan air,812500,0
+JU-005,2026-07-11,1102,Pembayaran listrik dan air,0,812500
+JU-006,2026-07-12,5201,Pembayaran gaji,4875000,0
+JU-006,2026-07-12,1101,Pembayaran gaji,0,4875000
+JU-007,2026-07-13,5101,Harga pokok penjualan,6000000,0
+JU-007,2026-07-13,1301,Harga pokok penjualan,0,6000000
+JU-008,2026-07-16,1101,Penjualan tunai,16000000,0
+JU-008,2026-07-16,4101,Penjualan tunai,0,16000000
+JU-009,2026-07-19,1102,Penerimaan piutang,3500000,0
+JU-009,2026-07-19,1201,Penerimaan piutang,0,3500000
+JU-010,2026-07-22,5202,Pembayaran listrik dan air,1875000,0
+JU-010,2026-07-22,1102,Pembayaran listrik dan air,0,1875000
+JU-011,2026-07-24,1301,Pembelian barang kredit,17000000,0
+JU-011,2026-07-24,2101,Pembelian barang kredit,0,17000000
+JU-012,2026-07-25,5203,Pembayaran sewa,6000000,0
+JU-012,2026-07-25,1102,Pembayaran sewa,0,6000000
+JU-013,2026-07-29,5201,Pembayaran gaji,1750000,0
+JU-013,2026-07-29,1101,Pembayaran gaji,0,1750000
+JU-014,2026-07-30,5201,Pembayaran gaji,500000,0
+JU-014,2026-07-30,1101,Pembayaran gaji,0,500000
+JU-015,2026-08-02,1101,Penjualan tunai,15500000,0
+JU-015,2026-08-02,4101,Penjualan tunai,0,15500000
+JU-016,2026-08-05,5201,Pembayaran gaji,2500000,0
+JU-016,2026-08-05,1101,Pembayaran gaji,0,2500000
+JU-017,2026-08-06,5204,Pembelian perlengkapan,5000000,0
+JU-017,2026-08-06,1101,Pembelian perlengkapan,0,5000000
+JU-018,2026-08-07,1301,Pembelian barang kredit,11500000,0
+JU-018,2026-08-07,2101,Pembelian barang kredit,0,11500000
+JU-019,2026-08-10,1201,Penjualan kredit,3000000,0
+JU-019,2026-08-10,4101,Penjualan kredit,0,3000000
+JU-020,2026-08-14,5101,Harga pokok penjualan,3750000,0
+JU-020,2026-08-14,1301,Harga pokok penjualan,0,3750000
+JU-021,2026-08-17,1201,Penjualan kredit,11500000,0
+JU-021,2026-08-17,4101,Penjualan kredit,0,11500000

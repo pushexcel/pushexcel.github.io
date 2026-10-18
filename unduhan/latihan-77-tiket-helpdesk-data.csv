@@ -1,0 +1,31 @@
+﻿ID Tiket,Pelapor,Kategori,Prioritas,Teknisi,Tanggal Buka,Jam Buka,Tanggal Selesai,Jam Selesai
+TK-001,Citra Susanto,Aplikasi,Tinggi,Tania Kusumo,2026-10-18,13:45,2026-10-18,18:45
+TK-002,Rina Fauzi,Jaringan,Sedang,Bagas Permadi,2026-10-18,14:30,2026-10-19,06:45
+TK-003,Siti Putra,Jaringan,Tinggi,Salsa Maharani,2026-10-07,14:15,2026-10-07,15:00
+TK-004,Jihan Kusuma,Akun,Rendah,Tania Kusumo,2026-10-21,11:00,2026-10-23,13:15
+TK-005,Maman Firmansyah,Perangkat Keras,Sedang,Salsa Maharani,2026-10-09,08:45,2026-10-09,12:45
+TK-006,Hesti Sari,Perangkat Keras,Rendah,Salsa Maharani,2026-10-01,10:30,2026-10-03,07:00
+TK-007,Wawan Nugroho,Jaringan,Sedang,Rendra Utama,2026-10-06,11:45,2026-10-07,01:00
+TK-008,Lestari Rahayu,Perangkat Keras,Rendah,Salsa Maharani,2026-10-01,07:00,2026-10-01,23:30
+TK-009,Tika Handayani,Perangkat Keras,Tinggi,Salsa Maharani,2026-10-13,10:00,2026-10-13,11:30
+TK-010,Novi Maharani,Perangkat Keras,Rendah,Bagas Permadi,2026-10-15,15:30,2026-10-17,11:00
+TK-011,Eko Putra,Jaringan,Rendah,Salsa Maharani,2026-10-14,12:15,2026-10-17,05:45
+TK-012,Intan Saputra,Aplikasi,Tinggi,Tania Kusumo,2026-10-05,09:45,2026-10-05,11:15
+TK-013,Dimas Hartono,Perangkat Keras,Rendah,Tania Kusumo,2026-10-21,07:45,2026-10-21,17:30
+TK-014,Maman Suryani,Jaringan,Sedang,Tania Kusumo,2026-10-04,16:30,2026-10-05,06:30
+TK-015,Siti Lestari,Aplikasi,Rendah,Rendra Utama,2026-10-08,09:30,2026-10-08,18:30
+TK-016,Wahyu Permana,Aplikasi,Tinggi,Bagas Permadi,2026-10-20,11:30,2026-10-20,15:15
+TK-017,Ahmad Saputra,Jaringan,Sedang,Bagas Permadi,2026-10-04,13:00,2026-10-04,23:00
+TK-018,Eka Rahayu,Akun,Rendah,Salsa Maharani,2026-10-03,14:00,2026-10-04,08:15
+TK-019,Nurul Setiawan,Aplikasi,Sedang,Salsa Maharani,2026-10-15,08:45,2026-10-15,18:30
+TK-020,Joko Pangestu,Perangkat Keras,Sedang,Bagas Permadi,2026-10-19,07:30,2026-10-19,10:00
+TK-021,Irfan Hidayat,Jaringan,Sedang,Salsa Maharani,2026-10-17,10:45,2026-10-18,03:15
+TK-022,Jihan Utomo,Aplikasi,Tinggi,Rendra Utama,2026-10-21,07:15,2026-10-21,08:45
+TK-023,Eka Fauzi,Perangkat Keras,Sedang,Tania Kusumo,2026-10-11,11:45,2026-10-11,22:15
+TK-024,Joko Fauzi,Akun,Rendah,Bagas Permadi,2026-10-20,07:45,2026-10-21,05:45
+TK-025,Rizki Sari,Akun,Rendah,Rendra Utama,2026-10-19,15:30,2026-10-23,02:45
+TK-026,Yuni Kusuma,Aplikasi,Sedang,Bagas Permadi,2026-10-11,13:15,2026-10-12,07:00
+TK-027,Joko Syahputra,Akun,Tinggi,Tania Kusumo,2026-10-03,17:30,2026-10-03,22:45
+TK-028,Fitri Saputra,Perangkat Keras,Sedang,Salsa Maharani,2026-10-06,17:30,2026-10-07,00:00
+TK-029,Prasetyo Kurniawan,Aplikasi,Tinggi,Salsa Maharani,2026-10-20,15:30,2026-10-20,16:15
+TK-030,Rahmat Sari,Jaringan,Sedang,Rendra Utama,2026-10-18,07:45,2026-10-18,19:00

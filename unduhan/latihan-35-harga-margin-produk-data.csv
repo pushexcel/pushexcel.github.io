@@ -1,0 +1,33 @@
+﻿Kode,Nama Produk,Kategori,HPP,Margin Target,Stok
+PRD-001,Mi Instan Goreng,Makanan,2600,0.3,78
+PRD-002,Biskuit Kelapa 300 g,Makanan,9600,0.15,68
+PRD-003,Keripik Singkong 250 g,Makanan,8450,0.15,58
+PRD-004,Roti Tawar,Makanan,11700,0.2,37
+PRD-005,Beras Pandan 5 kg,Makanan,61300,0.15,38
+PRD-006,Minyak Goreng 1 L,Makanan,16400,0.25,48
+PRD-007,Gula Pasir 1 kg,Makanan,15300,0.35,45
+PRD-008,Telur Ayam 1 kg,Makanan,27700,0.3,10
+PRD-009,Air Mineral 600 ml,Minuman,2100,0.25,14
+PRD-010,Teh Botol 350 ml,Minuman,4050,0.35,77
+PRD-011,Kopi Sachet 10 pcs,Minuman,13300,0.15,13
+PRD-012,Susu UHT 1 L,Minuman,16700,0.35,40
+PRD-013,Jus Jambu 250 ml,Minuman,4700,0.25,24
+PRD-014,Sirup Markisa 450 ml,Minuman,18600,0.15,30
+PRD-015,Minuman Isotonik,Minuman,5600,0.2,40
+PRD-016,Sabun Cuci Piring 800 ml,Rumah Tangga,14100,0.25,72
+PRD-017,Deterjen Bubuk 1 kg,Rumah Tangga,21200,0.3,54
+PRD-018,Pewangi Pakaian 900 ml,Rumah Tangga,17500,0.35,60
+PRD-019,Tisu Gulung 4 roll,Rumah Tangga,12700,0.25,28
+PRD-020,Sapu Lantai,Rumah Tangga,23300,0.2,17
+PRD-021,Ember 12 L,Rumah Tangga,19800,0.25,79
+PRD-022,Kantong Sampah 20 pcs,Rumah Tangga,7400,0.25,79
+PRD-023,Pulpen Biru isi 12,ATK,18900,0.3,51
+PRD-024,Buku Tulis 38 lembar,ATK,3950,0.2,43
+PRD-025,Kertas HVS A4 Rim,ATK,48900,0.35,18
+PRD-026,Spidol Papan Tulis,ATK,8850,0.3,35
+PRD-027,Map Plastik,ATK,2300,0.2,68
+PRD-028,Lampu LED 12 W,Elektronik,22900,0.3,60
+PRD-029,Kabel Roll 5 m,Elektronik,63900,0.3,40
+PRD-030,Baterai AA isi 4,Elektronik,14600,0.2,29
+PRD-031,Colokan T Bercabang,Elektronik,17800,0.35,43
+PRD-032,Senter Isi Ulang,Elektronik,48500,0.2,50

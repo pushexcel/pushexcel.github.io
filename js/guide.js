@@ -162,10 +162,17 @@
     if (k === 'galeri') return say({ html: 'Klik gambar mana saja untuk memperbesar, lalu geser dengan tombol panah di keyboard.', ttl: 8000, key: 'galeri' });
   }
 
+  var welcomeT = 0;
   function home() {
     if (!S.name && !S.asked) {
-      S.asked = true; save();
-      return say({ html: 'Hai! Aku <b>' + esc(GUIDE.nama) + '</b>, pemandu belajarmu di PushExcel. Siapa namamu?', input: true, key: 'welcome' });
+      if (welcomeT) return;
+      welcomeT = setTimeout(function () {
+        welcomeT = 0;
+        if (S.name || S.asked || R.name !== 'home') return;
+        S.asked = true; save();
+        say({ html: 'Hai! Aku <b>' + esc(GUIDE.nama) + '</b>, pemandu belajarmu di PushExcel. Siapa namamu?', input: true, key: 'welcome' });
+      }, 7000);
+      return;
     }
     var d = doneSet(), n = d.size, nx = nextUndone(), acts = [];
     var t = salam() + nm() + '! ';
@@ -348,7 +355,7 @@
     var small = window.innerWidth <= 960, s = [];
     s.push({ el: '#q', t: 'Cari rumus atau topik di sini, misalnya <b>VLOOKUP</b>. Dari mana saja, tekan <b>/</b> untuk langsung mengetik.' });
     s.push({ el: small ? '#menuBtn' : '#side', t: 'Semua materi dikelompokkan per topik. Tanda centang muncul di materi yang sudah kamu selesaikan.' });
-    s.push({ el: '.toplinks', t: '<b>Lab rumus</b> untuk latihan bebas, <b>Kuis</b> untuk menguji diri, dan <b>Galeri</b> untuk melihat semua tangkapan layar.' });
+    s.push({ el: small ? '.tabbar' : '.toplinks', t: '<b>Lab rumus</b> untuk latihan bebas, <b>Kuis</b> untuk menguji diri, dan <b>Galeri</b> untuk melihat semua tangkapan layar.' });
     s.push({ el: '#heroSheet', t: 'Ini lembar kerja mini. Klik sel, ubah rumus di kotak fx, lalu tekan Enter. Sel yang dipakai rumus diberi warna.' });
     s.push({ el: '#progBtn', t: 'Progres belajarmu terlihat di sini. Klik kapan saja untuk ringkasan.' });
     s.push({ el: '#themeBtn', t: 'Mata lelah? Ganti ke tema gelap lewat tombol ini.' });

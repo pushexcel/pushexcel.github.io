@@ -66,35 +66,38 @@ window.DATA = {
    "id": "rumus-pertama",
    "cat": "dasar",
    "judul": "Rumus pertama: awali dengan tanda sama dengan",
-   "ringkas": "Setiap rumus Excel dimulai dengan =. Setelah itu kamu bisa memakai angka, alamat sel, dan operator hitung.",
+   "ringkas": "Rumus adalah perintah hitung untuk Excel. Kamu selalu mulai dengan tanda sama dengan (=), lalu tulis apa yang mau dihitung.",
+   "intinya": "Tanda = memberi tahu Excel: tolong hitungkan ini.",
+   "analogi": "Bayangkan Excel itu kalkulator pintar. Sebelum menekan angka, kamu bilang dulu, \"Hei kalkulator, aku mau menghitung.\" Tanda = adalah cara bilang begitu. Tanpa tanda =, Excel cuma menganggap tulisanmu sebagai tulisan biasa.",
    "sintaks": "=B2*C2",
    "argumen": [
     [
      "+  -  *  /",
-     "Tambah, kurang, kali, bagi"
+     "Tambah, kurang, kali, bagi. Tanda * artinya kali dan tanda / artinya bagi."
     ],
     [
      "^",
-     "Pangkat, misalnya =2^3 menghasilkan 8"
+     "Pangkat. =2^3 artinya 2 dikali dirinya 3 kali, hasilnya 8."
     ],
     [
      "&",
-     "Menyambung teks"
+     "Menyambung tulisan, misalnya menyambung nama depan dan nama belakang."
     ],
     [
      "B2",
-     "Alamat sel: kolom B, baris 2"
+     "Alamat sebuah kotak. B berarti kolom B (arah ke samping), 2 berarti baris ke-2 (arah ke bawah)."
     ]
    ],
    "langkah": [
-    "Klik sel tempat hasil akan muncul, misalnya D2.",
-    "Ketik = lalu klik sel Harga (B2), ketik *, lalu klik sel Jumlah (C2).",
-    "Tekan Enter. Hasilnya muncul di sel, rumusnya tetap terlihat di formula bar.",
-    "Seret gagang isian (kotak kecil di pojok kanan bawah sel) ke bawah untuk menyalin rumus ke baris lain."
+    "Klik kotak tempat jawaban akan muncul, misalnya D2.",
+    "Ketik tanda =.",
+    "Klik kotak Harga (B2), ketik *, lalu klik kotak Jumlah (C2).",
+    "Tekan Enter. Jawabannya muncul di kotak. Rumusnya masih bisa kamu lihat di kotak panjang di atas (formula bar).",
+    "Tarik kotak kecil di pojok kanan bawah kotak D2 ke bawah. Rumus yang sama tersalin ke baris lain."
    ],
    "tips": [
-    "Pakai alamat sel, bukan angka langsung. Kalau harga berubah, hasil ikut berubah.",
-    "Kalau muncul ####, kolomnya terlalu sempit. Lebarkan kolom."
+    "Pakai alamat kotak, jangan ketik angkanya langsung. Kalau harga berubah, jawabannya ikut berubah sendiri.",
+    "Kalau kotak penuh tanda ####, artinya kolomnya terlalu sempit. Lebarkan kolomnya dengan menarik garis pembatas di judul kolom."
    ],
    "demo": {
     "data": [
@@ -155,25 +158,28 @@ window.DATA = {
    "id": "perkalian",
    "cat": "dasar",
    "judul": "Perkalian: operator * dan fungsi PRODUCT",
-   "ringkas": "Untuk mengalikan banyak sel sekaligus, PRODUCT lebih ringkas daripada menulis tanda * berulang kali.",
+   "ringkas": "Untuk mengalikan banyak angka sekaligus, kamu bisa memakai PRODUCT. Lebih pendek daripada menulis tanda * berkali-kali.",
+   "intinya": "PRODUCT mengalikan semua angka yang kamu tunjuk dalam satu rumus.",
+   "analogi": "Bayangkan kamu menghitung isi kardus: 2 baris x 3 kolom x 4 tumpuk. Daripada menekan kali berkali-kali, kamu bilang ke Excel, \"Kalikan semua ini ya.\" Itulah PRODUCT.",
    "sintaks": "=PRODUCT(angka1; [angka2]; ...)",
    "argumen": [
     [
      "angka1",
-     "Angka, sel, atau rentang pertama"
+     "Angka atau kotak pertama yang mau dikalikan. Boleh juga satu deretan kotak, misalnya B2:D2."
     ],
     [
      "angka2, ...",
-     "Opsional, sampai 255 argumen"
+     "Boleh ditambah angka atau kotak lain. Tidak wajib diisi."
     ]
    ],
    "langkah": [
-    "Siapkan angka di beberapa sel, misalnya B2 sampai D2.",
-    "Ketik =PRODUCT( lalu seret rentang B2:D2.",
-    "Tutup kurung dan tekan Enter."
+    "Tulis beberapa angka di kotak yang berdampingan, misalnya B2, C2, dan D2.",
+    "Klik kotak jawaban lalu ketik =PRODUCT( .",
+    "Seret dari B2 sampai D2 dengan mouse. Excel menulis B2:D2 sendiri.",
+    "Ketik tanda kurung tutup ) lalu tekan Enter."
    ],
    "tips": [
-    "Sel kosong dan teks dalam rentang diabaikan oleh PRODUCT, sedangkan operator * akan menghasilkan #VALUE! bila ada teks."
+    "PRODUCT melewati kotak kosong dan tulisan. Kalau kamu memakai tanda *, kotak yang berisi tulisan membuat hasilnya salah (#VALUE!)."
    ],
    "demo": {
     "data": [
@@ -223,8 +229,6 @@ window.DATA = {
    "kata": "perkalian product kali",
    "gambar": [
     "fungsi-argumen-product-300x183.jpg",
-    "perkalian-dengan-microsoft-excel-1.jpg",
-    "perkalian-dengan-microsoft-excel-2-300x152.jpg",
     "perkalian-dengan-microsoft-excel-3.jpg"
    ]
   },
@@ -232,25 +236,29 @@ window.DATA = {
    "id": "pangkat",
    "cat": "dasar",
    "judul": "Pangkat, superscript, dan subscript",
-   "ringkas": "Ada dua urusan berbeda: menghitung pangkat dengan rumus, dan menulis pangkat sebagai tampilan teks seperti m².",
+   "ringkas": "Ada dua hal yang berbeda: menghitung pangkat (misalnya 2 pangkat 10) dan menulis angka kecil di atas huruf seperti m².",
+   "intinya": "Untuk menghitung pakai ^ atau POWER. Untuk sekadar menulis angka kecil, pakai format Superscript.",
+   "analogi": "Pangkat itu seperti melipat kertas. Dilipat 1 kali jadi 2 lapis, dilipat 2 kali jadi 4 lapis. Itu sebabnya 2 pangkat 10 adalah 1024. Sedangkan m² hanyalah tulisan dengan angka kecil, seperti stiker, bukan perhitungan.",
    "sintaks": "=angka^pangkat   atau   =POWER(angka; pangkat)",
    "argumen": [
     [
      "angka",
-     "Bilangan pokok"
+     "Angka yang dipangkatkan, disebut bilangan pokok."
     ],
     [
      "pangkat",
-     "Bilangan pangkat"
+     "Berapa kali angka itu dikalikan dengan dirinya sendiri."
     ]
    ],
    "langkah": [
-    "Untuk menghitung: ketik =2^10 atau =POWER(2;10). Hasilnya 1024.",
-    "Untuk menulis m²: klik sel, tekan F2, blok angka 2, buka Format Cells (Ctrl+1), centang Superscript.",
-    "Subscript (seperti H₂O) memakai cara yang sama dengan mencentang Subscript."
+    "Untuk menghitung, ketik =2^10 lalu Enter. Hasilnya 1024. Cara lain: =POWER(2;10).",
+    "Untuk menulis m², klik kotak lalu tekan F2 agar bisa mengetik di dalamnya.",
+    "Blok (sorot) angka 2 di belakang m.",
+    "Tekan Ctrl+1 untuk membuka Format Cells, lalu centang Superscript dan klik OK.",
+    "Untuk angka kecil di bawah huruf seperti H₂O, caranya sama tetapi centang Subscript."
    ],
    "tips": [
-    "Superscript hanya mengubah tampilan teks. Excel tidak menghitungnya sebagai pangkat."
+    "Superscript hanya mengubah tampilan tulisan. Excel tidak menghitungnya sebagai pangkat."
    ],
    "demo": {
     "data": [
@@ -300,30 +308,26 @@ window.DATA = {
    },
    "kata": "pangkat kuadrat power superscript subscript",
    "gambar": [
-    "mengetik-pangkat-1.jpg",
-    "mengetik-pangkat-2-300x184.jpg",
     "mengetik-pangkat-3-300x270.jpg",
-    "mengetik-pangkat-4.jpg",
-    "subscripts-1.jpg",
-    "subscripts-2.jpg",
     "subscripts-3.jpg",
-    "superscript-1.jpg",
-    "superscript-2.jpg"
+    "subscripts-2.jpg"
    ]
   },
   {
    "id": "copy-paste",
    "cat": "dasar",
    "judul": "Salin dan tempel (Paste Special)",
-   "ringkas": "Paste Special memilih apa yang ditempel: nilai saja, rumus saja, format saja, atau hasil transpose.",
+   "ringkas": "Paste Special membiarkan kamu memilih apa yang ditempel: hasilnya saja, rumusnya, tampilannya, atau diputar (baris jadi kolom).",
+   "intinya": "Paste biasa menempel semuanya. Paste Special menempel hanya bagian yang kamu mau.",
+   "analogi": "Bayangkan kamu menyalin satu halaman buku. Paste biasa seperti memfotokopi seluruh halaman. Paste Special seperti memilih: fotokopi tulisannya saja, atau warnanya saja. Kamu yang memutuskan.",
    "langkah": [
-    "Pilih sel lalu tekan Ctrl+C.",
-    "Klik sel tujuan, buka Home > Paste > Paste Special (atau Ctrl+Alt+V).",
-    "Pilih Values untuk menempel hasil tanpa rumus, Formats untuk menyalin tampilan saja, atau Transpose untuk menukar baris dan kolom.",
-    "Tekan OK."
+    "Klik kotak yang mau disalin, lalu tekan Ctrl+C.",
+    "Klik kotak tujuan. Buka Home, klik panah kecil di bawah Paste, lalu pilih Paste Special (atau tekan Ctrl+Alt+V).",
+    "Pilih Values kalau mau hasil angkanya saja tanpa rumus. Pilih Formats kalau mau tampilannya saja. Pilih Transpose kalau mau baris berubah jadi kolom.",
+    "Klik OK."
    ],
    "tips": [
-    "Setelah menempel Values, rumus asli hilang. Simpan salinan data sebelum mencobanya."
+    "Setelah menempel dengan Values, rumus aslinya hilang di tempat tujuan. Simpan salinan datamu dulu kalau kamu masih ragu."
    ],
    "kuis": {
     "q": "Pilihan Paste Special mana yang menempel hasil rumus tanpa rumusnya?",
@@ -343,12 +347,14 @@ window.DATA = {
    "id": "tombol-excel",
    "cat": "dasar",
    "judul": "Mengenal tombol-tombol di Ribbon",
-   "ringkas": "Mengenal tab Home, Formulas, dan Data di Ribbon beserta tombol yang paling sering dipakai.",
+   "ringkas": "Ribbon adalah deretan tombol di bagian atas Excel. Kamu cukup kenal tiga tab dulu: Home, Formulas, dan Data.",
+   "intinya": "Tombol di Excel dikelompokkan di dalam tab. Cari tombolmu di tab yang sesuai.",
+   "analogi": "Ribbon itu seperti kotak perkakas yang punya beberapa laci. Laci Home isinya alat sehari-hari. Laci Formulas isinya alat rumus. Laci Data isinya alat mengurutkan dan menyaring. Kalau butuh palu, kamu tahu laci mana yang dibuka.",
    "langkah": [
-    "Perhatikan tab Home: kelompok Font, Alignment, dan Number berisi pengaturan tampilan.",
-    "Tab Formulas berisi pustaka fungsi dan tombol AutoSum.",
-    "Tab Data berisi urutkan, filter, dan validasi.",
-    "Arahkan kursor ke tombol untuk melihat keterangan singkatnya."
+    "Lihat tab Home. Kelompok Font mengatur huruf, Alignment mengatur letak tulisan, Number mengatur bentuk angka.",
+    "Klik tab Formulas. Di sini ada daftar fungsi dan tombol AutoSum untuk menjumlah cepat.",
+    "Klik tab Data. Di sini ada tombol untuk mengurutkan, menyaring, dan membatasi isian.",
+    "Arahkan mouse ke sebuah tombol tanpa diklik. Muncul keterangan singkat tentang fungsinya."
    ],
    "kuis": {
     "q": "Di tab mana tombol AutoSum berada selain Home?",
@@ -368,12 +374,14 @@ window.DATA = {
    "id": "warna-sel",
    "cat": "dasar",
    "judul": "Mewarnai sel dan batas tabel",
-   "ringkas": "Warna isian dan garis tepi membuat tabel mudah dibaca. Warna yang berubah otomatis dibahas di Conditional Formatting.",
+   "ringkas": "Warna dan garis tepi membuat tabel lebih mudah dibaca. Warna yang berubah sendiri nanti dibahas di materi Conditional Formatting.",
+   "intinya": "Warnai dengan Fill Color, beri garis dengan Borders.",
+   "analogi": "Tabel tanpa warna dan garis seperti halaman buku tulis yang kosong tanpa baris. Bisa dipakai, tapi mata cepat lelah. Warna dan garis membantu mata menemukan di mana baris dan kolomnya.",
    "langkah": [
-    "Blok sel yang akan diwarnai.",
-    "Home > Fill Color untuk warna latar, Font Color untuk warna huruf.",
-    "Home > Borders untuk garis tepi.",
-    "Gunakan Format Painter untuk menyalin tampilan ke sel lain."
+    "Sorot kotak yang mau diwarnai dengan menyeret mouse.",
+    "Klik Home lalu Fill Color (ikon ember cat) untuk warna latar. Font Color (huruf A berwarna) untuk warna tulisan.",
+    "Klik Borders (ikon kotak-kotak) untuk memberi garis tepi.",
+    "Mau menyalin tampilan ke kotak lain? Klik Format Painter (ikon kuas), lalu klik kotak tujuan."
    ],
    "kuis": {
     "q": "Alat apa yang menyalin tampilan satu sel ke sel lain?",
@@ -390,8 +398,6 @@ window.DATA = {
    "gambar": [
     "tnd-warna-cel-1-300x163.jpg",
     "tnd-warna-cel-3-300x163.jpg",
-    "warna-cell-pada-excel-1-300x157.jpg",
-    "warna-cell-pada-excel-4-300x290.jpg",
     "warna-cell-pada-excel-4.jpg"
    ]
   },
@@ -399,26 +405,28 @@ window.DATA = {
    "id": "nomor-urut",
    "cat": "dasar",
    "judul": "Nomor urut otomatis",
-   "ringkas": "Nomor urut yang dibuat dengan rumus akan menyesuaikan diri ketika baris disisipkan atau dihapus.",
+   "ringkas": "Nomor urut yang dibuat dengan rumus bisa menyesuaikan diri sendiri ketika ada baris yang ditambah atau dihapus.",
+   "intinya": "=ROW()-1 menghitung nomor baris, lalu dikurangi baris judul.",
+   "analogi": "Bayangkan antrean di loket. Kalau satu orang pulang, nomor orang di belakangnya maju. Rumus ROW membuat nomor urut Excel bersikap seperti itu: otomatis menyesuaikan.",
    "sintaks": "=ROW()-1",
    "argumen": [
     [
      "ROW()",
-     "Nomor baris tempat rumus berada"
+     "Memberi tahu nomor baris tempat rumus ini berada."
     ],
     [
      "-1",
-     "Dikurangi jumlah baris judul di atasnya"
+     "Dikurangi 1 karena baris pertama dipakai untuk judul tabel."
     ]
    ],
    "langkah": [
-    "Letakkan judul tabel di baris 1, data mulai baris 2.",
-    "Di A2 ketik =ROW()-1 lalu Enter.",
-    "Seret gagang isian ke bawah. Nomor 1, 2, 3, ... muncul.",
-    "Jika baris dihapus, nomor di bawahnya otomatis menyesuaikan."
+    "Taruh judul tabel di baris 1 dan data mulai dari baris 2.",
+    "Di kotak A2, ketik =ROW()-1 lalu tekan Enter. Muncul angka 1.",
+    "Tarik kotak kecil di pojok kanan bawah A2 ke bawah. Muncul 2, 3, 4, dan seterusnya.",
+    "Coba hapus satu baris. Nomor di bawahnya langsung menyesuaikan."
    ],
    "tips": [
-    "Cara lain: ketik 1 dan 2 di dua sel, blok keduanya, lalu seret gagang isian. Cara ini tidak otomatis menyesuaikan bila ada baris dihapus."
+    "Cara lain: ketik 1 dan 2 di dua kotak, sorot keduanya, lalu tarik ke bawah. Cara ini tidak menyesuaikan diri kalau ada baris yang dihapus."
    ],
    "demo": {
     "data": [
@@ -470,9 +478,7 @@ window.DATA = {
    },
    "kata": "nomor urut otomatis row",
    "gambar": [
-    "data-1-pengaturan-nomor-urut-265x300.jpg",
     "data-2-pengaturan-nomor-urut-293x300.jpg",
-    "gambar-pengaturan-rentang-angka-otomatis-281x300.jpg",
     "nomor-urut-otomatis-1.jpg",
     "nomor-urut-otomatis-2.jpg"
    ]
@@ -481,22 +487,24 @@ window.DATA = {
    "id": "penomoran-gabungan",
    "cat": "dasar",
    "judul": "Penomoran gabungan teks dan angka",
-   "ringkas": "Format seperti KD-001 atau NIS/2026/015 dibuat dengan menyambung teks dan angka yang diformat dengan TEXT.",
+   "ringkas": "Nomor seperti KD-001 atau NIS/2026/015 dibuat dengan menyambung tulisan dan angka. Angkanya diberi nol di depan memakai TEXT.",
+   "intinya": "Sambung tulisan dengan & lalu atur jumlah digit angka dengan TEXT.",
+   "analogi": "Bayangkan nomor kamar hotel: Kamar 007. Kata Kamar adalah tulisan tetap, 007 adalah nomor yang selalu tiga angka. Rumus ini menyambung keduanya, seperti merekatkan dua potong kertas menjadi satu.",
    "sintaks": "=\"KD-\"&TEXT(ROW()-1;\"000\")",
    "argumen": [
     [
      "&",
-     "Menyambung teks"
+     "Perekat. Menyambung dua potong tulisan menjadi satu."
     ],
     [
      "TEXT(angka; \"000\")",
-     "Mengubah angka menjadi teks tiga digit dengan nol di depan"
+     "Mengubah angka jadi tulisan tiga angka, dengan nol di depan kalau perlu. 7 menjadi 007."
     ]
    ],
    "langkah": [
-    "Ketik =\"KD-\"&TEXT(ROW()-1;\"000\") di sel pertama.",
-    "Tekan Enter, hasilnya KD-001.",
-    "Seret ke bawah untuk KD-002, KD-003, dan seterusnya."
+    "Di kotak pertama ketik =\"KD-\"&TEXT(ROW()-1;\"000\") . Tulisan tetap ditaruh di antara tanda kutip.",
+    "Tekan Enter. Muncul KD-001.",
+    "Tarik ke bawah. Muncul KD-002, KD-003, dan seterusnya."
    ],
    "demo": {
     "data": [
@@ -548,16 +556,18 @@ window.DATA = {
    "id": "angka-nol",
    "cat": "dasar",
    "judul": "Menampilkan angka nol di depan",
-   "ringkas": "Excel membuang nol di depan angka, jadi 007 menjadi 7. Ada tiga cara menjaganya: format teks, apostrof, atau format kustom.",
+   "ringkas": "Excel membuang nol di depan angka, jadi 007 berubah menjadi 7. Ada beberapa cara supaya nolnya tetap ada.",
+   "intinya": "Kalau nol di depan harus tetap ada, jadikan kotak itu bertipe Text atau pakai format kustom.",
+   "analogi": "Bagi Excel, 007 dan 7 itu angka yang sama, seperti uang Rp 7 dan Rp 007. Nol di depan dianggap tidak berguna lalu dibuang. Supaya nol tetap ada, kamu harus bilang, \"Ini bukan untuk dihitung, ini hanya tulisan,\" atau, \"Tampilkan selalu tiga angka.\"",
    "sintaks": "=TEXT(angka; \"0000\")",
    "langkah": [
-    "Cara 1: ubah format sel menjadi Text (Home > Number Format > Text) sebelum mengetik angka.",
-    "Cara 2: ketik apostrof di depan angka, misalnya '007.",
-    "Cara 3: Format Cells > Custom, tulis 000 agar angka selalu tiga digit.",
-    "Cara 4: pakai rumus TEXT bila hasilnya akan disambung dengan teks lain."
+    "Cara 1: sorot kotak, buka Home lalu Number Format, pilih Text. Setelah itu baru ketik angkanya.",
+    "Cara 2: ketik tanda petik satu (') di depan angka, misalnya '007. Tanda petik itu tidak tampil.",
+    "Cara 3: tekan Ctrl+1, pilih Custom, lalu tulis 000 di kotak Type. Angka selalu tampil tiga digit.",
+    "Cara 4: pakai rumus =TEXT(angka;\"0000\") kalau hasilnya mau disambung dengan tulisan lain."
    ],
    "tips": [
-    "Angka berformat teks tidak bisa dijumlahkan dengan SUM. Pakai cara Custom bila angka masih perlu dihitung."
+    "Angka yang bertipe Text tidak bisa dijumlahkan dengan SUM. Kalau angkanya masih perlu dihitung, pakai cara Custom."
    ],
    "demo": {
     "data": [
@@ -613,11 +623,13 @@ window.DATA = {
    "id": "desimal",
    "cat": "dasar",
    "judul": "Mengatur jumlah desimal",
-   "ringkas": "Tombol Increase Decimal dan Decrease Decimal mengubah tampilan, bukan nilai yang disimpan. Untuk mengubah nilainya, pakai ROUND.",
+   "ringkas": "Tombol Increase Decimal dan Decrease Decimal hanya mengubah tampilan angka. Angka aslinya di dalam kotak tetap sama. Untuk benar-benar membulatkan, pakai ROUND.",
+   "intinya": "Tombol desimal mengubah tampilan, ROUND mengubah nilainya.",
+   "analogi": "Bayangkan kamu membungkus kue dengan kertas cantik. Bentuk kuenya sama, hanya bungkusnya yang berubah. Tombol desimal itu bungkusnya. ROUND itu memotong kuenya.",
    "langkah": [
-    "Blok sel angka.",
-    "Home > Increase Decimal untuk menambah angka di belakang koma, Decrease Decimal untuk menguranginya.",
-    "Bila hasil harus benar-benar dibulatkan, pakai =ROUND(sel; jumlah_desimal)."
+    "Sorot kotak angka.",
+    "Klik Home lalu Increase Decimal untuk menambah angka di belakang koma. Klik Decrease Decimal untuk mengurangi.",
+    "Kalau angkanya harus benar-benar dibulatkan, tulis =ROUND(kotak; jumlah_angka_di_belakang_koma)."
    ],
    "kuis": {
     "q": "Apakah Decrease Decimal mengubah nilai yang tersimpan di sel?",
@@ -632,20 +644,21 @@ window.DATA = {
    },
    "kata": "desimal decimal increase decrease",
    "gambar": [
-    "4-8-gmbr-increase-decimal.jpg",
-    "gambar-decrease-decimal.jpg"
+    "4-8-gmbr-increase-decimal.jpg"
    ]
   },
   {
    "id": "cetak-judul",
    "cat": "dasar",
    "judul": "Mengatur halaman cetak dan judul berulang",
-   "ringkas": "Tabel panjang akan terpotong ke beberapa halaman. Print Titles mengulang baris judul di setiap halaman.",
+   "ringkas": "Tabel yang panjang akan terpotong ke beberapa lembar kertas. Print Titles membuat baris judul tercetak lagi di setiap lembar.",
+   "intinya": "Print Titles mengulang baris judul di setiap halaman cetak.",
+   "analogi": "Bayangkan buku daftar hadir yang panjangnya lima halaman. Kalau judul kolom hanya ada di halaman pertama, halaman keempat sulit dibaca. Dengan Print Titles, setiap halaman punya judul kolom sendiri.",
    "langkah": [
-    "Page Layout > Print Titles.",
-    "Di Rows to repeat at top, klik kotaknya lalu klik baris judul (misalnya $1:$1).",
-    "Klik Print Preview untuk memeriksa hasilnya.",
-    "Atur margin dan orientasi (Portrait atau Landscape) bila tabel terlalu lebar."
+    "Buka tab Page Layout lalu klik Print Titles.",
+    "Di kotak Rows to repeat at top, klik kotaknya lalu klik nomor baris judul di lembar kerja (misalnya baris 1).",
+    "Klik Print Preview untuk melihat hasilnya.",
+    "Kalau tabel terlalu lebar, ubah Margins atau Orientation menjadi Landscape (kertas diputar menyamping)."
    ],
    "kuis": {
     "q": "Fitur mana yang mengulang baris judul di tiap halaman cetak?",
@@ -662,7 +675,6 @@ window.DATA = {
    "gambar": [
     "cara-1-mencetak-judul-sama-tiap-halaman-300x95.jpg",
     "cara-2-mencetak-judul-sama-tiap-halaman-300x253.jpg",
-    "contoh-dokumen-sebelum-diatur-300x199.jpg",
     "contoh-dokumen-sesudah-diatur-300x207.jpg"
    ]
   },
@@ -670,12 +682,14 @@ window.DATA = {
    "id": "freeze-panes",
    "cat": "dasar",
    "judul": "Freeze Panes: mengunci baris dan kolom",
-   "ringkas": "Judul tabel tetap terlihat ketika kamu menggulir ke bawah atau ke samping.",
+   "ringkas": "Freeze Panes mengunci baris atau kolom tertentu supaya tetap terlihat saat kamu menggulir ke bawah atau ke samping.",
+   "intinya": "Freeze Panes menahan judul tabel di tempatnya.",
+   "analogi": "Bayangkan kamu membaca daftar panjang sambil menempelkan penggaris di bawah judul. Walau halaman digeser, judul tetap kelihatan. Freeze Panes adalah penggaris itu.",
    "langkah": [
-    "Klik sel tepat di bawah baris dan di kanan kolom yang ingin dikunci.",
-    "View > Freeze Panes > Freeze Panes.",
-    "Untuk hanya mengunci baris pertama, pilih Freeze Top Row.",
-    "Untuk membatalkan, pilih Unfreeze Panes."
+    "Klik kotak yang letaknya tepat di bawah baris dan di kanan kolom yang mau dikunci.",
+    "Buka tab View, klik Freeze Panes, lalu pilih Freeze Panes.",
+    "Kalau hanya mau mengunci baris paling atas, pilih Freeze Top Row.",
+    "Untuk melepas kunci, klik Freeze Panes lalu pilih Unfreeze Panes."
    ],
    "kuis": {
     "q": "Untuk mengunci baris 1 dan kolom A sekaligus, sel mana yang dipilih sebelum Freeze Panes?",
@@ -690,7 +704,6 @@ window.DATA = {
    },
    "kata": "freeze panes kunci baris kolom",
    "gambar": [
-    "freeze-panes-pada-excel-1.jpg",
     "freeze-panes-pada-excel-2.jpg",
     "freeze-panes-pada-excel-3.jpg",
     "freeze-panes-pada-excel-4.jpg"
@@ -700,16 +713,18 @@ window.DATA = {
    "id": "link-antar-file",
    "cat": "dasar",
    "judul": "Menghubungkan data antar sheet dan antar file",
-   "ringkas": "Rumus bisa mengambil nilai dari sheet atau file lain. Hasilnya ikut berubah saat data sumber berubah.",
+   "ringkas": "Sebuah rumus bisa mengambil angka dari sheet lain atau bahkan dari file lain. Kalau angka sumbernya berubah, hasilnya ikut berubah.",
+   "intinya": "Rumus yang menunjuk ke sheet atau file lain membuat datamu saling tersambung.",
+   "analogi": "Bayangkan kamu menulis di buku catatan, \"Harga bensin: lihat papan di SPBU.\" Kamu tidak menyalin harganya, hanya menunjuk. Saat harga di papan berganti, catatanmu ikut benar. Link antar file bekerja begitu.",
    "sintaks": "=Sheet2!B5   atau   ='[Data.xlsx]Sheet1'!$B$5",
    "langkah": [
-    "Buka kedua file. Gunakan View > View Side by Side agar keduanya tampil bersamaan.",
-    "Di file tujuan ketik =, lalu pindah ke file sumber dan klik sel yang diambil.",
-    "Tekan Enter. Excel menuliskan alamat lengkapnya.",
-    "Bila file sumber dipindah, gunakan Data > Edit Links untuk memperbaiki hubungan."
+    "Buka dua file Excel. Klik View lalu View Side by Side supaya keduanya tampil berdampingan.",
+    "Di file tujuan, ketik tanda = lalu klik kotak yang mau diambil di file sumber.",
+    "Tekan Enter. Excel menuliskan alamat lengkapnya untuk kamu.",
+    "Kalau file sumber pernah dipindah, buka Data lalu Edit Links untuk memperbaiki sambungannya."
    ],
    "tips": [
-    "Jangan ganti nama atau pindahkan file sumber tanpa memperbarui link."
+    "Jangan ganti nama atau memindahkan file sumber tanpa memperbarui link. Kalau tidak, rumusnya kehilangan jalan menuju datanya."
    ],
    "kuis": {
     "q": "Tanda apa yang memisahkan nama sheet dan alamat sel?",
@@ -725,26 +740,22 @@ window.DATA = {
    "kata": "link file sheet eksternal referensi",
    "gambar": [
     "data-1-membuat-link-di-excel-300x276.jpg",
-    "data-2-membuat-link-di-excel-174x300.jpg",
-    "data-3-membuat-link-di-excel-300x164.jpg",
     "gambar-1-data-utama-link-dengan-rumus-300x273.jpg",
-    "gambar-1-menampilkan-dua-file-bersamaan-300x203.jpg",
-    "gambar-1-tampilan-office-button-advanced-300x246.jpg",
-    "gambar-2-data-lain-link-dengan-rumus-300x158.jpg",
-    "gambar-2-menampilkan-dua-file-bersamaan-300x167.jpg",
-    "gambar-3-hasil-penerapan-link-dengan-rumus-300x98.jpg"
+    "gambar-1-tampilan-office-button-advanced-300x246.jpg"
    ]
   },
   {
    "id": "pindah-sheet",
    "cat": "dasar",
    "judul": "Memindahkan dan menyalin sheet ke file lain",
-   "ringkas": "Move or Copy memindahkan seluruh sheet beserta isinya ke workbook lain.",
+   "ringkas": "Move or Copy memindahkan satu sheet beserta seluruh isinya ke file Excel lain, atau membuat salinannya.",
+   "intinya": "Klik kanan nama sheet, lalu pilih Move or Copy.",
+   "analogi": "Sheet itu seperti selembar kertas di dalam map. Move or Copy memindahkan kertas itu ke map lain. Kalau kamu centang Create a copy, kertas aslinya tetap di map lama dan map baru mendapat fotokopinya.",
    "langkah": [
-    "Klik kanan tab sheet > Move or Copy.",
-    "Pilih workbook tujuan di To book.",
-    "Centang Create a copy bila sheet asli harus tetap ada.",
-    "Tekan OK."
+    "Klik kanan nama sheet di bagian bawah layar, lalu pilih Move or Copy.",
+    "Di kotak To book, pilih file tujuan.",
+    "Centang Create a copy kalau sheet yang asli tetap harus ada.",
+    "Klik OK."
    ],
    "kuis": {
     "q": "Centang apa yang menjaga sheet asli tetap ada setelah dipindah?",
@@ -768,13 +779,15 @@ window.DATA = {
    "id": "kontrol-formulir",
    "cat": "dasar",
    "judul": "Combo Box dan Option Button",
-   "ringkas": "Kontrol formulir memudahkan pengisi memilih nilai dari daftar atau opsi, lalu hasilnya dipakai oleh rumus.",
+   "ringkas": "Combo Box dan Option Button adalah tombol pilihan yang bisa kamu taruh di lembar kerja. Orang tinggal memilih, tidak perlu mengetik.",
+   "intinya": "Kontrol formulir menyimpan nomor pilihan di satu kotak, lalu rumus memakai nomor itu.",
+   "analogi": "Bayangkan menu di restoran. Pelanggan tinggal menunjuk nomor menu. Combo Box adalah daftar menu yang bisa dibuka-tutup. Nomor yang ditunjuk dicatat di satu kotak khusus (Cell link). Rumusmu membaca nomor itu lalu mencari nama menunya.",
    "langkah": [
-    "Aktifkan tab Developer (File > Options > Customize Ribbon).",
-    "Developer > Insert > Combo Box (Form Controls), lalu gambar di lembar kerja.",
-    "Klik kanan > Format Control: isi Input range (daftar pilihan) dan Cell link (sel penampung nomor pilihan).",
-    "Pakai =INDEX(daftar; sel_link) untuk menampilkan pilihan yang dipilih.",
-    "Option Button bekerja sama: setiap tombol mengisi Cell link dengan angka urutannya."
+    "Aktifkan tab Developer: File, Options, Customize Ribbon, lalu centang Developer.",
+    "Klik Developer, Insert, lalu pilih Combo Box di bagian Form Controls. Gambar kotaknya di lembar kerja.",
+    "Klik kanan kotak itu lalu pilih Format Control. Isi Input range dengan daftar pilihan dan Cell link dengan satu kotak kosong untuk menyimpan nomor pilihan.",
+    "Pakai rumus =INDEX(daftar; kotak_link) untuk menampilkan isi pilihan yang dipilih.",
+    "Option Button bekerja sama. Setiap tombol mengisi Cell link dengan nomor urutnya."
    ],
    "kuis": {
     "q": "Apa yang disimpan di Cell link pada Combo Box?",
@@ -789,26 +802,26 @@ window.DATA = {
    },
    "kata": "combo box option button form control developer",
    "gambar": [
-    "option-botton-excel-1.jpg",
-    "option-botton-excel-2-300x196.jpg",
     "option-botton-excel-3.jpg",
-    "option-botton-excel-4.jpg",
-    "option-botton-excel-5.jpg"
+    "option-botton-excel-2-300x196.jpg",
+    "option-botton-excel-4.jpg"
    ]
   },
   {
    "id": "hapus-ganda",
    "cat": "data",
    "judul": "Menghapus data ganda (duplikat)",
-   "ringkas": "Remove Duplicates membuang baris yang isinya sama berdasarkan kolom yang kamu pilih.",
+   "ringkas": "Remove Duplicates membuang baris yang isinya sama, berdasarkan kolom yang kamu pilih.",
+   "intinya": "Excel mencari baris kembar lalu menyisakan satu saja.",
+   "analogi": "Bayangkan daftar absen yang tidak sengaja menulis nama Budi dua kali. Kamu cukup menyisakan satu Budi. Remove Duplicates melakukan itu untukmu, bahkan untuk ribuan baris.",
    "langkah": [
-    "Blok tabel data.",
-    "Data > Remove Duplicates.",
-    "Centang kolom yang dijadikan penentu duplikat.",
-    "Tekan OK. Excel melaporkan berapa baris yang dihapus."
+    "Sorot seluruh tabel datamu.",
+    "Buka tab Data lalu klik Remove Duplicates.",
+    "Centang kolom yang dipakai untuk menentukan kembar atau tidak.",
+    "Klik OK. Excel memberi tahu berapa baris yang dihapus."
    ],
    "tips": [
-    "Simpan salinan sebelum menghapus. Tindakan ini mengubah data aslinya."
+    "Simpan salinan datamu dulu. Baris yang dihapus tidak bisa kembali kecuali kamu menekan Ctrl+Z langsung."
    ],
    "demo": {
     "data": [
@@ -868,12 +881,14 @@ window.DATA = {
    "id": "hapus-baris",
    "cat": "data",
    "judul": "Menghapus banyak baris sekaligus",
-   "ringkas": "Hapus baris yang berselang-seling atau kosong dengan bantuan filter atau Go To Special, bukan satu per satu.",
+   "ringkas": "Baris kosong atau baris selang-seling bisa dihapus sekaligus. Kamu tidak perlu menghapus satu per satu.",
+   "intinya": "Pilih semua kotak kosong sekaligus dengan Go To Special, lalu hapus barisnya.",
+   "analogi": "Bayangkan kamu membersihkan lemari yang penuh rak kosong. Daripada membuang rak satu-satu, kamu menandai semua rak kosong dulu, lalu membuangnya bersamaan.",
    "langkah": [
-    "Blok kolom yang mengandung sel kosong.",
-    "Tekan F5 > Special > Blanks > OK.",
-    "Klik kanan salah satu sel terpilih > Delete > Entire row.",
-    "Atau gunakan filter pada kolom tertentu, pilih baris yang tampil, lalu hapus."
+    "Sorot kolom yang mengandung kotak kosong.",
+    "Tekan F5, klik Special, pilih Blanks, lalu klik OK. Semua kotak kosong ikut terpilih.",
+    "Klik kanan salah satu kotak yang terpilih, pilih Delete, lalu Entire row.",
+    "Cara lain: pasang filter pada satu kolom, tampilkan baris yang mau dihapus saja, lalu hapus baris yang tampil."
    ],
    "kuis": {
     "q": "Tombol F5 > Special > Blanks dipakai untuk apa?",
@@ -897,13 +912,15 @@ window.DATA = {
    "id": "urutkan",
    "cat": "data",
    "judul": "Mengurutkan data (Sort)",
-   "ringkas": "Urutkan data dari kecil ke besar, abjad, atau gabungan beberapa kolom.",
+   "ringkas": "Sort menyusun data dari kecil ke besar, dari A ke Z, atau berdasarkan beberapa kolom sekaligus.",
+   "intinya": "Sort menyusun ulang baris tanpa memisahkan isi satu baris.",
+   "analogi": "Bayangkan kartu nama yang berserakan di meja. Kamu susun dari A sampai Z supaya gampang dicari. Sort melakukannya, dan setiap kartu tetap utuh, tidak ada tulisan yang tertukar.",
    "langkah": [
-    "Klik satu sel di dalam tabel.",
-    "Data > Sort.",
-    "Pilih kolom di Sort by dan arah urutan (A to Z atau Z to A).",
-    "Tambah tingkat dengan Add Level, misalnya urut kelas lalu nilai.",
-    "Pastikan My data has headers tercentang bila ada baris judul."
+    "Klik satu kotak di dalam tabel.",
+    "Buka tab Data lalu klik Sort.",
+    "Di Sort by, pilih kolom yang jadi patokan. Pilih A to Z (kecil ke besar) atau Z to A (besar ke kecil).",
+    "Mau urut dua tingkat, misalnya kelas lalu nilai? Klik Add Level dan pilih kolom kedua.",
+    "Pastikan My data has headers tercentang kalau tabelmu punya baris judul. Lalu klik OK."
    ],
    "kuis": {
     "q": "Agar baris judul tidak ikut terurut, kamu harus...",
@@ -920,8 +937,6 @@ window.DATA = {
    "gambar": [
     "mengurutkan-data-1-300x200.jpg",
     "mengurutkan-data-2-300x184.jpg",
-    "mengurutkan-data-3-300x137.jpg",
-    "mengurutkan-data-4-300x137.jpg",
     "mengurutkan-data-5-300x202.jpg"
    ]
   },
@@ -929,13 +944,15 @@ window.DATA = {
    "id": "filter",
    "cat": "data",
    "judul": "Filter: menampilkan data tertentu",
-   "ringkas": "AutoFilter menyembunyikan baris yang tidak cocok dengan syarat, tanpa menghapusnya.",
+   "ringkas": "Filter menyembunyikan baris yang tidak cocok dengan syaratmu. Barisnya tidak dihapus, hanya tidak kelihatan.",
+   "intinya": "Filter hanya menampilkan baris yang kamu cari, sisanya disembunyikan.",
+   "analogi": "Bayangkan menyaring teh. Daun tehnya tertahan di saringan, tapi tidak dibuang dari dunia. Filter juga begitu: baris yang tidak cocok hanya disembunyikan dan bisa dimunculkan lagi.",
    "langkah": [
-    "Klik sel di dalam tabel.",
-    "Data > Filter (atau Ctrl+Shift+L).",
-    "Klik panah di judul kolom, lalu centang nilai yang ingin ditampilkan.",
-    "Gunakan Text Filters atau Number Filters untuk syarat seperti 'lebih besar dari'.",
-    "Klik Filter lagi untuk mematikannya."
+    "Klik satu kotak di dalam tabel.",
+    "Buka tab Data lalu klik Filter (atau tekan Ctrl+Shift+L). Muncul panah kecil di judul kolom.",
+    "Klik panah itu, lalu centang nilai yang mau ditampilkan.",
+    "Untuk syarat seperti lebih besar dari, pilih Number Filters atau Text Filters.",
+    "Klik Filter sekali lagi untuk mematikannya dan menampilkan semua baris."
    ],
    "kuis": {
     "q": "Apa yang terjadi pada baris yang tidak lolos filter?",
@@ -959,16 +976,18 @@ window.DATA = {
    "id": "validasi",
    "cat": "data",
    "judul": "Data Validation: membatasi isian",
-   "ringkas": "Validation mencegah salah ketik dengan membatasi isi sel pada angka tertentu, tanggal, atau daftar pilihan.",
+   "ringkas": "Data Validation membatasi apa yang boleh diketik di sebuah kotak, misalnya hanya angka 0 sampai 100 atau hanya pilihan dari daftar.",
+   "intinya": "Validation mencegah salah ketik sebelum terjadi.",
+   "analogi": "Bayangkan kotak surat dengan celah yang hanya muat amplop. Benda lain tidak bisa masuk. Data Validation membuat kotak Excel hanya menerima isian yang kamu izinkan.",
    "langkah": [
-    "Blok sel yang akan dibatasi.",
-    "Data > Data Validation.",
-    "Di Allow pilih Whole number, Decimal, List, Date, dan seterusnya.",
-    "Isi batas atau sumber daftar (misalnya A1:A5).",
-    "Tab Input Message dan Error Alert dipakai untuk pesan petunjuk dan peringatan."
+    "Sorot kotak yang mau dibatasi.",
+    "Buka tab Data lalu klik Data Validation.",
+    "Di kotak Allow, pilih jenis isian: Whole number (bilangan bulat), Decimal, List (daftar pilihan), Date, dan lainnya.",
+    "Isi batasnya. Untuk List, isi sumber daftar, misalnya A1:A5.",
+    "Tab Input Message dipakai untuk pesan petunjuk. Tab Error Alert dipakai untuk pesan peringatan kalau isiannya salah."
    ],
    "tips": [
-    "Pilihan List menampilkan panah drop-down di sel."
+    "Kalau kamu memilih List, di kotak muncul panah drop-down seperti di formulir online."
    ],
    "kuis": {
     "q": "Pilihan Allow mana yang membuat drop-down di sel?",
@@ -983,38 +1002,28 @@ window.DATA = {
    },
    "kata": "validation validasi dropdown daftar",
    "gambar": [
-    "image001.jpg",
-    "image002.jpg",
     "image003.jpg",
     "image004.jpg",
-    "image005.jpg",
-    "image006.jpg",
-    "image007.jpg",
-    "image008.jpg",
-    "validation-data-1.jpg",
-    "validation-data-2.jpg",
-    "validation-data-3.jpg",
-    "validation-data-4.jpg",
-    "validation-data-5.jpg",
-    "validation-data-6.jpg",
-    "validation-data-7-a.jpg",
-    "validation-data-7-b.jpg",
-    "validation-data-8.jpg"
+    "image005.jpg"
    ]
   },
   {
    "id": "proteksi",
    "cat": "data",
    "judul": "Proteksi sheet dan workbook",
-   "ringkas": "Proteksi mengunci rumus agar tidak terhapus tidak sengaja, dan dapat dilengkapi kata sandi.",
+   "ringkas": "Proteksi mengunci sheet supaya rumus dan isi pentingmu tidak terhapus atau berubah tanpa sengaja. Kamu boleh menambahkan kata sandi.",
+   "intinya": "Semua kotak awalnya berstatus Locked. Kuncinya baru bekerja setelah kamu menyalakan Protect Sheet.",
+   "analogi": "Bayangkan etalase toko. Semua barang dikunci di dalam kaca. Kamu hanya membuka satu pintu kecil untuk barang yang boleh disentuh pembeli. Kotak yang tidak dicentang Locked adalah pintu kecil itu.",
    "langkah": [
-    "Blok sel yang boleh diubah, buka Format Cells > Protection, hilangkan centang Locked.",
-    "Review > Protect Sheet.",
-    "Isi kata sandi (opsional) dan pilih tindakan yang masih diizinkan.",
-    "Untuk melindungi struktur sheet, gunakan Review > Protect Workbook."
+    "Sorot kotak yang boleh diubah orang lain, misalnya kotak isian.",
+    "Tekan Ctrl+1, buka tab Protection, lalu hilangkan centang Locked. Klik OK.",
+    "Buka tab Review lalu klik Protect Sheet.",
+    "Isi kata sandi kalau mau (boleh dikosongkan), lalu pilih tindakan yang masih diizinkan. Klik OK.",
+    "Untuk mengunci susunan sheet (tidak bisa tambah, hapus, atau pindah sheet), klik Review lalu Protect Workbook."
    ],
    "tips": [
-    "Kata sandi yang lupa sulit dipulihkan. Catat di tempat aman."
+    "Kata sandi yang lupa sangat sulit dipulihkan. Catat di tempat yang aman.",
+    "Coba ketik di kotak yang terkunci. Kalau Excel menolak, berarti proteksinya sudah bekerja."
    ],
    "kuis": {
     "q": "Sel yang tetap bisa diubah setelah Protect Sheet adalah sel yang...",
@@ -1029,32 +1038,26 @@ window.DATA = {
    },
    "kata": "proteksi protect password kunci",
    "gambar": [
-    "protect-workbook-2.jpg",
-    "protect-workbook-3.jpg",
     "protect-workbook-4.jpg",
-    "protect-workbook.jpg",
-    "proteksi-sheet-1-300x141.jpg",
     "proteksi-sheet-2.jpg",
-    "proteksi-sheet-3-258x300.jpg",
-    "proteksi-sheet-4-300x182.jpg",
-    "proteksi-sheet-5-300x50.jpg",
-    "proteksi-sheet-6-300x202.jpg",
-    "proteksi-sheet-7.jpg"
+    "proteksi-sheet-3-258x300.jpg"
    ]
   },
   {
    "id": "cond-format",
    "cat": "data",
    "judul": "Conditional Formatting: warna otomatis",
-   "ringkas": "Sel berwarna sendiri ketika memenuhi syarat, misalnya nilai di bawah 70 menjadi merah.",
+   "ringkas": "Conditional Formatting mewarnai kotak secara otomatis kalau isinya cocok dengan syaratmu. Contohnya nilai di bawah 70 menjadi merah.",
+   "intinya": "Kamu menulis aturan sekali, Excel yang mewarnai sendiri.",
+   "analogi": "Bayangkan guru yang menyiapkan pulpen merah. Setiap melihat nilai di bawah 70, ia langsung melingkarinya dengan merah. Conditional Formatting adalah guru itu, tetapi bekerja sendiri dan sangat cepat. Kalau nilainya berubah, warnanya ikut berubah.",
    "langkah": [
-    "Blok sel nilai.",
-    "Home > Conditional Formatting > Highlight Cells Rules > Less Than.",
-    "Isi 70 dan pilih warna.",
-    "Untuk syarat berbasis rumus, pilih New Rule > Use a formula."
+    "Sorot kotak-kotak nilai.",
+    "Buka tab Home, klik Conditional Formatting, pilih Highlight Cells Rules, lalu Less Than (kurang dari).",
+    "Ketik 70, pilih warna, lalu klik OK.",
+    "Untuk syarat yang lebih rumit, pilih New Rule lalu Use a formula to determine which cells to format. Kamu menulis rumus yang hasilnya benar atau salah."
    ],
    "tips": [
-    "Hapus aturan lewat Conditional Formatting > Clear Rules."
+    "Untuk menghapus aturan, klik Conditional Formatting lalu Clear Rules."
    ],
    "demo": {
     "data": [
@@ -1107,29 +1110,25 @@ window.DATA = {
    },
    "kata": "conditional formatting warna otomatis",
    "gambar": [
-    "conditional-formatting-1-300x88.jpg",
-    "conditional-formatting-2.jpg",
     "conditional-formatting-3-300x290.jpg",
     "conditional-formatting-4-300x290.jpg",
-    "conditional-formatting-5-300x88.jpg",
-    "image001-300x180.jpg",
-    "image002-243x300.jpg",
-    "image003-300x242.jpg",
-    "image004-224x300.jpg",
-    "image005-300x178.jpg"
+    "image002-243x300.jpg"
    ]
   },
   {
    "id": "consolidate",
    "cat": "data",
    "judul": "Consolidate: menggabungkan beberapa tabel",
-   "ringkas": "Consolidate menjumlahkan (atau menghitung rata-rata, dan sebagainya) data dari beberapa range atau sheet menjadi satu ringkasan.",
+   "ringkas": "Consolidate menggabungkan beberapa tabel kecil (dari beberapa area atau sheet) menjadi satu ringkasan, misalnya total penjualan dari tiap cabang.",
+   "intinya": "Consolidate menjumlahkan (atau merata-ratakan) data yang namanya sama, dari beberapa tempat sekaligus.",
+   "analogi": "Bayangkan tiga warung melaporkan penjualan. Ada yang menjual gula, kopi, dan teh. Kamu ingin satu laporan total: berapa gula, berapa kopi, berapa teh dari semua warung. Consolidate adalah juru tulis yang mengelompokkan berdasarkan nama barang lalu menjumlahkannya.",
    "langkah": [
-    "Siapkan sel tujuan.",
-    "Data > Consolidate.",
-    "Pilih fungsi (Sum, Average, ...) di Function.",
-    "Klik Reference, blok range pertama, lalu Add. Ulangi untuk range lain.",
-    "Centang Top row dan Left column bila ingin mencocokkan berdasarkan label."
+    "Klik satu kotak kosong sebagai tempat hasil.",
+    "Buka tab Data lalu klik Consolidate.",
+    "Di Function pilih Sum (jumlah) atau Average (rata-rata), dan sebagainya.",
+    "Klik kotak Reference, sorot tabel pertama, lalu klik Add. Ulangi untuk tabel kedua dan seterusnya.",
+    "Centang Top row dan Left column supaya Excel mencocokkan data berdasarkan nama (label), bukan berdasarkan posisi.",
+    "Klik OK."
    ],
    "kuis": {
     "q": "Centang Left column pada Consolidate berguna untuk...",
@@ -1146,21 +1145,26 @@ window.DATA = {
    "gambar": [
     "fitur-consolidate-1-287x300.jpg",
     "fitur-consolidate-2.jpg",
-    "fitur-consolidate-3-300x207.jpg",
-    "fitur-consolidate-4-300x151.jpg"
+    "fitur-consolidate-3-300x207.jpg"
    ]
   },
   {
    "id": "pivot",
    "cat": "data",
    "judul": "PivotTable: meringkas data besar",
-   "ringkas": "PivotTable meringkas ribuan baris menjadi tabel ringkasan hanya dengan menyeret kolom.",
+   "ringkas": "PivotTable meringkas ribuan baris menjadi tabel kecil hanya dengan menyeret kolom. Tidak perlu rumus.",
+   "intinya": "Kamu menyeret judul kolom ke kotak yang tepat, lalu Excel menyusun ringkasannya.",
+   "analogi": "Bayangkan buku kas toko dengan 1000 catatan penjualan. Kamu ingin tahu total penjualan tiap jenis barang. Mencatatnya satu-satu sangat lama. PivotTable bisa menjawabnya dalam beberapa detik, seperti asisten yang memilah semua catatan ke dalam tumpukan sesuai jenisnya, lalu menghitung isi tiap tumpukan.",
    "langkah": [
-    "Klik sel di dalam data (data harus punya judul kolom).",
-    "Insert > PivotTable > OK.",
-    "Seret kolom kategori ke Rows, kolom angka ke Values.",
-    "Klik kanan angka di Values > Value Field Settings untuk mengganti Sum menjadi Count atau Average.",
-    "Setelah data berubah, klik kanan > Refresh."
+    "Klik satu kotak di dalam data. Pastikan setiap kolom punya judul di baris paling atas.",
+    "Buka tab Insert, klik PivotTable, lalu klik OK.",
+    "Di daftar kolom yang muncul, seret kolom kategori (misalnya Jenis Barang) ke kotak Rows.",
+    "Seret kolom angka (misalnya Penjualan) ke kotak Values. Excel langsung menjumlahkannya per kategori.",
+    "Mau menghitung banyaknya, bukan jumlahnya? Klik kanan angka di tabel, pilih Value Field Settings, lalu ganti Sum menjadi Count atau Average.",
+    "Kalau data sumber berubah, klik kanan PivotTable lalu pilih Refresh."
+   ],
+   "tips": [
+    "PivotTable tidak ikut berubah otomatis. Selalu klik Refresh setelah datamu diubah."
    ],
    "kuis": {
     "q": "Setelah data sumber berubah, apa yang harus dilakukan pada PivotTable?",
@@ -1177,8 +1181,6 @@ window.DATA = {
    "gambar": [
     "funsi-pivottable-excel-1-300x221.jpg",
     "funsi-pivottable-excel-2-300x287.jpg",
-    "funsi-pivottable-excel-3-300x218.jpg",
-    "funsi-pivottable-excel-4-147x300.jpg",
     "funsi-pivottable-excel-5-300x223.jpg"
    ]
   },
@@ -1186,23 +1188,28 @@ window.DATA = {
    "id": "subtotal",
    "cat": "data",
    "judul": "Subtotal: ringkasan per kelompok",
-   "ringkas": "Fungsi SUBTOTAL dan fitur Subtotal menyisipkan total per kelompok data yang sudah terurut.",
+   "ringkas": "Subtotal menyisipkan baris total di setiap kelompok data. Datanya harus diurutkan dulu berdasarkan kelompoknya.",
+   "intinya": "SUBTOTAL menghitung hanya baris yang tampil, jadi cocok dipakai bersama Filter.",
+   "analogi": "Bayangkan daftar belanja yang dikelompokkan: sayur, buah, daging. Di akhir tiap kelompok kamu menulis \"jumlah sayur\", \"jumlah buah\", dan seterusnya. Fitur Subtotal menulis baris jumlah itu otomatis di akhir tiap kelompok.",
    "sintaks": "=SUBTOTAL(nomor_fungsi; rentang)",
    "argumen": [
     [
      "nomor_fungsi",
-     "1=AVERAGE, 2=COUNT, 4=MAX, 5=MIN, 9=SUM"
+     "Angka yang menentukan jenis hitungan. 1 = rata-rata, 2 = banyaknya angka, 4 = terbesar, 5 = terkecil, 9 = jumlah."
     ],
     [
      "rentang",
-     "Sel yang dihitung"
+     "Kotak-kotak yang dihitung."
     ]
    ],
    "langkah": [
-    "Urutkan data berdasarkan kolom pengelompokan.",
-    "Data > Subtotal.",
-    "Pilih kolom At each change in, fungsi, dan kolom yang dihitung.",
-    "Tombol angka 1, 2, 3 di kiri lembar kerja meringkas atau memperluas tampilan."
+    "Urutkan data berdasarkan kolom yang jadi kelompok, misalnya Kategori.",
+    "Buka tab Data lalu klik Subtotal.",
+    "Di At each change in, pilih kolom kelompok. Di Use function pilih Sum. Centang kolom yang mau dijumlahkan.",
+    "Klik OK. Di sebelah kiri muncul tombol angka 1, 2, 3. Klik angka itu untuk meringkas atau membuka rincian."
+   ],
+   "tips": [
+    "Angka 9 artinya jumlah. Angka 109 artinya jumlah juga, tetapi mengabaikan baris yang kamu sembunyikan sendiri."
    ],
    "kuis": {
     "q": "Nomor fungsi mana pada SUBTOTAL yang menjumlah?",
@@ -1219,23 +1226,22 @@ window.DATA = {
    "gambar": [
     "penggunaan-fungsi-subtotal-excel-1-300x261.jpg",
     "penggunaan-fungsi-subtotal-excel-2-300x222.jpg",
-    "penggunaan-fungsi-subtotal-excel-3-240x300.jpg",
-    "penggunaan-fungsi-subtotal-excel-4-300x201.jpg",
-    "penggunaan-fungsi-subtotal-excel-5-300x135.jpg",
-    "penggunaan-fungsi-subtotal-excel-6-300x202.jpg"
+    "penggunaan-fungsi-subtotal-excel-3-240x300.jpg"
    ]
   },
   {
    "id": "what-if",
    "cat": "data",
    "judul": "Data Table (What-If Analysis)",
-   "ringkas": "Data Table menghitung satu rumus berulang kali dengan nilai masukan berbeda, misalnya cicilan pada berbagai suku bunga.",
+   "ringkas": "Data Table menghitung satu rumus berkali-kali dengan angka masukan yang berbeda-beda, misalnya cicilan pada beberapa pilihan bunga.",
+   "intinya": "Kamu menyiapkan rumus dan daftar angka percobaan, lalu Excel mengisi semua jawabannya sekaligus.",
+   "analogi": "Bayangkan kamu bertanya, \"Kalau bunga 5 persen, cicilanku berapa? Kalau 6 persen? Kalau 7 persen?\" Biasanya kamu harus mengganti angka satu-satu. Data Table menjawab semua pertanyaan itu dalam satu tabel.",
    "langkah": [
-    "Susun rumus di sudut kiri atas tabel, nilai masukan di kolom (atau baris) di sampingnya.",
-    "Blok seluruh tabel.",
-    "Data > What-If Analysis > Data Table.",
-    "Isi Column input cell dengan sel masukan yang dipakai rumus (atau Row input cell untuk deret baris).",
-    "Tekan OK."
+    "Taruh rumus di pojok kiri atas tabel. Taruh angka percobaan di kolom tepat di bawahnya (atau di baris di sebelah kanannya).",
+    "Sorot seluruh tabel itu, termasuk rumus dan angka percobaan.",
+    "Buka tab Data, klik What-If Analysis, lalu pilih Data Table.",
+    "Isi Column input cell dengan kotak masukan yang dipakai rumus kalau angka percobaanmu berderet ke bawah. Pakai Row input cell kalau berderet ke samping.",
+    "Klik OK. Tabel terisi sendiri."
    ],
    "kuis": {
     "q": "Untuk nilai masukan yang berderet ke bawah, kotak mana yang diisi?",
@@ -1257,15 +1263,17 @@ window.DATA = {
    "id": "diagram",
    "cat": "data",
    "judul": "Membuat diagram (grafik)",
-   "ringkas": "Grafik mengubah angka menjadi gambar yang lebih mudah dibandingkan.",
+   "ringkas": "Grafik mengubah angka menjadi gambar sehingga lebih mudah dibandingkan sekilas.",
+   "intinya": "Sorot datamu, pilih jenis grafik yang cocok, selesai.",
+   "analogi": "Angka itu seperti daftar panjang. Grafik seperti foto. Dengan satu pandangan kamu tahu mana yang tinggi dan mana yang rendah, tanpa membaca satu per satu.",
    "langkah": [
-    "Blok data beserta judul kolom dan baris.",
-    "Insert > pilih jenis grafik: Column, Line, Pie, dan sebagainya.",
-    "Klik grafik, lalu gunakan Chart Design untuk mengganti gaya dan warna.",
-    "Tambahkan judul dan label data lewat tombol + di samping grafik."
+    "Sorot datamu, termasuk judul kolom dan judul baris.",
+    "Buka tab Insert lalu pilih jenis grafik: Column (batang), Line (garis), Pie (lingkaran), dan lainnya.",
+    "Klik grafiknya, lalu buka Chart Design untuk mengganti gaya dan warna.",
+    "Klik tanda + di samping grafik untuk menambah judul dan label angka."
    ],
    "tips": [
-    "Pie cocok untuk bagian dari keseluruhan; Line cocok untuk perubahan dari waktu ke waktu."
+    "Pie cocok untuk melihat bagian dari keseluruhan (misalnya pembagian kue). Line cocok untuk melihat perubahan dari waktu ke waktu. Column cocok untuk membandingkan beberapa hal."
    ],
    "kuis": {
     "q": "Jenis grafik yang cocok untuk tren dari waktu ke waktu adalah...",
@@ -1281,19 +1289,21 @@ window.DATA = {
    "kata": "diagram grafik chart",
    "gambar": [
     "diagram-dg-excel-1-300x161.jpg",
-    "diagram-dg-excel-4-300x91.jpg",
-    "diagram-dg-excel-5-300x90.jpg"
+    "diagram-dg-excel-4-300x91.jpg"
    ]
   },
   {
    "id": "transpose",
    "cat": "data",
    "judul": "Mengubah baris menjadi kolom (Transpose)",
-   "ringkas": "Transpose menukar posisi baris dan kolom tanpa mengetik ulang.",
+   "ringkas": "Transpose menukar baris menjadi kolom (atau sebaliknya) tanpa kamu mengetik ulang.",
+   "intinya": "Transpose memutar tabel seperempat putaran.",
+   "analogi": "Bayangkan kamu memegang selembar daftar lalu memutarnya ke samping. Yang tadinya berderet ke bawah sekarang berderet ke kanan. Itulah Transpose.",
    "langkah": [
-    "Blok dan salin (Ctrl+C) data asal.",
-    "Klik sel tujuan.",
-    "Home > Paste > Paste Special > centang Transpose > OK."
+    "Sorot data asal lalu tekan Ctrl+C.",
+    "Klik satu kotak kosong sebagai tempat tujuan.",
+    "Buka tab Home, klik panah di bawah Paste, pilih Paste Special.",
+    "Centang Transpose lalu klik OK."
    ],
    "kuis": {
     "q": "Opsi Paste Special untuk menukar baris dan kolom adalah...",
@@ -1308,8 +1318,6 @@ window.DATA = {
    },
    "kata": "transpose baris kolom",
    "gambar": [
-    "data-baris-menjadi-data-kolom-excel-1-300x99.jpg",
-    "data-baris-menjadi-data-kolom-excel-2-300x168.jpg",
     "data-baris-menjadi-data-kolom-excel-3-300x191.jpg",
     "data-baris-menjadi-data-kolom-excel-4-300x267.jpg",
     "data-baris-menjadi-data-kolom-excel-5.jpg"
@@ -1319,13 +1327,18 @@ window.DATA = {
    "id": "pecah-teks",
    "cat": "data",
    "judul": "Memecah teks ke beberapa kolom",
-   "ringkas": "Text to Columns memotong teks panjang menjadi kolom terpisah berdasarkan pemisah, misalnya koma atau spasi.",
+   "ringkas": "Text to Columns memotong tulisan panjang dalam satu kotak menjadi beberapa kolom, berdasarkan tanda pemisah seperti koma atau spasi.",
+   "intinya": "Kamu memberi tahu Excel tanda mana yang jadi tempat memotong.",
+   "analogi": "Bayangkan sebuah roti panjang. Kamu memotongnya di setiap garis yang kamu tandai. Tanda itu bisa koma, spasi, atau titik. Hasilnya beberapa potong roti di kotak yang berbeda.",
    "langkah": [
-    "Blok kolom yang berisi teks gabungan.",
-    "Data > Text to Columns.",
-    "Pilih Delimited bila ada pemisah, atau Fixed width bila lebar tetap.",
-    "Centang pemisah (Comma, Space, ...), lalu Next dan Finish.",
-    "Pastikan kolom di sebelah kanan kosong agar tidak tertimpa."
+    "Sorot kolom yang isinya tulisan gabungan.",
+    "Buka tab Data lalu klik Text to Columns.",
+    "Pilih Delimited kalau ada tanda pemisah. Pilih Fixed width kalau setiap potongan punya lebar yang sama.",
+    "Centang tanda pemisahnya (Comma untuk koma, Space untuk spasi), lalu klik Next dan Finish.",
+    "Pastikan kolom di sebelah kanan masih kosong. Kalau tidak, isinya akan tertimpa."
+   ],
+   "tips": [
+    "Salin datamu dulu sebelum memotong. Kalau salah, kamu masih punya aslinya."
    ],
    "demo": {
     "data": [
@@ -1372,23 +1385,26 @@ window.DATA = {
    },
    "kata": "text to columns pecah teks delimiter",
    "gambar": [
-    "mecah-teks-1-300x161.jpg",
-    "mecah-teks-2-300x191.jpg",
     "mecah-teks-3-300x229.jpg",
     "mecah-teks-4-300x229.jpg",
-    "mecah-teks-5-300x229.jpg",
-    "mecah-teks-6-300x131.jpg"
+    "mecah-teks-5-300x229.jpg"
    ]
   },
   {
    "id": "npwp",
    "cat": "data",
    "judul": "Mengubah format NPWP",
-   "ringkas": "Nomor NPWP memiliki pola titik dan strip. Format ini bisa dibuat dengan format kustom atau rumus teks.",
+   "ringkas": "Nomor NPWP punya pola titik dan strip. Kamu bisa membuatnya dengan format kustom atau dengan rumus tulisan.",
+   "intinya": "Format kustom menyisipkan titik dan strip tanpa mengubah angkanya.",
+   "analogi": "Bayangkan 15 angka berderet tanpa jeda, sulit dibaca. Format kustom seperti penggaris yang menempelkan titik dan strip pada tempat yang benar, sehingga lebih mudah dibaca.",
    "langkah": [
-    "Simpan nomor sebagai teks agar nol di depan tidak hilang.",
-    "Format Cells > Custom, tulis pola 00.000.000.0-000.000 untuk angka 15 digit.",
-    "Alternatif: susun dengan LEFT, MID, dan RIGHT lalu sambung memakai &."
+    "Sorot kotak berisi nomor NPWP (15 digit).",
+    "Tekan Ctrl+1, pilih Custom, lalu tulis 00.000.000.0-000.000 di kotak Type.",
+    "Klik OK. Nomor tampil dengan titik dan strip, angkanya di dalam kotak tidak berubah.",
+    "Cara lain: kalau nomornya berupa tulisan, ambil potongannya dengan LEFT, MID, dan RIGHT, lalu sambung dengan & dan tanda titik atau strip."
+   ],
+   "tips": [
+    "Kalau nomor diawali angka 0, simpan sebagai Text supaya nol di depan tidak hilang."
    ],
    "demo": {
     "data": [
@@ -1423,12 +1439,14 @@ window.DATA = {
    "id": "currency",
    "cat": "data",
    "judul": "Format Currency dan Accounting",
-   "ringkas": "Currency menempelkan simbol mata uang dekat angka; Accounting meluruskan simbol di tepi kiri sel.",
+   "ringkas": "Currency menaruh simbol mata uang tepat di depan angka. Accounting menaruh simbol di tepi kiri kotak sehingga simbol dan angka rapi berderet.",
+   "intinya": "Keduanya hanya mengubah tampilan, bukan nilai angkanya.",
+   "analogi": "Currency seperti menempelkan tulisan Rp di depan harga di label toko. Accounting seperti daftar harga di struk yang semua tanda Rp-nya berbaris lurus di kiri dan semua angkanya rata di kanan.",
    "langkah": [
-    "Blok sel angka.",
-    "Home > Number Format > Currency atau Accounting.",
-    "Ubah simbol (misalnya Rp) lewat Format Cells > Number > Currency > Symbol.",
-    "Atur jumlah desimal sesuai kebutuhan."
+    "Sorot kotak angka.",
+    "Buka tab Home, klik Number Format, lalu pilih Currency atau Accounting.",
+    "Mau mengganti simbol? Tekan Ctrl+1, pilih Currency, lalu pilih Rp di Symbol.",
+    "Atur jumlah angka di belakang koma sesuai kebutuhan (Decimal places)."
    ],
    "kuis": {
     "q": "Perbedaan utama Accounting dibanding Currency?",
@@ -1450,22 +1468,27 @@ window.DATA = {
    "id": "nomor-acak",
    "cat": "data",
    "judul": "Membuat nomor acak",
-   "ringkas": "RAND dan RANDBETWEEN menghasilkan angka acak yang berubah setiap lembar kerja dihitung ulang.",
+   "ringkas": "RAND dan RANDBETWEEN membuat angka acak. Angkanya berganti setiap kali lembar kerja dihitung ulang.",
+   "intinya": "RANDBETWEEN mengundi satu angka bulat di antara dua batas yang kamu tentukan.",
+   "analogi": "Bayangkan mengocok dadu. Setiap kali kamu mengocok, angkanya berbeda. =RANDBETWEEN(1;6) adalah dadu di dalam Excel. Kalau kamu mau angkanya berhenti berubah, kamu perlu menempelkan hasilnya sebagai angka biasa.",
    "sintaks": "=RANDBETWEEN(bawah; atas)",
    "argumen": [
     [
      "bawah",
-     "Bilangan bulat terkecil"
+     "Angka bulat terkecil yang boleh keluar."
     ],
     [
      "atas",
-     "Bilangan bulat terbesar"
+     "Angka bulat terbesar yang boleh keluar."
     ]
    ],
    "langkah": [
-    "Ketik =RANDBETWEEN(1;100) lalu Enter.",
-    "Tekan F9 untuk mengacak ulang.",
-    "Untuk membekukan hasil, salin lalu Paste Special > Values."
+    "Ketik =RANDBETWEEN(1;100) lalu tekan Enter. Muncul satu angka dari 1 sampai 100.",
+    "Tekan F9 untuk mengocok ulang.",
+    "Mau angkanya tetap? Salin kotaknya (Ctrl+C), lalu Paste Special dan pilih Values."
+   ],
+   "tips": [
+    "Angka acak berganti setiap kali kamu mengetik sesuatu di lembar kerja. Itu normal, bukan kerusakan."
    ],
    "demo": {
     "data": [
@@ -1504,11 +1527,7 @@ window.DATA = {
    "kata": "acak random randbetween",
    "gambar": [
     "hasil-perumusan-279x300.jpg",
-    "membuat-nomor-acak-1-300x232.jpg",
     "membuat-nomor-acak-2-300x266.jpg",
-    "membuat-nomor-acak-3-300x137.jpg",
-    "membuat-nomor-acak-4-300x233.jpg",
-    "membuat-nomor-acak-5-300x231.jpg",
     "tabel-1-data-300x250.jpg"
    ]
   },
@@ -1516,27 +1535,30 @@ window.DATA = {
    "id": "sum",
    "cat": "rumus",
    "judul": "SUM: menjumlahkan",
-   "ringkas": "SUM menjumlahkan semua angka dalam satu atau beberapa rentang. Ini fungsi yang paling sering dipakai.",
+   "ringkas": "SUM menjumlahkan semua angka di satu atau beberapa deretan kotak. Ini rumus yang paling sering dipakai.",
+   "intinya": "SUM sama seperti kamu menjumlahkan di kalkulator, hanya saja Excel yang menekan tombolnya.",
+   "analogi": "Bayangkan kamu menghitung uang receh di meja. Kamu bilang, \"Tolong jumlahkan semua ini.\" SUM adalah tangan yang menjumlahkannya dengan cepat dan tanpa salah.",
    "sintaks": "=SUM(angka1; [angka2]; ...)",
    "argumen": [
     [
      "angka1",
-     "Sel, rentang, atau angka pertama"
+     "Kotak, deretan kotak, atau angka pertama yang mau dijumlahkan."
     ],
     [
      "angka2, ...",
-     "Opsional, tambahan sel atau rentang"
+     "Tidak wajib. Tambahan kotak atau deretan lain."
     ]
    ],
    "langkah": [
-    "Klik sel di bawah deretan angka.",
-    "Ketik =SUM( lalu seret sel yang dijumlahkan.",
-    "Tutup kurung dan tekan Enter. Pintasan: Alt+= langsung membuat SUM.",
-    "Seret rumus ke samping atau ke bawah untuk total kolom atau baris lain."
+    "Klik satu kotak kosong tepat di bawah deretan angka.",
+    "Ketik =SUM( lalu seret mouse dari angka pertama sampai angka terakhir.",
+    "Ketik tanda kurung tutup ) lalu tekan Enter.",
+    "Jalan pintas: tekan Alt dan = bersamaan. Excel menuliskan SUM untukmu.",
+    "Mau total kolom lain? Tarik rumusnya ke samping. Alamat kotak menyesuaikan sendiri."
    ],
    "tips": [
-    "Teks dan sel kosong dalam rentang diabaikan.",
-    "Total ke samping dan ke bawah memakai pola yang sama; alamat sel menyesuaikan saat disalin."
+    "Tulisan dan kotak kosong di dalam deretan diabaikan. Hanya angka yang dijumlahkan.",
+    "Total ke bawah dan total ke samping memakai pola yang sama."
    ],
    "demo": {
     "data": [
@@ -1610,36 +1632,31 @@ window.DATA = {
    "gambar": [
     "fungsi-sum-pada-excel.jpg",
     "gambar-1-1.jpg",
-    "gambar-1-2-300x35.jpg",
-    "gambar-2-1.jpg",
-    "gambar-2-2-300x127.jpg",
-    "gambar-3-2-300x127.jpg",
-    "gambar-4-2-300x127.jpg",
-    "gambar-4-3rumus-kebawah-300x120.jpg",
-    "gambar-5-2hasil-rumus-sum-300x116.jpg",
-    "gambar-5-3hassil-rumus-kebawah-300x121.jpg"
+    "gambar-2-1.jpg"
    ]
   },
   {
    "id": "max",
    "cat": "rumus",
    "judul": "MAX: nilai terbesar",
-   "ringkas": "MAX mengambil angka terbesar dari sekumpulan sel.",
+   "ringkas": "MAX mencari angka yang paling besar dari sekumpulan kotak.",
+   "intinya": "MAX menjawab: siapa yang paling tinggi?",
+   "analogi": "Bayangkan kamu membandingkan tinggi badan teman sekelas. MAX langsung menunjuk siapa yang paling tinggi, lalu menyebutkan tingginya.",
    "sintaks": "=MAX(angka1; [angka2]; ...)",
    "argumen": [
     [
      "angka1",
-     "Sel atau rentang pertama"
+     "Kotak atau deretan kotak pertama."
     ],
     [
      "angka2, ...",
-     "Opsional"
+     "Tidak wajib. Tambahan kotak atau deretan lain."
     ]
    ],
    "langkah": [
     "Siapkan deretan angka.",
-    "Klik sel hasil, ketik =MAX( lalu seret rentang.",
-    "Tekan Enter."
+    "Klik kotak kosong untuk hasil, ketik =MAX( lalu seret deretan angkanya.",
+    "Tutup dengan ) lalu tekan Enter."
    ],
    "demo": {
     "data": [
@@ -1712,7 +1729,6 @@ window.DATA = {
    "gambar": [
     "1-4-contoh-data-rumus-max-300x158.jpg",
     "2-4-mengoperasikan-rumus-max-300x156.jpg",
-    "3-4-penulisan-rumus-max-2-300x153.jpg",
     "4-4-hasil-aplikasi-rumus-max-300x156.jpg"
    ]
   },
@@ -1720,22 +1736,24 @@ window.DATA = {
    "id": "min",
    "cat": "rumus",
    "judul": "MIN: nilai terkecil",
-   "ringkas": "MIN mengambil angka terkecil.",
+   "ringkas": "MIN mencari angka yang paling kecil dari sekumpulan kotak.",
+   "intinya": "MIN menjawab: siapa yang paling rendah?",
+   "analogi": "Kebalikan MAX. Kalau MAX mencari anak yang paling tinggi, MIN mencari anak yang paling pendek. Cocok untuk mencari harga termurah atau nilai terendah.",
    "sintaks": "=MIN(angka1; [angka2]; ...)",
    "argumen": [
     [
      "angka1",
-     "Sel atau rentang pertama"
+     "Kotak atau deretan kotak pertama."
     ],
     [
      "angka2, ...",
-     "Opsional"
+     "Tidak wajib. Tambahan kotak atau deretan lain."
     ]
    ],
    "langkah": [
-    "Klik sel hasil.",
-    "Ketik =MIN( lalu seret rentang.",
-    "Tekan Enter."
+    "Klik kotak kosong untuk hasil.",
+    "Ketik =MIN( lalu seret deretan angkanya.",
+    "Tutup dengan ) lalu tekan Enter."
    ],
    "demo": {
     "data": [
@@ -1802,7 +1820,6 @@ window.DATA = {
    },
    "kata": "min minimum terkecil terendah",
    "gambar": [
-    "5-4-hasil-mengoperasikan-rumus-min-300x124.jpg",
     "rumus-min-excel-contoh-1.jpg",
     "rumus-min-excel-contoh-2.jpg",
     "rumus-min-excel-data.jpg"
@@ -1812,25 +1829,27 @@ window.DATA = {
    "id": "average",
    "cat": "rumus",
    "judul": "AVERAGE: rata-rata",
-   "ringkas": "AVERAGE menjumlahkan lalu membagi dengan banyaknya angka. Sel kosong dan teks diabaikan.",
+   "ringkas": "AVERAGE menghitung rata-rata: semua angka dijumlahkan, lalu dibagi banyaknya angka. Kotak kosong dan tulisan diabaikan.",
+   "intinya": "Rata-rata adalah angka tengah yang adil untuk semua.",
+   "analogi": "Bayangkan tiga anak punya 70, 80, dan 90 permen. Kalau permennya dikumpulkan lalu dibagi rata, masing-masing mendapat 80. Itulah rata-rata.",
    "sintaks": "=AVERAGE(angka1; [angka2]; ...)",
    "argumen": [
     [
      "angka1",
-     "Sel atau rentang pertama"
+     "Kotak atau deretan kotak pertama."
     ],
     [
      "angka2, ...",
-     "Opsional"
+     "Tidak wajib. Tambahan kotak atau deretan lain."
     ]
    ],
    "langkah": [
-    "Klik sel hasil.",
-    "Ketik =AVERAGE( lalu seret nilai.",
-    "Tekan Enter. Atur desimal bila perlu."
+    "Klik kotak kosong untuk hasil.",
+    "Ketik =AVERAGE( lalu seret deretan nilainya.",
+    "Tutup dengan ) lalu tekan Enter. Atur jumlah angka di belakang koma kalau perlu."
    ],
    "tips": [
-    "Sel berisi 0 ikut dihitung, sel kosong tidak. Hati-hati dengan data yang belum diisi."
+    "Kotak berisi angka 0 ikut dihitung. Kotak yang benar-benar kosong tidak ikut. Hati-hati dengan data yang belum diisi."
    ],
    "demo": {
     "data": [
@@ -1903,7 +1922,6 @@ window.DATA = {
    "gambar": [
     "gambar-1-3average-300x136.jpg",
     "gambar-2-3average-300x125.jpg",
-    "gambar-3-3average1-300x125.jpg",
     "gambar-6-3-hasil-rumus-average-300x124.jpg"
    ]
   },
@@ -1911,18 +1929,21 @@ window.DATA = {
    "id": "count",
    "cat": "rumus",
    "judul": "COUNT, COUNTA, dan COUNTBLANK",
-   "ringkas": "COUNT menghitung sel berisi angka, COUNTA menghitung sel yang tidak kosong, dan COUNTBLANK menghitung sel kosong.",
+   "ringkas": "COUNT menghitung kotak yang berisi angka. COUNTA menghitung kotak yang ada isinya (angka maupun tulisan). COUNTBLANK menghitung kotak yang kosong.",
+   "intinya": "Tiga fungsi ini menjawab tiga pertanyaan: berapa angka, berapa yang terisi, berapa yang kosong.",
+   "analogi": "Bayangkan satu baris kursi di bioskop. COUNT menghitung kursi yang ditempati orang. COUNTA menghitung kursi yang ada barangnya (tas, jaket, atau orang). COUNTBLANK menghitung kursi yang masih kosong.",
    "sintaks": "=COUNT(rentang)   =COUNTA(rentang)   =COUNTBLANK(rentang)",
    "argumen": [
     [
      "rentang",
-     "Sel yang dihitung"
+     "Deretan kotak yang mau dihitung."
     ]
    ],
    "langkah": [
-    "Pilih sel hasil.",
-    "Ketik fungsi lalu seret rentang.",
-    "Bandingkan hasil ketiga fungsi untuk rentang yang sama."
+    "Klik kotak kosong untuk hasil.",
+    "Ketik salah satu fungsi, misalnya =COUNT( lalu seret deretan kotaknya.",
+    "Tutup dengan ) lalu tekan Enter.",
+    "Coba ketiga fungsi pada deretan yang sama, lalu bandingkan hasilnya."
    ],
    "demo": {
     "data": [
@@ -1986,26 +2007,28 @@ window.DATA = {
    "id": "countif",
    "cat": "rumus",
    "judul": "COUNTIF: menghitung sel yang memenuhi syarat",
-   "ringkas": "COUNTIF menghitung berapa sel yang cocok dengan satu syarat, misalnya jumlah nilai di atas 75.",
+   "ringkas": "COUNTIF menghitung berapa kotak yang cocok dengan satu syarat, misalnya berapa nilai yang di atas 75.",
+   "intinya": "COUNTIF = hitung, tetapi hanya yang memenuhi syarat.",
+   "analogi": "Bayangkan kamu berdiri di depan kelas dan berkata, \"Yang tingginya di atas 150 cm, angkat tangan.\" Lalu kamu menghitung tangan yang terangkat. COUNTIF melakukan hal yang sama pada kotak-kotak.",
    "sintaks": "=COUNTIF(rentang; kriteria)",
    "argumen": [
     [
      "rentang",
-     "Sel yang diperiksa"
+     "Kotak-kotak yang diperiksa."
     ],
     [
      "kriteria",
-     "Angka, teks, atau syarat seperti \">75\""
+     "Syaratnya. Bisa angka, tulisan, atau perbandingan seperti \">75\"."
     ]
    ],
    "langkah": [
-    "Ketik =COUNTIF( lalu seret rentang.",
-    "Beri tanda ; atau , lalu tulis kriteria dalam tanda kutip, misalnya \">75\".",
-    "Tekan Enter."
+    "Ketik =COUNTIF( lalu seret deretan kotak yang diperiksa.",
+    "Ketik tanda titik koma (;) lalu tulis syarat di dalam tanda kutip, misalnya \">75\".",
+    "Tutup dengan ) lalu tekan Enter."
    ],
    "tips": [
-    "Operator perbandingan harus berada di dalam tanda kutip: \">=70\".",
-    "Gunakan * sebagai pengganti banyak karakter, misalnya \"A*\"."
+    "Tanda perbandingan seperti > atau >= harus berada di dalam tanda kutip: \">=70\".",
+    "Tanda bintang (*) berarti \"huruf apa saja, berapa pun\". \"A*\" artinya semua tulisan yang diawali huruf A."
    ],
    "demo": {
     "data": [
@@ -2084,26 +2107,29 @@ window.DATA = {
    "id": "sumif",
    "cat": "rumus",
    "judul": "SUMIF: menjumlahkan dengan syarat",
-   "ringkas": "SUMIF menjumlahkan angka hanya dari baris yang memenuhi syarat.",
+   "ringkas": "SUMIF menjumlahkan angka, tetapi hanya dari baris yang cocok dengan syaratmu.",
+   "intinya": "SUMIF = jumlahkan, tetapi hanya yang memenuhi syarat.",
+   "analogi": "Bayangkan kamu punya celengan berisi uang dari beberapa anak. Kamu bertanya, \"Berapa uang milik Ani saja?\" Kamu hanya menjumlahkan uang yang bertuliskan nama Ani. Itulah SUMIF.",
    "sintaks": "=SUMIF(rentang; kriteria; [rentang_jumlah])",
    "argumen": [
     [
      "rentang",
-     "Sel yang diperiksa terhadap kriteria"
+     "Kotak-kotak yang diperiksa terhadap syarat, misalnya kolom nama."
     ],
     [
      "kriteria",
-     "Syarat"
+     "Syaratnya, misalnya \"Ani\"."
     ],
     [
      "rentang_jumlah",
-     "Sel yang dijumlahkan; jika dikosongkan, rentang itu sendiri"
+     "Kotak-kotak yang dijumlahkan, misalnya kolom uang. Kalau dikosongkan, Excel menjumlahkan rentang pertama."
     ]
    ],
    "langkah": [
-    "Ketik =SUMIF( lalu blok kolom yang diperiksa.",
-    "Tulis kriteria dalam tanda kutip.",
-    "Blok kolom yang dijumlahkan, tutup kurung, Enter."
+    "Ketik =SUMIF( lalu sorot kolom yang diperiksa (misalnya kolom nama).",
+    "Ketik ; lalu tulis syaratnya di dalam tanda kutip, misalnya \"Ani\".",
+    "Ketik ; lalu sorot kolom yang dijumlahkan (misalnya kolom uang).",
+    "Tutup dengan ) lalu tekan Enter."
    ],
    "demo": {
     "data": [
@@ -2166,26 +2192,31 @@ window.DATA = {
    "id": "averageif",
    "cat": "rumus",
    "judul": "AVERAGEIF: rata-rata dengan syarat",
-   "ringkas": "AVERAGEIF menghitung rata-rata hanya dari sel yang memenuhi syarat.",
+   "ringkas": "AVERAGEIF menghitung rata-rata, tetapi hanya dari kotak yang cocok dengan syaratmu.",
+   "intinya": "AVERAGEIF = rata-rata, tetapi hanya yang memenuhi syarat.",
+   "analogi": "Bayangkan kamu ingin tahu rata-rata nilai anak laki-laki saja. Kamu hanya mengambil nilai anak laki-laki, lalu merata-ratakannya. Anak perempuan tidak ikut dihitung.",
    "sintaks": "=AVERAGEIF(rentang; kriteria; [rentang_rata2])",
    "argumen": [
     [
      "rentang",
-     "Sel yang diperiksa"
+     "Kotak-kotak yang diperiksa terhadap syarat."
     ],
     [
      "kriteria",
-     "Syarat"
+     "Syaratnya."
     ],
     [
      "rentang_rata2",
-     "Sel yang dirata-ratakan"
+     "Kotak-kotak yang dirata-ratakan."
     ]
    ],
    "langkah": [
-    "Ketik =AVERAGEIF( lalu pilih rentang yang diperiksa.",
-    "Tulis kriteria dalam tanda kutip.",
-    "Pilih rentang yang dirata-ratakan lalu tekan Enter."
+    "Ketik =AVERAGEIF( lalu sorot kolom yang diperiksa.",
+    "Ketik ; lalu tulis syaratnya di dalam tanda kutip.",
+    "Ketik ; lalu sorot kolom yang dirata-ratakan, tutup dengan ), lalu tekan Enter."
+   ],
+   "tips": [
+    "Kalau tidak ada satu pun kotak yang cocok, hasilnya #DIV/0!. Artinya tidak ada yang bisa dirata-ratakan."
    ],
    "demo": {
     "data": [
@@ -2236,40 +2267,40 @@ window.DATA = {
    },
    "kata": "averageif rata-rata kondisi",
    "gambar": [
-    "averageif-1-300x295.jpg",
     "averageif-2-300x296.jpg",
-    "averageif-3-300x300.jpg",
-    "averageif-4-300x296.jpg"
+    "averageif-3-300x300.jpg"
    ]
   },
   {
    "id": "rank",
    "cat": "rumus",
    "judul": "RANK: peringkat",
-   "ringkas": "RANK menentukan urutan peringkat sebuah angka di antara angka lain.",
+   "ringkas": "RANK memberi tahu peringkat sebuah angka di antara angka-angka lain: juara 1, juara 2, dan seterusnya.",
+   "intinya": "RANK menjawab: aku ada di urutan ke berapa?",
+   "analogi": "Bayangkan lomba lari. Semua waktu dicatat, lalu kamu bertanya, \"Aku juara berapa?\" RANK membandingkan angkamu dengan semua angka lain lalu menyebutkan urutannya.",
    "sintaks": "=RANK(angka; rentang; [urutan])",
    "argumen": [
     [
      "angka",
-     "Nilai yang dicari peringkatnya"
+     "Angka yang mau dicari peringkatnya."
     ],
     [
      "rentang",
-     "Seluruh nilai pembanding, kunci dengan $"
+     "Semua angka pembanding. Tulis dengan tanda $ supaya tidak bergeser saat disalin."
     ],
     [
      "urutan",
-     "0 atau kosong = terbesar peringkat 1; 1 = terkecil peringkat 1"
+     "Kosong atau 0: angka terbesar jadi juara 1. Isi 1: angka terkecil jadi juara 1."
     ]
    ],
    "langkah": [
-    "Hitung total atau rata-rata tiap siswa.",
-    "Di sel peringkat ketik =RANK(E2;$E$2:$E$6).",
-    "Tanda $ mengunci rentang agar tidak bergeser saat rumus disalin ke bawah.",
-    "Seret ke bawah."
+    "Siapkan nilai tiap siswa, misalnya di kolom E.",
+    "Di kotak peringkat ketik =RANK(E2;$E$2:$E$6).",
+    "Tanda $ mengunci deretan pembanding supaya tidak bergeser ke bawah saat rumus disalin. Tekan F4 setelah menyorot deretan untuk memberi tanda $ otomatis.",
+    "Tekan Enter, lalu tarik rumus ke bawah."
    ],
    "tips": [
-    "Dua nilai sama menghasilkan peringkat yang sama, dan peringkat berikutnya dilewati."
+    "Kalau dua nilai sama, peringkatnya sama, lalu peringkat berikutnya dilewati. Contoh: dua juara 1, berikutnya juara 3."
    ],
    "demo": {
     "data": [
@@ -2327,7 +2358,6 @@ window.DATA = {
    "gambar": [
     "5-5-hasil-rumus-rank-2-300x179.jpg",
     "gambar-2-5-rumus-1-300x169.jpg",
-    "gambar-3-5-hasil-rumus-1-300x179.jpg",
     "gambar-4-5-rumus-2-300x182.jpg"
    ]
   },
@@ -2335,22 +2365,27 @@ window.DATA = {
    "id": "large",
    "cat": "rumus",
    "judul": "LARGE dan SMALL: nilai ke-n",
-   "ringkas": "LARGE mengambil nilai terbesar ke-k, SMALL mengambil nilai terkecil ke-k.",
+   "ringkas": "LARGE mengambil angka terbesar ke-sekian. SMALL mengambil angka terkecil ke-sekian.",
+   "intinya": "LARGE dan SMALL menjawab: siapa juara kedua? juara ketiga?",
+   "analogi": "MAX hanya menunjuk juara 1. LARGE bisa menunjuk juara 2, juara 3, dan seterusnya. Kamu cukup menyebut nomor urutnya.",
    "sintaks": "=LARGE(rentang; k)   =SMALL(rentang; k)",
    "argumen": [
     [
      "rentang",
-     "Kumpulan angka"
+     "Kumpulan angka."
     ],
     [
      "k",
-     "Urutan yang diminta (1 = terbesar atau terkecil)"
+     "Urutan yang diminta. 1 artinya yang pertama, 2 artinya yang kedua, dan seterusnya."
     ]
    ],
    "langkah": [
-    "Ketik =LARGE( lalu pilih rentang.",
-    "Isi k, misalnya 2 untuk nilai kedua terbesar.",
-    "Tekan Enter."
+    "Ketik =LARGE( lalu sorot deretan angkanya.",
+    "Ketik ; lalu isi k. Contoh: 2 untuk angka terbesar kedua.",
+    "Tutup dengan ) lalu tekan Enter."
+   ],
+   "tips": [
+    "=LARGE(rentang;1) hasilnya sama dengan MAX. =SMALL(rentang;1) hasilnya sama dengan MIN."
    ],
    "demo": {
     "data": [
@@ -2421,8 +2456,6 @@ window.DATA = {
    },
    "kata": "large small terbesar kedua ke-n",
    "gambar": [
-    "rumus-excel-large-1.jpg",
-    "rumus-excel-large-2.jpg",
     "rumus-excel-large-3.jpg",
     "rumus-excel-large-data-300x173.jpg"
    ]
@@ -2431,26 +2464,29 @@ window.DATA = {
    "id": "percentrank",
    "cat": "rumus",
    "judul": "PERCENTRANK: posisi persentase",
-   "ringkas": "PERCENTRANK menunjukkan posisi sebuah nilai sebagai persentase dari seluruh data, dari 0 sampai 1.",
+   "ringkas": "PERCENTRANK menunjukkan posisi sebuah angka dalam bentuk persentase dari seluruh data, mulai 0 (paling bawah) sampai 1 (paling atas).",
+   "intinya": "Hasilnya makin dekat ke 1, makin tinggi posisi angkamu.",
+   "analogi": "Bayangkan kamu berdiri di barisan anak-anak yang diurutkan dari yang paling pendek. Kalau kamu di tengah, posisimu sekitar 0,5. Kalau kamu yang paling tinggi, posisimu 1.",
    "sintaks": "=PERCENTRANK(rentang; x; [digit])",
    "argumen": [
     [
      "rentang",
-     "Kumpulan data"
+     "Seluruh data pembanding."
     ],
     [
      "x",
-     "Nilai yang dicari posisinya"
+     "Angka yang mau dicari posisinya."
     ],
     [
      "digit",
-     "Opsional, jumlah angka signifikan (default 3)"
+     "Tidak wajib. Berapa angka di belakang koma pada hasil. Kalau kosong, 3 digit."
     ]
    ],
    "langkah": [
-    "Ketik =PERCENTRANK( lalu pilih rentang data.",
-    "Isi x dengan nilai atau sel yang dinilai.",
-    "Ubah format sel menjadi Percentage bila ingin tampil sebagai persen."
+    "Ketik =PERCENTRANK( lalu sorot seluruh data.",
+    "Ketik ; lalu isi angka (atau kotak) yang mau dinilai.",
+    "Tutup dengan ) lalu tekan Enter.",
+    "Mau tampil sebagai persen? Ubah format kotak menjadi Percentage di tab Home."
    ],
    "demo": {
     "data": [
@@ -2499,31 +2535,32 @@ window.DATA = {
    },
    "kata": "percentrank persentil posisi",
    "gambar": [
-    "percentrank-1-300x129.jpg",
-    "percentrank-2-300x130.jpg",
-    "percentrank-3-300x130.jpg"
+    "percentrank-2-300x130.jpg"
    ]
   },
   {
    "id": "sumproduct",
    "cat": "rumus",
    "judul": "SUMPRODUCT: kali lalu jumlah",
-   "ringkas": "SUMPRODUCT mengalikan pasangan sel yang sejajar lalu menjumlahkannya, cocok untuk total harga atau nilai berbobot.",
+   "ringkas": "SUMPRODUCT mengalikan angka-angka yang sejajar, lalu menjumlahkan semua hasil kalinya. Cocok untuk total harga.",
+   "intinya": "Kali dulu, jumlahkan kemudian, semuanya dalam satu rumus.",
+   "analogi": "Bayangkan kamu belanja: 2 buku seharga 5 ribu dan 3 pensil seharga 2 ribu. Jumlah uangnya adalah (2 x 5) ditambah (3 x 2). SUMPRODUCT melakukan hitungan itu untuk puluhan barang sekaligus.",
    "sintaks": "=SUMPRODUCT(rentang1; [rentang2]; ...)",
    "argumen": [
     [
      "rentang1",
-     "Deret angka pertama"
+     "Deretan angka pertama, misalnya harga."
     ],
     [
      "rentang2",
-     "Deret kedua dengan ukuran sama"
+     "Deretan angka kedua yang jumlahnya sama banyak, misalnya jumlah barang."
     ]
    ],
    "langkah": [
-    "Pastikan setiap rentang memiliki jumlah baris yang sama.",
-    "Ketik =SUMPRODUCT( lalu pilih rentang harga, koma, rentang jumlah.",
-    "Tekan Enter."
+    "Pastikan kedua deretan punya jumlah baris yang sama.",
+    "Ketik =SUMPRODUCT( lalu sorot deretan harga.",
+    "Ketik ; lalu sorot deretan jumlah barang.",
+    "Tutup dengan ) lalu tekan Enter."
    ],
    "demo": {
     "data": [
@@ -2577,7 +2614,6 @@ window.DATA = {
    "gambar": [
     "sumproduct-1.jpg",
     "sumproduct-2-300x254.jpg",
-    "sumproduct-3-300x253.jpg",
     "sumproduct-4-300x222.jpg"
    ]
   },
@@ -2585,22 +2621,27 @@ window.DATA = {
    "id": "korelasi",
    "cat": "rumus",
    "judul": "CORREL: korelasi dua data",
-   "ringkas": "CORREL mengukur seberapa kuat dua deret data bergerak bersama, dari -1 sampai 1.",
+   "ringkas": "CORREL mengukur seberapa kompak dua deret angka bergerak bersama. Hasilnya antara -1 dan 1.",
+   "intinya": "Dekat 1 artinya naik bersama. Dekat -1 artinya satu naik, satu turun. Dekat 0 artinya tidak ada hubungan.",
+   "analogi": "Bayangkan jumlah es krim yang terjual dan suhu udara. Saat udara makin panas, es krim makin laku: keduanya naik bersama, korelasinya dekat 1. Sedangkan suhu dan jumlah jaket yang terjual: suhu naik, jaket turun, korelasinya dekat -1.",
    "sintaks": "=CORREL(data1; data2)",
    "argumen": [
     [
      "data1",
-     "Deret angka pertama"
+     "Deretan angka pertama."
     ],
     [
      "data2",
-     "Deret angka kedua, jumlahnya sama"
+     "Deretan angka kedua. Jumlahnya harus sama dengan deretan pertama."
     ]
    ],
    "langkah": [
-    "Susun dua deret data berdampingan.",
-    "Ketik =CORREL( lalu pilih deret pertama dan kedua.",
-    "Mendekati 1 berarti naik bersama, mendekati -1 berarti berlawanan, mendekati 0 berarti tidak berhubungan."
+    "Taruh kedua deretan angka berdampingan.",
+    "Ketik =CORREL( lalu sorot deretan pertama.",
+    "Ketik ; lalu sorot deretan kedua. Tutup dengan ) lalu tekan Enter."
+   ],
+   "tips": [
+    "Korelasi hanya menunjukkan dua hal bergerak bersama. Itu tidak membuktikan yang satu menyebabkan yang lain."
    ],
    "demo": {
     "data": [
@@ -2659,30 +2700,32 @@ window.DATA = {
    "id": "if-tunggal",
    "cat": "logika",
    "judul": "IF: memilih satu dari dua hasil",
-   "ringkas": "IF memeriksa sebuah syarat, lalu memberi satu hasil bila benar dan hasil lain bila salah.",
+   "ringkas": "IF memeriksa sebuah syarat. Kalau benar, Excel memberi satu jawaban. Kalau salah, Excel memberi jawaban lain.",
+   "intinya": "IF = jika ... maka ..., kalau tidak ... maka ...",
+   "analogi": "Bayangkan penjaga pintu. Ia bertanya, \"Apakah kamu membawa tiket?\" Kalau ya, kamu boleh masuk. Kalau tidak, kamu ditolak. IF adalah penjaga pintu itu di dalam Excel.",
    "sintaks": "=IF(syarat; hasil_jika_benar; hasil_jika_salah)",
    "argumen": [
     [
      "syarat",
-     "Pernyataan yang bernilai benar atau salah, misalnya B2>=75"
+     "Pertanyaan yang jawabannya benar atau salah, misalnya B2>=75."
     ],
     [
      "hasil_jika_benar",
-     "Nilai bila syarat terpenuhi"
+     "Jawaban kalau syaratnya terpenuhi."
     ],
     [
      "hasil_jika_salah",
-     "Nilai bila syarat tidak terpenuhi"
+     "Jawaban kalau syaratnya tidak terpenuhi."
     ]
    ],
    "langkah": [
-    "Tentukan syaratnya, misalnya nilai minimal 75 untuk lulus.",
-    "Di sel hasil ketik =IF(B2>=75;\"Lulus\";\"Remedial\").",
-    "Tekan Enter lalu seret ke bawah.",
-    "Teks hasil harus diapit tanda kutip; angka tidak."
+    "Tentukan dulu syaratnya. Contoh: nilai 75 atau lebih berarti Lulus.",
+    "Di kotak hasil ketik =IF(B2>=75;\"Lulus\";\"Remedial\").",
+    "Tekan Enter, lalu tarik ke bawah.",
+    "Ingat: tulisan harus diapit tanda kutip. Angka tidak perlu."
    ],
    "tips": [
-    "Operator pembanding: = , <> (tidak sama), < , > , <= , >= ."
+    "Tanda perbandingan: = (sama dengan), <> (tidak sama), < (kurang dari), > (lebih dari), <= (kurang dari atau sama dengan), >= (lebih dari atau sama dengan)."
    ],
    "demo": {
     "data": [
@@ -2737,8 +2780,6 @@ window.DATA = {
    },
    "kata": "if jika logika kondisi lulus",
    "gambar": [
-    "1-7-gambar-data-if-300x133.jpg",
-    "2-7-hasil-fungsi-if-300x135.jpg",
     "contoh-rumus-if-excel-tunggal-2.jpg",
     "contoh-rumus-if-excel-tunggal.jpg",
     "fungsi-argumen-if-300x160.jpg"
@@ -2748,27 +2789,29 @@ window.DATA = {
    "id": "if-ganda",
    "cat": "logika",
    "judul": "IF bertingkat dan kombinasi AND, OR",
-   "ringkas": "Untuk lebih dari dua kemungkinan, letakkan IF di dalam IF. AND dan OR membantu menggabungkan beberapa syarat.",
+   "ringkas": "Kalau pilihannya lebih dari dua, taruh IF di dalam IF. AND dan OR membantu menggabungkan beberapa syarat sekaligus.",
+   "intinya": "IF bertingkat seperti pertanyaan berurutan. Excel berhenti di pertanyaan pertama yang jawabannya benar.",
+   "analogi": "Bayangkan guru memberi nilai huruf. Ia bertanya, \"Apakah 85 atau lebih? Kalau ya, A. Kalau bukan, apakah 75 atau lebih? Kalau ya, B.\" Begitu seterusnya sampai ada yang cocok.",
    "sintaks": "=IF(syarat1; hasil1; IF(syarat2; hasil2; hasil_lain))",
    "argumen": [
     [
      "AND(a; b)",
-     "Benar bila semua syarat benar"
+     "Benar hanya kalau semua syarat benar. Contoh: nilai tugas dan nilai ujian sama-sama 75 ke atas."
     ],
     [
      "OR(a; b)",
-     "Benar bila salah satu benar"
+     "Benar kalau salah satu syarat benar. Contoh: nilai tugas atau nilai ujian 75 ke atas."
     ]
    ],
    "langkah": [
-    "Urutkan syarat dari yang paling ketat atau paling tinggi.",
-    "Contoh predikat: =IF(B2>=85;\"A\";IF(B2>=75;\"B\";IF(B2>=65;\"C\";\"D\"))).",
+    "Urutkan syarat dari yang paling tinggi atau paling ketat.",
+    "Contoh nilai huruf: =IF(B2>=85;\"A\";IF(B2>=75;\"B\";IF(B2>=65;\"C\";\"D\"))).",
     "Untuk dua syarat sekaligus: =IF(AND(B2>=75;C2>=75);\"Lulus\";\"Gagal\").",
-    "Periksa jumlah kurung buka dan kurung tutup sama banyak."
+    "Hitung kurung buka dan kurung tutup. Jumlahnya harus sama."
    ],
    "tips": [
-    "Excel 2007 ke atas mengizinkan sampai 64 tingkat IF; sebelumnya hanya 7.",
-    "Fungsi IFS (Excel 2019 ke atas) menyederhanakan IF bertingkat."
+    "Excel 2007 ke atas boleh menumpuk sampai 64 IF. Versi lama hanya 7.",
+    "Excel baru punya fungsi IFS yang lebih ringkas untuk IF bertingkat."
    ],
    "demo": {
     "data": [
@@ -2829,38 +2872,37 @@ window.DATA = {
    },
    "kata": "if bertingkat nested and or predikat nilai",
    "gambar": [
-    "1-8-aplikasi-if-ganda-300x133.jpg",
     "1-8-aplikasi-if-ganda.jpg",
     "1-9-contoh-data.jpg",
-    "2-8-4-syarat-5pilihan-300x106.jpg",
-    "2-9-hasilrumus.jpg",
-    "3-8-contoh-lain-300x290.jpg"
+    "2-9-hasilrumus.jpg"
    ]
   },
   {
    "id": "left",
    "cat": "teks",
    "judul": "LEFT: mengambil karakter dari kiri",
-   "ringkas": "LEFT memotong sejumlah karakter dari awal teks, misalnya mengambil kode jenjang dari nomor induk.",
+   "ringkas": "LEFT memotong sejumlah huruf dari awal (sisi kiri) sebuah tulisan.",
+   "intinya": "LEFT = ambil dari kiri.",
+   "analogi": "Bayangkan kamu menggunting kata KOMPUTER dari ujung kirinya. Kalau kamu minta 3 huruf, kamu dapat KOM.",
    "sintaks": "=LEFT(teks; [jumlah_karakter])",
    "argumen": [
     [
      "teks",
-     "Teks atau sel sumber"
+     "Tulisan atau kotak sumber."
     ],
     [
      "jumlah_karakter",
-     "Banyak karakter dari kiri; kosong berarti 1"
+     "Berapa huruf yang diambil dari kiri. Kalau kosong, Excel mengambil 1 huruf."
     ]
    ],
    "langkah": [
-    "Klik sel hasil.",
-    "Ketik =LEFT( lalu klik sel sumber.",
-    "Isi jumlah karakter, misalnya 3.",
-    "Tekan Enter dan seret ke bawah."
+    "Klik kotak hasil.",
+    "Ketik =LEFT( lalu klik kotak sumber.",
+    "Ketik ; lalu isi jumlah huruf, misalnya 3. Tutup dengan ).",
+    "Tekan Enter, lalu tarik ke bawah."
    ],
    "tips": [
-    "Hasil LEFT selalu berupa teks, bahkan bila yang diambil angka. Bungkus dengan VALUE bila ingin menghitungnya."
+    "Hasil LEFT selalu berupa tulisan, walaupun yang diambil angka. Kalau mau dihitung, bungkus dengan VALUE."
    ],
    "demo": {
     "data": [
@@ -2912,7 +2954,6 @@ window.DATA = {
    "kata": "left kiri potong teks",
    "gambar": [
     "fungsi-left-001.jpg",
-    "fungsi-left.jpg",
     "g-1-left-300x135.jpg",
     "g-2-functions-arguments-left-300x152.jpg"
    ]
@@ -2921,22 +2962,24 @@ window.DATA = {
    "id": "right",
    "cat": "teks",
    "judul": "RIGHT: mengambil karakter dari kanan",
-   "ringkas": "RIGHT memotong karakter dari akhir teks, cocok untuk mengambil nomor urut di ujung kode.",
+   "ringkas": "RIGHT memotong sejumlah huruf dari akhir (sisi kanan) sebuah tulisan.",
+   "intinya": "RIGHT = ambil dari kanan.",
+   "analogi": "Kebalikan LEFT. Kata KOMPUTER dipotong dari ujung kanannya. Kalau kamu minta 3 huruf, kamu dapat TER.",
    "sintaks": "=RIGHT(teks; [jumlah_karakter])",
    "argumen": [
     [
      "teks",
-     "Teks atau sel sumber"
+     "Tulisan atau kotak sumber."
     ],
     [
      "jumlah_karakter",
-     "Banyak karakter dari kanan"
+     "Berapa huruf yang diambil dari kanan."
     ]
    ],
    "langkah": [
-    "Klik sel hasil.",
-    "Ketik =RIGHT( lalu klik sel sumber.",
-    "Isi jumlah karakter dan tekan Enter."
+    "Klik kotak hasil.",
+    "Ketik =RIGHT( lalu klik kotak sumber.",
+    "Ketik ; lalu isi jumlah huruf. Tutup dengan ) lalu tekan Enter."
    ],
    "demo": {
     "data": [
@@ -2984,8 +3027,6 @@ window.DATA = {
    "kata": "right kanan potong teks",
    "gambar": [
     "fungsi-right-001.jpg",
-    "fungsi-right.jpg",
-    "g-6-function-arg-right-300x160.jpg",
     "g-7-right-teks-300x176.jpg",
     "g-8-right-angka-300x238.jpg"
    ]
@@ -2994,25 +3035,28 @@ window.DATA = {
    "id": "mid",
    "cat": "teks",
    "judul": "MID: mengambil karakter dari tengah",
-   "ringkas": "MID mengambil sejumlah karakter mulai dari posisi tertentu.",
+   "ringkas": "MID mengambil sejumlah huruf mulai dari posisi yang kamu tentukan, di bagian tengah tulisan.",
+   "intinya": "MID = ambil dari tengah.",
+   "analogi": "Bayangkan huruf-huruf dalam kata punya nomor kursi: I=1, N=2, D=3, O=4, dan seterusnya. Kamu berkata, \"Mulai dari kursi nomor 3, ambil 4 orang.\" Hasilnya DONE (dari INDONESIA).",
    "sintaks": "=MID(teks; mulai; jumlah_karakter)",
    "argumen": [
     [
      "teks",
-     "Teks sumber"
+     "Tulisan sumber."
     ],
     [
      "mulai",
-     "Posisi karakter pertama yang diambil (dimulai dari 1)"
+     "Nomor huruf pertama yang diambil. Huruf pertama bernomor 1."
     ],
     [
      "jumlah_karakter",
-     "Banyaknya karakter"
+     "Berapa huruf yang diambil."
     ]
    ],
    "langkah": [
-    "Hitung posisi awal karakter yang diambil.",
-    "Ketik =MID( lalu sel, posisi awal, jumlah karakter.",
+    "Hitung dulu huruf ke berapa yang jadi awal potongan.",
+    "Ketik =MID( lalu klik kotak sumber.",
+    "Ketik ; lalu nomor awal, ; lalu jumlah huruf. Tutup dengan ).",
     "Tekan Enter."
    ],
    "demo": {
@@ -3061,30 +3105,31 @@ window.DATA = {
    "kata": "mid tengah potong teks",
    "gambar": [
     "fungsi-mid-001.jpg",
-    "fungsi-mid.jpg",
     "g-3-mid-teks-300x284.jpg",
-    "g-4-mid-angka-300x240.jpg",
-    "g-5-function-arg-mid-300x164.jpg"
+    "g-4-mid-angka-300x240.jpg"
    ]
   },
   {
    "id": "len",
    "cat": "teks",
    "judul": "LEN: menghitung panjang teks",
-   "ringkas": "LEN menghitung jumlah karakter termasuk spasi. Berguna untuk memeriksa panjang kode atau nomor.",
+   "ringkas": "LEN menghitung banyaknya huruf dalam tulisan, termasuk spasi.",
+   "intinya": "LEN = berapa panjangnya?",
+   "analogi": "Bayangkan kamu menghitung jumlah kotak huruf di teka-teki silang. Spasi juga dihitung sebagai satu kotak. LEN melakukannya untuk kamu.",
    "sintaks": "=LEN(teks)",
    "argumen": [
     [
      "teks",
-     "Teks atau sel"
+     "Tulisan atau kotak yang dihitung."
     ]
    ],
    "langkah": [
-    "Ketik =LEN( lalu klik sel.",
-    "Tekan Enter. Spasi di awal atau akhir ikut terhitung."
+    "Ketik =LEN( lalu klik kotak yang dihitung.",
+    "Tutup dengan ) lalu tekan Enter.",
+    "Ingat: spasi di awal atau di akhir ikut dihitung."
    ],
    "tips": [
-    "Gabungkan dengan TRIM untuk membuang spasi berlebih sebelum menghitung."
+    "Gabungkan dengan TRIM supaya spasi berlebih dibuang dulu sebelum dihitung."
    ],
    "demo": {
     "data": [
@@ -3139,18 +3184,20 @@ window.DATA = {
    "id": "huruf",
    "cat": "teks",
    "judul": "UPPER, LOWER, dan PROPER: mengubah huruf",
-   "ringkas": "UPPER menjadi huruf besar, LOWER huruf kecil, PROPER huruf kapital di awal tiap kata.",
+   "ringkas": "UPPER mengubah semua jadi huruf besar. LOWER mengubah semua jadi huruf kecil. PROPER membuat huruf pertama tiap kata jadi huruf besar.",
+   "intinya": "Tiga fungsi ini hanya mengubah ukuran hurufnya, tulisannya sama.",
+   "analogi": "UPPER seperti berteriak: BUDI SANTOSO. LOWER seperti berbisik: budi santoso. PROPER seperti menulis nama dengan rapi: Budi Santoso.",
    "sintaks": "=UPPER(teks)   =LOWER(teks)   =PROPER(teks)",
    "argumen": [
     [
      "teks",
-     "Teks atau sel sumber"
+     "Tulisan atau kotak sumber."
     ]
    ],
    "langkah": [
-    "Ketik fungsi lalu klik sel yang berisi nama.",
-    "Tekan Enter dan seret ke bawah.",
-    "Salin hasilnya, lalu Paste Special > Values bila ingin menimpa data asli."
+    "Ketik fungsinya, misalnya =PROPER( lalu klik kotak yang berisi nama.",
+    "Tutup dengan ) lalu tekan Enter. Tarik ke bawah untuk baris lain.",
+    "Mau mengganti data aslinya? Salin hasil, lalu pakai Paste Special dan pilih Values di kotak yang asli."
    ],
    "demo": {
     "data": [
@@ -3201,39 +3248,38 @@ window.DATA = {
    },
    "kata": "upper lower proper huruf besar kecil kapital",
    "gambar": [
-    "g-1-upper.jpg",
     "g-2-lower.jpg",
     "g-3-proper-a.jpg",
-    "g-4-proper-b.jpg",
-    "merubah-huruf-besar-menjadi-kecil-1.jpg",
-    "merubah-huruf-besar-menjadi-kecil-2.jpg"
+    "g-4-proper-b.jpg"
    ]
   },
   {
    "id": "text-value",
    "cat": "teks",
    "judul": "TEXT dan VALUE: angka menjadi teks dan sebaliknya",
-   "ringkas": "TEXT memformat angka atau tanggal menjadi teks dengan pola tertentu. VALUE mengubah teks berbentuk angka kembali menjadi angka.",
+   "ringkas": "TEXT mengubah angka atau tanggal menjadi tulisan dengan tampilan yang kamu atur. VALUE mengubah tulisan yang berbentuk angka menjadi angka sungguhan.",
+   "intinya": "TEXT = jadikan tulisan dengan gaya tertentu. VALUE = jadikan angka lagi.",
+   "analogi": "Bayangkan angka 5. Kamu ingin ia berpakaian rapi menjadi 005. TEXT adalah penjahitnya. Kebalikannya, VALUE adalah orang yang melepas pakaian itu lalu mengembalikannya jadi angka biasa yang bisa dijumlahkan.",
    "sintaks": "=TEXT(nilai; \"format\")   =VALUE(teks)",
    "argumen": [
     [
      "nilai",
-     "Angka atau tanggal"
+     "Angka atau tanggal yang mau ditampilkan."
     ],
     [
      "format",
-     "Pola, misalnya \"000\", \"#,##0\", \"dd/mm/yyyy\", \"dddd\""
+     "Pola tampilan, dituliskan di dalam tanda kutip. Contoh: \"000\" (tiga digit), \"#,##0\" (ada pemisah ribuan), \"dd/mm/yyyy\" (tanggal), \"dddd\" (nama hari)."
     ],
     [
      "teks",
-     "Teks yang tampak seperti angka"
+     "Tulisan yang terlihat seperti angka."
     ]
    ],
    "langkah": [
     "Contoh TEXT: =TEXT(1234567;\"#,##0\") menghasilkan 1,234,567.",
-    "Contoh hari: =TEXT(A2;\"dddd\") menghasilkan nama hari.",
-    "VALUE: =VALUE(\"250\")+1 menghasilkan 251.",
-    "Pakai & untuk menyisipkan hasil TEXT ke dalam kalimat."
+    "Contoh nama hari: =TEXT(A2;\"dddd\") menghasilkan nama hari dari tanggal di A2.",
+    "Contoh VALUE: =VALUE(\"250\")+1 menghasilkan 251.",
+    "Pakai & untuk memasukkan hasil TEXT ke dalam kalimat."
    ],
    "demo": {
     "data": [
@@ -3288,9 +3334,7 @@ window.DATA = {
    },
    "kata": "text value format angka teks",
    "gambar": [
-    "fungsi-text-pada-excel-300x120.jpg",
     "g-1-function-argument-text.jpg",
-    "g-2-hasil-rumus-text.jpg",
     "g-3-function-argument-value.jpg",
     "g-4-hasil-rumus-value.jpg"
    ]
@@ -3299,21 +3343,23 @@ window.DATA = {
    "id": "rept",
    "cat": "teks",
    "judul": "REPT: mengulang teks",
-   "ringkas": "REPT menulis sebuah karakter berkali-kali, berguna untuk diagram batang sederhana atau garis pemisah.",
+   "ringkas": "REPT menulis sebuah huruf atau tanda berulang-ulang. Berguna untuk grafik batang sederhana atau garis pemisah.",
+   "intinya": "REPT = ulangi tulisan ini sekian kali.",
+   "analogi": "Bayangkan kamu disuruh menulis \"ha\" sebanyak 3 kali sebagai hukuman. Kamu menulis hahaha. REPT melakukan itu dalam sekejap, berapa pun jumlahnya.",
    "sintaks": "=REPT(teks; jumlah)",
    "argumen": [
     [
      "teks",
-     "Teks yang diulang"
+     "Tulisan yang diulang."
     ],
     [
      "jumlah",
-     "Berapa kali diulang"
+     "Berapa kali diulang."
     ]
    ],
    "langkah": [
-    "Ketik =REPT(\"|\";B2) untuk membuat batang sepanjang nilai B2.",
-    "Atur font menjadi yang rapat agar batang tampak rata."
+    "Ketik =REPT(\"|\";B2). Garis tegak akan diulang sebanyak angka di B2, sehingga tampak seperti batang.",
+    "Tarik ke bawah supaya setiap baris punya batangnya sendiri."
    ],
    "demo": {
     "data": [
@@ -3376,25 +3422,30 @@ window.DATA = {
    "id": "find",
    "cat": "teks",
    "judul": "FIND dan SEARCH: mencari posisi teks",
-   "ringkas": "FIND dan SEARCH menghasilkan posisi sebuah teks di dalam teks lain. FIND membedakan huruf besar kecil, SEARCH tidak.",
+   "ringkas": "FIND dan SEARCH memberi tahu posisi sebuah tulisan di dalam tulisan lain. FIND membedakan huruf besar dan kecil. SEARCH tidak membedakan.",
+   "intinya": "FIND menjawab: huruf yang kucari ada di nomor berapa?",
+   "analogi": "Bayangkan kamu mencari huruf di dalam kata dan memberi nomor urut dari kiri. Dalam kata BUDI SANTOSO, spasi ada di nomor 5. FIND memberi tahu nomor itu.",
    "sintaks": "=FIND(dicari; dalam_teks; [mulai])",
    "argumen": [
     [
      "dicari",
-     "Teks yang dicari"
+     "Tulisan yang dicari."
     ],
     [
      "dalam_teks",
-     "Teks sumber"
+     "Tulisan tempat mencari."
     ],
     [
      "mulai",
-     "Posisi awal pencarian, default 1"
+     "Tidak wajib. Mulai mencari dari nomor ke berapa. Kalau kosong, mulai dari awal."
     ]
    ],
    "langkah": [
-    "Ketik =FIND(\" \";A2) untuk mencari spasi pertama.",
-    "Gabungkan dengan LEFT atau MID untuk memotong teks di titik tersebut."
+    "Ketik =FIND(\" \";A2) untuk mencari spasi pertama di kotak A2.",
+    "Gabungkan dengan LEFT atau MID untuk memotong tulisan tepat di tempat itu."
+   ],
+   "tips": [
+    "Kalau yang dicari tidak ditemukan, hasilnya #VALUE!."
    ],
    "demo": {
     "data": [
@@ -3454,29 +3505,34 @@ window.DATA = {
    "id": "substitute",
    "cat": "teks",
    "judul": "SUBSTITUTE: mengganti teks",
-   "ringkas": "SUBSTITUTE mengganti bagian tertentu dari teks dengan teks lain, tanpa mengubah posisi lain.",
+   "ringkas": "SUBSTITUTE mengganti sebagian tulisan dengan tulisan lain. Bagian lainnya tidak berubah.",
+   "intinya": "SUBSTITUTE = cari ini, ganti dengan itu.",
+   "analogi": "Bayangkan kamu pakai fitur cari-dan-ganti di aplikasi menulis, tetapi hasilnya muncul di kotak lain lewat rumus. Data asli tetap aman.",
    "sintaks": "=SUBSTITUTE(teks; lama; baru; [urutan])",
    "argumen": [
     [
      "teks",
-     "Teks sumber"
+     "Tulisan sumber."
     ],
     [
      "lama",
-     "Bagian yang diganti"
+     "Bagian yang mau diganti."
     ],
     [
      "baru",
-     "Penggantinya"
+     "Pengganti."
     ],
     [
      "urutan",
-     "Opsional, hanya ganti kemunculan ke-n"
+     "Tidak wajib. Ganti hanya kemunculan ke sekian. Kalau kosong, semua diganti."
     ]
    ],
    "langkah": [
-    "Ketik =SUBSTITUTE(A2;\"-\";\"/\") untuk mengubah semua strip menjadi garis miring.",
-    "Tambahkan angka urutan bila hanya ingin mengganti kemunculan tertentu."
+    "Ketik =SUBSTITUTE(A2;\"-\";\"/\") untuk mengganti semua tanda strip dengan garis miring.",
+    "Mau mengganti satu kemunculan saja? Tambahkan angka urutan di bagian akhir."
+   ],
+   "tips": [
+    "Untuk menghapus sebagian tulisan, isi bagian baru dengan tanda kutip kosong \"\"."
    ],
    "demo": {
     "data": [
@@ -3535,12 +3591,17 @@ window.DATA = {
    "id": "menambah-kata",
    "cat": "teks",
    "judul": "Menambah kata pada banyak sel",
-   "ringkas": "Operator & menyambung teks tetap dengan isi sel, misalnya menambahkan kata Kelas di depan huruf kelas.",
+   "ringkas": "Tanda & menyambung tulisan tetap dengan isi kotak. Contohnya menambah kata Kelas di depan huruf kelas.",
+   "intinya": "Tanda & adalah perekat tulisan.",
+   "analogi": "Bayangkan kamu menempelkan stiker bertuliskan Kelas di depan setiap huruf A, B, atau C. Hasilnya Kelas A, Kelas B, Kelas C. Itulah =\"Kelas \"&A2.",
    "sintaks": "=\"Kelas \"&A2",
    "langkah": [
-    "Ketik =\"Kelas \"&A2 di sel kosong.",
-    "Tekan Enter lalu seret ke bawah.",
-    "Salin hasilnya dan tempel sebagai Values bila ingin mengganti data aslinya."
+    "Di kotak kosong ketik =\"Kelas \"&A2. Tulisan tetap harus di dalam tanda kutip.",
+    "Tekan Enter, lalu tarik ke bawah.",
+    "Mau mengganti data aslinya? Salin hasilnya, lalu tempel sebagai Values di kotak yang asli."
+   ],
+   "tips": [
+    "Jangan lupa spasi di dalam tanda kutip (\"Kelas \" bukan \"Kelas\"). Kalau lupa, hasilnya menempel: KelasA."
    ],
    "demo": {
     "data": [
@@ -3600,15 +3661,19 @@ window.DATA = {
    "id": "terbilang",
    "cat": "teks",
    "judul": "Angka terbilang di Excel",
-   "ringkas": "Mengubah angka menjadi tulisan (misalnya 250 menjadi dua ratus lima puluh). Excel tidak punya fungsi bawaan, jadi dibuat dengan tabel bantu atau macro VBA.",
+   "ringkas": "Terbilang mengubah angka menjadi tulisan, misalnya 250 menjadi \"dua ratus lima puluh\". Excel tidak punya fungsi untuk ini, jadi kamu membuatnya sendiri dengan tabel bantu atau macro VBA.",
+   "intinya": "Cara paling mudah: simpan sebuah fungsi VBA bernama Terbilang, lalu pakai seperti fungsi biasa.",
+   "analogi": "Bayangkan kamu punya asisten yang bisa membaca angka dengan suara keras. Excel belum punya asisten itu. Kamu perlu mengajarinya dengan menulis sedikit kode (macro). Setelah diajari, kamu tinggal bilang =Terbilang(A1).",
    "langkah": [
-    "Cara tabel bantu: buat daftar 0 sampai 9 beserta namanya (nol, satu, dua, ...), lalu ambil per digit dengan MID dan VLOOKUP.",
-    "Cara macro: simpan fungsi VBA bernama Terbilang di modul, lalu panggil =Terbilang(A1) seperti fungsi biasa.",
-    "Untuk huruf kapital di awal kata, bungkus hasil dengan PROPER; untuk kapital di awal kalimat, gabungkan UPPER(LEFT()) dan LOWER(MID()).",
-    "Simpan file sebagai .xlsm bila memakai macro."
+    "Cara tabel bantu: buat daftar 0 sampai 9 beserta namanya (nol, satu, dua, ...). Lalu ambil angka satu per satu dengan MID dan cari namanya dengan VLOOKUP.",
+    "Cara macro: simpan fungsi VBA bernama Terbilang di sebuah modul, lalu panggil =Terbilang(A1).",
+    "Mau huruf besar di awal tiap kata? Bungkus hasilnya dengan PROPER.",
+    "Mau huruf besar hanya di awal kalimat? Gabungkan UPPER(LEFT()) dan LOWER(MID()).",
+    "Kalau memakai macro, simpan filenya sebagai .xlsm."
    ],
    "tips": [
-    "Tangkapan layar di bawah menunjukkan langkah dan hasil akhirnya."
+    "Gambar di bawah menunjukkan langkah dan hasil akhirnya. Ikuti sambil melihat gambar.",
+    "File biasa (.xlsx) tidak bisa menyimpan macro. Itu sebabnya harus .xlsm."
    ],
    "kuis": {
     "q": "Mengapa file dengan fungsi Terbilang harus disimpan sebagai .xlsm?",
@@ -3625,43 +3690,44 @@ window.DATA = {
    "gambar": [
     "angka-terbilang-pada-excel-dengan-huruf-kapital-pada-awal-kata.jpg",
     "angka-terbilang-pada-excel-dengan-huruf-kapital.jpg",
-    "angka-terbilang-pada-excel.jpg",
-    "data-tabel-169x300.jpg"
+    "angka-terbilang-pada-excel.jpg"
    ]
   },
   {
    "id": "vlookup",
    "cat": "lookup",
    "judul": "VLOOKUP: mencari data ke bawah",
-   "ringkas": "VLOOKUP mencari sebuah nilai di kolom pertama sebuah tabel, lalu mengambil data dari kolom lain di baris yang sama.",
+   "ringkas": "VLOOKUP mencari sebuah nilai di kolom paling kiri sebuah tabel, lalu mengambil isi kolom lain pada baris yang sama.",
+   "intinya": "VLOOKUP = cari kata kunci di kolom pertama, lalu ambil jawaban dari kolom ke sekian.",
+   "analogi": "Bayangkan buku telepon. Kamu mencari nama (kata kunci) di daftar nama, lalu membaca nomor teleponnya di sebelah kanan nama itu. VLOOKUP melakukan itu di dalam tabelmu.",
    "sintaks": "=VLOOKUP(dicari; tabel; kolom_ke; [persis])",
    "argumen": [
     [
      "dicari",
-     "Nilai yang dicari, harus ada di kolom pertama tabel"
+     "Kata kunci yang dicari. Harus ada di kolom paling kiri tabel."
     ],
     [
      "tabel",
-     "Seluruh tabel, kunci dengan $"
+     "Seluruh tabel tempat mencari. Kunci dengan tanda $."
     ],
     [
      "kolom_ke",
-     "Nomor kolom yang diambil, dihitung dari kolom pertama tabel"
+     "Jawaban ada di kolom nomor berapa? Kolom paling kiri dihitung nomor 1."
     ],
     [
      "persis",
-     "FALSE = harus sama persis; TRUE atau kosong = perkiraan terdekat (tabel harus terurut)"
+     "Isi FALSE agar harus sama persis. TRUE (atau kosong) artinya perkiraan terdekat, dan tabel harus terurut."
     ]
    ],
    "langkah": [
-    "Pastikan nilai kunci ada di kolom paling kiri tabel.",
-    "Ketik =VLOOKUP( lalu klik sel kunci.",
-    "Blok tabel dan tekan F4 agar menjadi $A$2:$C$5.",
-    "Isi nomor kolom, lalu FALSE untuk pencarian persis. Tekan Enter."
+    "Pastikan kata kunci ada di kolom paling kiri tabel.",
+    "Ketik =VLOOKUP( lalu klik kotak kata kunci.",
+    "Ketik ; lalu sorot seluruh tabel dan tekan F4 agar jadi $A$2:$C$5.",
+    "Ketik ; lalu nomor kolom jawaban, ; lalu FALSE. Tutup dengan ) lalu tekan Enter."
    ],
    "tips": [
-    "Hampir selalu pakai FALSE kecuali sedang mencari rentang nilai.",
-    "#N/A berarti kunci tidak ditemukan. Periksa spasi tersembunyi atau beda format."
+    "Hampir selalu pakai FALSE, kecuali kamu mencari rentang nilai seperti tabel nilai huruf.",
+    "Kalau muncul #N/A, kata kuncinya tidak ketemu. Periksa spasi tersembunyi atau beda bentuk (angka vs tulisan)."
    ],
    "demo": {
     "data": [
@@ -3736,49 +3802,40 @@ window.DATA = {
    "kata": "vlookup cari tabel kolom",
    "gambar": [
     "g-1-vlookup-300x256.jpg",
-    "g-2-argumentvlookup-300x168.jpg",
     "rumus-vlookup-excel.jpg",
-    "tabel-harga-300x160.jpg",
-    "vlookup-laporan-1-300x180.jpg",
-    "vlookup-laporan-2.jpg",
-    "vlookup-laporan-3.jpg",
-    "vlookup-laporan-4-300x124.jpg",
-    "vlookup-laporan-5-300x109.jpg",
-    "vlookup-laporan-6-300x110.jpg",
-    "vlookup-laporan-7-300x94.jpg",
-    "vlookup-laporan-8-300x94.jpg",
-    "vlookup-laporan-9-300x95.jpg",
-    "vlookup-laporan-menggunakan-auto-fill-300x107.jpg"
+    "vlookup-laporan-2.jpg"
    ]
   },
   {
    "id": "hlookup",
    "cat": "lookup",
    "judul": "HLOOKUP: mencari data ke samping",
-   "ringkas": "HLOOKUP sama dengan VLOOKUP, tetapi tabelnya disusun mendatar: kunci ada di baris paling atas.",
+   "ringkas": "HLOOKUP sama dengan VLOOKUP, tetapi tabelnya mendatar. Kata kunci ada di baris paling atas.",
+   "intinya": "HLOOKUP = cari kata kunci di baris pertama, lalu ambil jawaban dari baris ke sekian.",
+   "analogi": "Bayangkan jadwal pelajaran yang hari-harinya berderet ke samping. Kamu mencari hari (di baris atas), lalu membaca ke bawah untuk menemukan pelajarannya. Itu HLOOKUP.",
    "sintaks": "=HLOOKUP(dicari; tabel; baris_ke; [persis])",
    "argumen": [
     [
      "dicari",
-     "Nilai yang dicari di baris pertama"
+     "Kata kunci yang dicari di baris paling atas."
     ],
     [
      "tabel",
-     "Seluruh tabel"
+     "Seluruh tabel tempat mencari."
     ],
     [
      "baris_ke",
-     "Nomor baris yang diambil"
+     "Jawaban ada di baris nomor berapa? Baris paling atas dihitung nomor 1."
     ],
     [
      "persis",
-     "FALSE untuk persis"
+     "Isi FALSE agar harus sama persis."
     ]
    ],
    "langkah": [
-    "Pastikan kunci berada di baris paling atas tabel.",
-    "Ketik =HLOOKUP( lalu kunci, tabel, nomor baris, FALSE.",
-    "Tekan Enter."
+    "Pastikan kata kunci ada di baris paling atas tabel.",
+    "Ketik =HLOOKUP( lalu klik kata kunci, tabel, nomor baris, dan FALSE (dipisah ;).",
+    "Tutup dengan ) lalu tekan Enter."
    ],
    "demo": {
     "data": [
@@ -3836,43 +3893,48 @@ window.DATA = {
    },
    "kata": "hlookup cari mendatar baris",
    "gambar": [
-    "g3-hasilrumushlookup-300x165.jpg",
-    "g-1-data-hlookup-300x161.jpg",
-    "g-2-argumenthlookup-300x174.jpg",
-    "rumus-hlookup-excel-1.jpg",
     "rumus-hlookup-excel-2.jpg",
     "rumus-hlookup-excel-3.jpg",
-    "rumus-hlookup-excel-4.jpg",
-    "rumus-hlookup-excel-5.jpg",
-    "rumus-hlookup-excel-6.jpg",
-    "rumus-hlookup-excel-7.jpg",
-    "rumus-hlookup-excel-8.jpg"
+    "rumus-hlookup-excel-4.jpg"
    ]
   },
   {
    "id": "match-index",
    "cat": "lookup",
    "judul": "MATCH dan INDEX: pasangan pencari fleksibel",
-   "ringkas": "MATCH menemukan posisi sebuah nilai dalam deretan. INDEX mengambil isi sel pada posisi tertentu. Berdua, keduanya bisa mencari ke kiri, sesuatu yang tidak bisa dilakukan VLOOKUP.",
+   "ringkas": "MATCH mencari nomor urut sebuah isi dalam deretan. INDEX mengambil isi kotak pada nomor urut tertentu. Berdua, mereka bisa mencari ke kiri, hal yang tidak bisa dilakukan VLOOKUP.",
+   "intinya": "MATCH menjawab \"ada di nomor berapa?\". INDEX menjawab \"apa isi di nomor itu?\".",
+   "analogi": "Bayangkan perpustakaan. MATCH seperti pustakawan yang berkata, \"Buku itu ada di rak nomor 7.\" INDEX seperti kamu yang berjalan ke rak nomor 7 lalu mengambil bukunya. Dua langkah, tetapi sangat fleksibel.",
    "sintaks": "=MATCH(dicari; deret; [tipe])   =INDEX(rentang; baris; [kolom])",
    "argumen": [
     [
+     "dicari",
+     "Isi yang dicari (untuk MATCH)."
+    ],
+    [
+     "deret",
+     "Deretan kotak tempat mencari."
+    ],
+    [
      "tipe",
-     "0 = persis, 1 = terbesar yang tidak lebih dari nilai (terurut naik), -1 = terkecil yang tidak kurang dari nilai (terurut turun)"
+     "0 = harus sama persis. 1 = cari yang terbesar tetapi tidak melebihi (deret harus urut naik). -1 = cari yang terkecil tetapi tidak kurang (deret harus urut turun)."
     ],
     [
      "baris",
-     "Nomor baris dalam rentang"
+     "Nomor baris dalam rentang (untuk INDEX)."
     ],
     [
      "kolom",
-     "Nomor kolom dalam rentang"
+     "Nomor kolom dalam rentang (untuk INDEX). Boleh dikosongkan kalau rentangnya hanya satu kolom."
     ]
    ],
    "langkah": [
-    "Ketik =MATCH(nilai; kolom_kunci; 0) untuk memperoleh nomor baris.",
-    "Bungkus dengan INDEX: =INDEX(kolom_hasil; MATCH(...)).",
-    "Rentang kolom_hasil dan kolom_kunci boleh berada di sisi mana saja."
+    "Cari nomor urutnya dulu: =MATCH(kata_kunci; kolom_kunci; 0).",
+    "Bungkus dengan INDEX: =INDEX(kolom_hasil; MATCH(kata_kunci; kolom_kunci; 0)).",
+    "Kolom hasil dan kolom kunci boleh berada di sisi mana saja, termasuk kolom hasil di sebelah kiri."
+   ],
+   "tips": [
+    "Selalu isi 0 pada bagian tipe MATCH kalau kamu mau pencarian yang persis."
    ],
    "demo": {
     "data": [
@@ -3949,21 +4011,26 @@ window.DATA = {
    "id": "choose",
    "cat": "lookup",
    "judul": "CHOOSE: memilih dari daftar",
-   "ringkas": "CHOOSE mengembalikan item ke-n dari daftar nilai yang kamu tulis langsung di rumus. Cocok untuk memberi nama pada angka 1 sampai 7.",
+   "ringkas": "CHOOSE mengambil pilihan ke sekian dari daftar yang kamu tulis langsung di rumus. Cocok untuk memberi nama pada angka 1 sampai 7.",
+   "intinya": "CHOOSE = pilih nomor sekian dari daftar ini.",
+   "analogi": "Bayangkan menu makanan dengan tiga pilihan bernomor. Kamu bilang, \"Aku pilih nomor 2.\" Pelayan langsung tahu pilihanmu adalah menu kedua. CHOOSE adalah pelayan itu.",
    "sintaks": "=CHOOSE(nomor; nilai1; nilai2; ...)",
    "argumen": [
     [
      "nomor",
-     "Angka 1, 2, 3, ... yang menentukan pilihan"
+     "Angka 1, 2, 3, dan seterusnya. Ini nomor pilihanmu."
     ],
     [
      "nilai1, nilai2, ...",
-     "Daftar pilihan"
+     "Daftar pilihan, ditulis berurutan."
     ]
    ],
    "langkah": [
     "Ketik =CHOOSE(A2;\"Senin\";\"Selasa\";\"Rabu\").",
-    "Nomor di luar jumlah pilihan menghasilkan #VALUE!."
+    "Kalau A2 berisi 2, hasilnya Selasa."
+   ],
+   "tips": [
+    "Kalau nomornya lebih besar dari jumlah pilihan, hasilnya #VALUE!."
    ],
    "demo": {
     "data": [
@@ -4018,19 +4085,29 @@ window.DATA = {
    "id": "alamat-sel",
    "cat": "lookup",
    "judul": "ADDRESS, ROW, COLUMN, ROWS, COLUMNS, AREAS",
-   "ringkas": "Kumpulan fungsi yang menanyakan posisi: nomor baris atau kolom, jumlah baris atau kolom, dan alamat sel dalam bentuk teks.",
+   "ringkas": "Ini kumpulan fungsi yang bertanya soal posisi: nomor baris, nomor kolom, jumlah baris atau kolom, dan alamat kotak dalam bentuk tulisan.",
+   "intinya": "Fungsi-fungsi ini menjawab \"di mana?\" dan \"berapa banyak?\".",
+   "analogi": "Bayangkan peta kota. ROW dan COLUMN seperti menyebut nomor jalan dan nomor gang. ADDRESS seperti menuliskan alamat lengkapnya. ROWS dan COLUMNS menghitung berapa jalan dan berapa gang di sebuah daerah.",
    "sintaks": "=ADDRESS(baris; kolom; [jenis])  =ROW([sel])  =COLUMN([sel])  =ROWS(rentang)  =COLUMNS(rentang)",
    "argumen": [
     [
+     "baris",
+     "Nomor baris (untuk ADDRESS)."
+    ],
+    [
+     "kolom",
+     "Nomor kolom (untuk ADDRESS)."
+    ],
+    [
      "jenis",
-     "1 = $A$1, 2 = A$1, 3 = $A1, 4 = A1"
+     "Bentuk alamat. 1 = $A$1, 2 = A$1, 3 = $A1, 4 = A1."
     ]
    ],
    "langkah": [
-    "=ROW(C5) menghasilkan 5, =COLUMN(C5) menghasilkan 3.",
-    "=ROWS(A1:B10) menghasilkan 10, =COLUMNS(A1:B10) menghasilkan 2.",
-    "=ADDRESS(2;3) menghasilkan teks $C$2.",
-    "AREAS menghitung berapa area dalam sebuah referensi."
+    "=ROW(C5) menghasilkan 5. =COLUMN(C5) menghasilkan 3 (C adalah kolom ketiga).",
+    "=ROWS(A1:B10) menghasilkan 10. =COLUMNS(A1:B10) menghasilkan 2.",
+    "=ADDRESS(2;3) menghasilkan tulisan $C$2.",
+    "AREAS menghitung ada berapa area dalam sebuah acuan."
    ],
    "demo": {
     "data": [
@@ -4092,15 +4169,8 @@ window.DATA = {
    },
    "kata": "address row column rows columns areas alamat",
    "gambar": [
-    "areas-1.jpg",
     "areas-2.jpg",
-    "column-1-1.jpg",
-    "column-2-atau-columns-1.jpg",
-    "columns-2.jpg",
-    "fungsi-address-pada-excel-300x125.jpg",
     "row-1-001.jpg",
-    "row-1.jpg",
-    "row-2.jpg",
     "rows-2.jpg"
    ]
   },
@@ -4108,12 +4178,17 @@ window.DATA = {
    "id": "lookup-jurusan",
    "cat": "lookup",
    "judul": "Lookup untuk laporan: jurusan dan tarif",
-   "ringkas": "Contoh kasus: tabel tiket kereta yang mengambil jurusan dan harga dari tabel data memakai kode.",
+   "ringkas": "Ini contoh kasus nyata: sebuah laporan tiket kereta mengambil jurusan dan harga dari tabel data memakai kode kereta.",
+   "intinya": "Gabungkan beberapa fungsi yang sudah kamu pelajari untuk menyelesaikan satu pekerjaan.",
+   "analogi": "Bayangkan loket kereta. Petugas melihat kode kereta di tiketmu, lalu mencari jurusannya di buku daftar. Setelah itu ia melihat kelasmu (Eksekutif, Bisnis, atau Ekonomi) untuk menentukan harga. Kamu membuat petugas itu di dalam Excel.",
    "langkah": [
-    "Siapkan tabel referensi berisi kode, nama, jurusan, dan harga tiap kelas.",
+    "Siapkan tabel acuan yang berisi kode, nama kereta, jurusan, dan harga tiap kelas.",
     "Di laporan, ambil jurusan dengan VLOOKUP berdasarkan kode kereta.",
-    "Pilih kolom tarif dengan IF atau MATCH sesuai kelas (Eksekutif, Bisnis, Ekonomi).",
-    "Gunakan IFERROR agar kode yang tidak ada tidak menampilkan #N/A."
+    "Pilih kolom harga sesuai kelas memakai IF atau MATCH.",
+    "Bungkus dengan IFERROR supaya kode yang tidak ada tidak menampilkan #N/A."
+   ],
+   "tips": [
+    "Kerjakan satu kolom dulu sampai benar, baru lanjut ke kolom berikutnya."
    ],
    "demo": {
     "data": [
@@ -4190,12 +4265,8 @@ window.DATA = {
    },
    "kata": "lookup jurusan tiket kereta tarif",
    "gambar": [
-    "contoh-data-300x85.jpg",
     "contoh-data-300x214.jpg",
-    "data-mencari-jurusan-300x100.jpg",
     "hasil-penggunaan-rumus-300x228.jpg",
-    "hasil-rumus-jurusan-dll-300x102.jpg",
-    "rumus-mencari-kelas-300x99.jpg",
     "tabel-data-jurusan-300x221.jpg"
    ]
   },
@@ -4203,26 +4274,28 @@ window.DATA = {
    "id": "tanggal-dasar",
    "cat": "tanggal",
    "judul": "Cara Excel menyimpan tanggal",
-   "ringkas": "Excel menyimpan tanggal sebagai nomor urut hari sejak 1 Januari 1900. Karena itu tanggal bisa dikurangkan atau ditambah seperti angka biasa.",
+   "ringkas": "Excel menyimpan tanggal sebagai nomor urut hari, dihitung sejak 1 Januari 1900. Karena itu tanggal bisa dikurangi atau ditambah seperti angka biasa.",
+   "intinya": "Bagi Excel, tanggal sebenarnya hanya angka yang diberi tampilan tanggal.",
+   "analogi": "Bayangkan kalender yang setiap harinya diberi nomor urut dari hari pertama. Tanggal 10 Oktober dan 1 Oktober dipisahkan 9 nomor. Karena hanya angka, kamu bisa menghitung selisihnya dengan mengurangkan.",
    "sintaks": "=DATE(tahun; bulan; hari)   =TODAY()   =NOW()",
    "argumen": [
     [
      "DATE",
-     "Membuat tanggal dari tiga angka"
+     "Membuat tanggal dari tiga angka: tahun, bulan, hari."
     ],
     [
      "TODAY()",
-     "Tanggal hari ini, berubah tiap hari"
+     "Tanggal hari ini. Berubah setiap hari."
     ],
     [
      "NOW()",
-     "Tanggal dan jam saat ini"
+     "Tanggal dan jam saat ini."
     ]
    ],
    "langkah": [
-    "Ketik tanggal dengan pola sesuai pengaturan regional, misalnya 02/10/2026.",
-    "Bila tampil sebagai angka, ubah format sel menjadi Short Date.",
-    "Hitung selisih dengan pengurangan: =B2-A2.",
+    "Ketik tanggal sesuai pengaturan komputermu, misalnya 02/10/2026.",
+    "Kalau yang muncul angka aneh, ubah format kotaknya menjadi Short Date di tab Home.",
+    "Menghitung selisih hari: =B2-A2.",
     "=A2+30 menghasilkan tanggal 30 hari setelah A2."
    ],
    "demo": {
@@ -4281,7 +4354,6 @@ window.DATA = {
    "gambar": [
     "date-dan-time-5.jpg",
     "date-dan-time-6.jpg",
-    "date-dan-time.jpg",
     "fungsi-dmy.jpg"
    ]
   },
@@ -4289,19 +4361,21 @@ window.DATA = {
    "id": "day-month-year",
    "cat": "tanggal",
    "judul": "DAY, MONTH, YEAR: memecah tanggal",
-   "ringkas": "Tiga fungsi ini mengambil hari, bulan, dan tahun dari sebuah tanggal.",
+   "ringkas": "Tiga fungsi ini mengambil hari, bulan, atau tahun dari sebuah tanggal.",
+   "intinya": "DAY = hari. MONTH = bulan. YEAR = tahun.",
+   "analogi": "Bayangkan tanggal 2 Oktober 2026 sebagai sebuah kotak berisi tiga barang. DAY mengambil angka 2. MONTH mengambil angka 10. YEAR mengambil angka 2026.",
    "sintaks": "=DAY(tanggal)   =MONTH(tanggal)   =YEAR(tanggal)",
    "argumen": [
     [
      "tanggal",
-     "Tanggal atau sel yang berisi tanggal"
+     "Tanggal, atau kotak yang berisi tanggal."
     ]
    ],
    "langkah": [
-    "Ketik =DAY(A2) untuk mendapat angka hari.",
-    "=MONTH(A2) untuk bulan 1 sampai 12.",
-    "=YEAR(A2) untuk tahun.",
-    "Gabungkan dengan DATE untuk menyusun ulang, misalnya =DATE(YEAR(A2)+1;MONTH(A2);DAY(A2))."
+    "Ketik =DAY(A2) untuk mendapat angka harinya.",
+    "Ketik =MONTH(A2) untuk bulannya (1 sampai 12).",
+    "Ketik =YEAR(A2) untuk tahunnya.",
+    "Menyusun tanggal baru? Gabungkan dengan DATE. Contoh: =DATE(YEAR(A2)+1;MONTH(A2);DAY(A2)) menghasilkan tanggal yang sama satu tahun kemudian."
    ],
    "demo": {
     "data": [
@@ -4365,18 +4439,23 @@ window.DATA = {
    "id": "jam",
    "cat": "tanggal",
    "judul": "HOUR, MINUTE, SECOND: memecah jam",
-   "ringkas": "Fungsi ini mengambil jam, menit, dan detik dari nilai waktu.",
+   "ringkas": "Fungsi-fungsi ini mengambil jam, menit, atau detik dari sebuah waktu.",
+   "intinya": "HOUR = jam. MINUTE = menit. SECOND = detik.",
+   "analogi": "Bayangkan jam dinding yang menunjuk 14:35:20. HOUR mengambil angka 14. MINUTE mengambil 35. SECOND mengambil 20.",
    "sintaks": "=HOUR(waktu)   =MINUTE(waktu)   =SECOND(waktu)",
    "argumen": [
     [
      "waktu",
-     "Nilai waktu, misalnya hasil TIME atau NOW"
+     "Waktu yang dipecah, misalnya hasil TIME atau NOW."
     ]
    ],
    "langkah": [
     "Ketik =HOUR(A2) untuk jam (0 sampai 23).",
-    "=MINUTE(A2) untuk menit (0 sampai 59).",
-    "=SECOND(A2) untuk detik (0 sampai 59)."
+    "Ketik =MINUTE(A2) untuk menit (0 sampai 59).",
+    "Ketik =SECOND(A2) untuk detik (0 sampai 59)."
+   ],
+   "tips": [
+    "Excel memakai jam 24, jadi jam 2 siang dihitung sebagai 14."
    ],
    "demo": {
     "data": [
@@ -4427,31 +4506,32 @@ window.DATA = {
    },
    "kata": "hour minute second jam menit detik",
    "gambar": [
-    "fungsi-hour.jpg",
-    "fungsi-minute.jpg",
-    "fungsi-second.jpg"
+    "fungsi-second.jpg",
+    "fungsi-minute.jpg"
    ]
   },
   {
    "id": "weekday",
    "cat": "tanggal",
    "judul": "WEEKDAY: mengetahui hari dalam seminggu",
-   "ringkas": "WEEKDAY mengubah tanggal menjadi nomor hari. Gabungkan dengan CHOOSE atau TEXT untuk menampilkan namanya.",
+   "ringkas": "WEEKDAY mengubah tanggal menjadi nomor hari dalam seminggu. Gabungkan dengan CHOOSE atau TEXT untuk menampilkan nama harinya.",
+   "intinya": "WEEKDAY menjawab: tanggal ini hari apa?",
+   "analogi": "Bayangkan setiap hari punya nomor. Kalau Senin nomor 1, maka Selasa nomor 2, dan Minggu nomor 7. Kamu bertanya, \"Tanggal 2 Oktober itu nomor hari berapa?\" WEEKDAY menjawabnya.",
    "sintaks": "=WEEKDAY(tanggal; [tipe])",
    "argumen": [
     [
      "tanggal",
-     "Tanggal"
+     "Tanggal yang diperiksa."
     ],
     [
      "tipe",
-     "1 = Minggu(1) sampai Sabtu(7), default; 2 = Senin(1) sampai Minggu(7)"
+     "1 (bawaan): Minggu = 1 sampai Sabtu = 7. 2: Senin = 1 sampai Minggu = 7."
     ]
    ],
    "langkah": [
-    "Ketik =WEEKDAY(A2;2) agar Senin bernilai 1.",
-    "Ubah ke nama hari dengan =TEXT(A2;\"dddd\") atau =CHOOSE(WEEKDAY(A2;2);\"Senin\";\"Selasa\";...).",
-    "Gunakan syarat WEEKDAY(A2;2)>5 untuk mendeteksi akhir pekan."
+    "Ketik =WEEKDAY(A2;2) supaya Senin bernilai 1.",
+    "Mau nama harinya? Pakai =TEXT(A2;\"dddd\"), atau =CHOOSE(WEEKDAY(A2;2);\"Senin\";\"Selasa\";\"Rabu\";\"Kamis\";\"Jumat\";\"Sabtu\";\"Minggu\").",
+    "Mau tahu apakah akhir pekan? Pakai syarat WEEKDAY(A2;2)>5. Artinya Sabtu atau Minggu."
    ],
    "demo": {
     "data": [
@@ -4506,7 +4586,6 @@ window.DATA = {
    "kata": "weekday hari minggu senin",
    "gambar": [
     "hari-weekday-2.jpg",
-    "hari-weekday.jpg",
     "hari.jpg"
    ]
   },
@@ -4514,29 +4593,31 @@ window.DATA = {
    "id": "selisih-hari",
    "cat": "tanggal",
    "judul": "Menghitung selisih hari, bulan, dan tahun",
-   "ringkas": "Pengurangan sederhana menghasilkan jumlah hari. Untuk bulan atau tahun penuh (misalnya umur), pakai DATEDIF.",
+   "ringkas": "Mengurangkan dua tanggal menghasilkan jumlah hari. Untuk jumlah bulan atau tahun penuh (misalnya umur), pakai DATEDIF.",
+   "intinya": "DATEDIF menghitung jarak antara dua tanggal dalam satuan yang kamu pilih.",
+   "analogi": "Bayangkan menghitung umur. Kamu tidak peduli berapa harinya, kamu ingin tahu berapa tahun penuh sejak lahir. DATEDIF memberi tahu itu, dan bisa juga memberi tahu bulan penuh atau hari penuh.",
    "sintaks": "=DATEDIF(awal; akhir; \"satuan\")",
    "argumen": [
     [
      "awal",
-     "Tanggal mulai"
+     "Tanggal mulai."
     ],
     [
      "akhir",
-     "Tanggal akhir, tidak boleh lebih kecil"
+     "Tanggal akhir. Tidak boleh lebih kecil dari tanggal mulai."
     ],
     [
-     "\"Y\"  \"M\"  \"D\"",
-     "Satuan: tahun, bulan, atau hari penuh"
+     "\"satuan\"",
+     "\"Y\" = tahun penuh. \"M\" = bulan penuh. \"D\" = hari."
     ]
    ],
    "langkah": [
-    "Selisih hari: =B2-A2 (format hasil sebagai General).",
+    "Selisih hari: =B2-A2. Ubah format hasil menjadi General supaya tampil sebagai angka.",
     "Umur: =DATEDIF(A2;TODAY();\"Y\").",
-    "Masa kerja bulan: =DATEDIF(A2;B2;\"M\")."
+    "Masa kerja dalam bulan: =DATEDIF(A2;B2;\"M\")."
    ],
    "tips": [
-    "DATEDIF tidak muncul di daftar fungsi, tetapi tetap berfungsi bila diketik langsung."
+    "DATEDIF tidak muncul di daftar saran Excel, tetapi tetap bekerja kalau kamu mengetiknya sendiri."
    ],
    "demo": {
     "data": [
@@ -4592,26 +4673,29 @@ window.DATA = {
    "id": "networkdays",
    "cat": "tanggal",
    "judul": "NETWORKDAYS: menghitung hari kerja",
-   "ringkas": "NETWORKDAYS menghitung jumlah hari kerja (Senin sampai Jumat) di antara dua tanggal dan dapat mengecualikan hari libur.",
+   "ringkas": "NETWORKDAYS menghitung jumlah hari kerja (Senin sampai Jumat) di antara dua tanggal. Hari libur bisa dikecualikan.",
+   "intinya": "NETWORKDAYS menghitung hari kerja saja, tanpa Sabtu dan Minggu.",
+   "analogi": "Bayangkan kamu ingin tahu berapa hari kamu sekolah dalam satu bulan. Sabtu dan Minggu tidak dihitung, dan hari libur nasional juga tidak. NETWORKDAYS menghitungnya untukmu.",
    "sintaks": "=NETWORKDAYS(awal; akhir; [libur])",
    "argumen": [
     [
      "awal",
-     "Tanggal mulai"
+     "Tanggal mulai."
     ],
     [
      "akhir",
-     "Tanggal selesai"
+     "Tanggal selesai."
     ],
     [
      "libur",
-     "Rentang tanggal libur (opsional)"
+     "Tidak wajib. Daftar tanggal libur yang dikecualikan."
     ]
    ],
    "langkah": [
-    "Tulis daftar hari libur di beberapa sel.",
-    "Ketik =NETWORKDAYS( lalu tanggal awal, tanggal akhir, dan rentang libur.",
-    "Tekan Enter."
+    "Tulis daftar hari libur di beberapa kotak.",
+    "Ketik =NETWORKDAYS( lalu klik tanggal awal.",
+    "Ketik ; lalu klik tanggal akhir. Ketik ; lalu sorot daftar libur.",
+    "Tutup dengan ) lalu tekan Enter."
    ],
    "demo": {
     "data": [
@@ -4663,32 +4747,34 @@ window.DATA = {
    },
    "kata": "networkdays hari kerja libur",
    "gambar": [
-    "networksday-1-300x98.jpg",
     "networksday-2-238x300.jpg",
     "networksday-3-300x226.jpg",
-    "networksday-4-300x123.jpg",
-    "networksday-5-300x97.jpg",
-    "networksday-6-300x99.jpg"
+    "networksday-4-300x123.jpg"
    ]
   },
   {
    "id": "weeknum",
    "cat": "tanggal",
    "judul": "WEEKNUM: nomor minggu",
-   "ringkas": "WEEKNUM menghasilkan nomor minggu dalam setahun, berguna untuk laporan mingguan.",
+   "ringkas": "WEEKNUM memberi tahu nomor minggu dalam setahun. Berguna untuk laporan mingguan.",
+   "intinya": "WEEKNUM menjawab: tanggal ini masuk minggu ke berapa?",
+   "analogi": "Bayangkan setahun dibagi jadi 52 sampai 53 lembar halaman, satu halaman untuk satu minggu. WEEKNUM memberi tahu kamu tanggal itu ada di halaman nomor berapa.",
    "sintaks": "=WEEKNUM(tanggal; [tipe])",
    "argumen": [
     [
      "tanggal",
-     "Tanggal"
+     "Tanggal yang diperiksa."
     ],
     [
      "tipe",
-     "1 = minggu mulai Minggu (default); 2 = minggu mulai Senin"
+     "1 (bawaan): minggu dimulai hari Minggu. 2: minggu dimulai hari Senin."
     ]
    ],
    "langkah": [
-    "Ketik =WEEKNUM(A2) lalu Enter.",
+    "Ketik =WEEKNUM(A2) lalu tekan Enter.",
+    "Mau minggu yang dimulai Senin? Tulis =WEEKNUM(A2;2)."
+   ],
+   "tips": [
     "Minggu yang memuat 1 Januari dihitung sebagai minggu ke-1."
    ],
    "demo": {
@@ -4735,12 +4821,17 @@ window.DATA = {
    "id": "hijriyah",
    "cat": "tanggal",
    "judul": "Kalender Hijriyah",
-   "ringkas": "Tangkapan layar menunjukkan cara menampilkan tanggal dalam kalender Hijriyah di Excel.",
+   "ringkas": "Excel bisa menampilkan tanggal Masehi sebagai tanggal Hijriyah, kalau pengaturan komputermu mendukungnya.",
+   "intinya": "Tanggalnya tetap sama. Yang berubah hanya cara menampilkannya.",
+   "analogi": "Bayangkan satu hari yang punya dua nama, seperti orang yang punya nama panggilan. Hari yang sama bisa ditulis dalam kalender Masehi dan kalender Hijriyah.",
    "langkah": [
-    "Ketik tanggal Masehi di sel.",
-    "Buka Format Cells (Ctrl+1) > Date.",
-    "Pilih tipe kalender Hijri bila tersedia di pengaturan regional komputer.",
-    "Ikuti tangkapan layar di bawah untuk melihat urutan klik dan hasilnya."
+    "Ketik tanggal Masehi di sebuah kotak.",
+    "Tekan Ctrl+1 untuk membuka Format Cells, lalu pilih Date.",
+    "Pilih jenis kalender Hijri kalau tersedia di pengaturan regional komputermu.",
+    "Ikuti gambar di bawah untuk melihat urutan klik dan hasil akhirnya."
+   ],
+   "tips": [
+    "Kalau pilihan Hijri tidak muncul, cek dulu pengaturan bahasa dan wilayah (regional) di komputermu."
    ],
    "kuis": {
     "q": "Pengaturan tampilan kalender dilakukan melalui...",
@@ -4763,18 +4854,20 @@ window.DATA = {
    "id": "abs-sqrt",
    "cat": "mate",
    "judul": "ABS dan SQRT: harga mutlak dan akar",
-   "ringkas": "ABS membuang tanda negatif. SQRT menghitung akar kuadrat dan memberi #NUM! bila angkanya negatif.",
+   "ringkas": "ABS membuang tanda minus pada angka. SQRT menghitung akar kuadrat. SQRT memberi #NUM! kalau angkanya negatif.",
+   "intinya": "ABS membuat angka selalu positif. SQRT mencari angka yang kalau dikali dirinya sendiri hasilnya sama dengan angka itu.",
+   "analogi": "ABS seperti jarak: berjalan 5 langkah ke depan atau 5 langkah ke belakang, jauhnya tetap 5. SQRT seperti mencari sisi sebuah kotak persegi. Luasnya 81, maka sisinya 9, karena 9 kali 9 sama dengan 81.",
    "sintaks": "=ABS(angka)   =SQRT(angka)",
    "argumen": [
     [
      "angka",
-     "Bilangan atau sel"
+     "Angka atau kotak yang dihitung."
     ]
    ],
    "langkah": [
     "=ABS(-12) menghasilkan 12.",
     "=SQRT(81) menghasilkan 9.",
-    "Untuk akar dari angka yang mungkin negatif, pakai =SQRT(ABS(A2))."
+    "Kalau angkanya mungkin negatif, tulis =SQRT(ABS(A2))."
    ],
    "demo": {
     "data": [
@@ -4830,27 +4923,26 @@ window.DATA = {
    "kata": "abs sqrt akar mutlak",
    "gambar": [
     "function-arg-abs.jpg",
-    "function-arg-sqrt-300x137.jpg",
     "fungsi-abs.jpg",
-    "hasil-sqrt-abs-300x154.jpg",
-    "rumus-sqrt-300x192.jpg",
-    "sqrt-angka-negatif-300x166.jpg"
+    "rumus-sqrt-300x192.jpg"
    ]
   },
   {
    "id": "round",
    "cat": "mate",
    "judul": "ROUND, ROUNDUP, ROUNDDOWN: pembulatan",
-   "ringkas": "ROUND membulatkan seperti biasa, ROUNDUP selalu ke atas, ROUNDDOWN selalu ke bawah (menjauh dari atau mendekat ke nol).",
+   "ringkas": "ROUND membulatkan seperti biasa. ROUNDUP selalu membulatkan ke atas (menjauhi nol). ROUNDDOWN selalu membuang sisanya (mendekati nol).",
+   "intinya": "Tiga fungsi ini memotong angka sampai jumlah angka di belakang koma yang kamu tentukan.",
+   "analogi": "Bayangkan kamu membayar di warung dan uang receh diabaikan. ROUND membulatkan ke yang terdekat. ROUNDUP selalu membulatkan ke atas, seperti penjual yang tidak mau rugi. ROUNDDOWN selalu membuang sisanya, seperti penjual yang baik hati.",
    "sintaks": "=ROUND(angka; digit)",
    "argumen": [
     [
      "angka",
-     "Bilangan yang dibulatkan"
+     "Angka yang dibulatkan."
     ],
     [
      "digit",
-     "Jumlah desimal. Negatif membulatkan ke puluhan, ratusan, dst."
+     "Berapa angka di belakang koma. Angka negatif membulatkan ke puluhan, ratusan, dan seterusnya."
     ]
    ],
    "langkah": [
@@ -4914,7 +5006,6 @@ window.DATA = {
    },
    "kata": "round roundup rounddown bulat",
    "gambar": [
-    "data-dan-rumus-roundroundup-dll-300x137.jpg",
     "function-arg-round-300x161.jpg",
     "function-arg-rounddown-300x160.jpg",
     "function-arg-roundup-300x161.jpg"
@@ -4924,18 +5015,20 @@ window.DATA = {
    "id": "int",
    "cat": "mate",
    "judul": "INT: bagian bulat",
-   "ringkas": "INT membulatkan ke bawah menjadi bilangan bulat terdekat yang tidak lebih besar dari angkanya.",
+   "ringkas": "INT membulatkan ke bawah menjadi bilangan bulat terdekat yang tidak lebih besar dari angka itu.",
+   "intinya": "INT = turun ke bilangan bulat di bawahnya.",
+   "analogi": "Bayangkan tangga. Kamu berdiri di antara anak tangga 8 dan 9. INT selalu menurunkanmu ke anak tangga di bawahmu, yaitu 8. Kalau kamu ada di bawah nol, misalnya di -8,1, anak tangga di bawahmu adalah -9.",
    "sintaks": "=INT(angka)",
    "argumen": [
     [
      "angka",
-     "Bilangan"
+     "Angka yang dibulatkan ke bawah."
     ]
    ],
    "langkah": [
     "=INT(8,9) menghasilkan 8.",
-    "=INT(-8,1) menghasilkan -9 (membulat ke bawah).",
-    "Untuk hanya membuang desimal tanpa melihat tanda, pakai TRUNC."
+    "=INT(-8,1) menghasilkan -9, karena -9 adalah bilangan bulat di bawah -8,1.",
+    "Mau hanya membuang angka di belakang koma tanpa melihat tanda? Pakai TRUNC."
    ],
    "demo": {
     "data": [
@@ -4992,22 +5085,27 @@ window.DATA = {
    "id": "log",
    "cat": "mate",
    "judul": "LOG, LN, LOG10: logaritma",
-   "ringkas": "LOG menghitung logaritma dengan basis pilihan (default 10). LN memakai basis e. LOG10 selalu basis 10.",
+   "ringkas": "LOG menghitung logaritma, yaitu pertanyaan \"10 harus dipangkatkan berapa untuk menjadi angka ini?\". LN memakai basis e. LOG10 selalu basis 10.",
+   "intinya": "Logaritma adalah kebalikan dari pangkat.",
+   "analogi": "Kalau 10 pangkat 3 sama dengan 1000, maka logaritma 1000 adalah 3. Logaritma bertanya mundur: \"Berapa pangkatnya?\"",
    "sintaks": "=LOG(angka; [basis])   =LN(angka)   =LOG10(angka)",
    "argumen": [
     [
      "angka",
-     "Bilangan positif"
+     "Angka positif yang dicari logaritmanya."
     ],
     [
      "basis",
-     "Basis logaritma, default 10"
+     "Tidak wajib. Basis logaritma. Kalau kosong, Excel memakai 10."
     ]
    ],
    "langkah": [
     "=LOG(1000) menghasilkan 3.",
-    "=LOG(8;2) menghasilkan 3.",
+    "=LOG(8;2) menghasilkan 3, karena 2 pangkat 3 sama dengan 8.",
     "=LN(EXP(1)) menghasilkan 1."
+   ],
+   "tips": [
+    "Angka nol atau negatif tidak punya logaritma. Hasilnya #NUM!."
    ],
    "demo": {
     "data": [
@@ -5065,35 +5163,36 @@ window.DATA = {
    "kata": "log ln logaritma",
    "gambar": [
     "data-dan-hasil-rumus-lnloglog-10.jpg",
-    "function-arg-log-10.jpg",
-    "function-arg-log.jpg"
+    "function-arg-log-10.jpg"
    ]
   },
   {
    "id": "trigonometri",
    "cat": "mate",
    "judul": "SIN, COS, TAN dan kebalikannya",
-   "ringkas": "Fungsi trigonometri Excel bekerja dalam radian. Ubah derajat menjadi radian dengan RADIANS sebelum menghitung.",
+   "ringkas": "Fungsi trigonometri di Excel bekerja dengan satuan radian, bukan derajat. Ubah derajat menjadi radian dulu dengan RADIANS.",
+   "intinya": "SIN(30) tidak sama dengan 0,5 di Excel kecuali kamu mengubah 30 derajat menjadi radian.",
+   "analogi": "Bayangkan penggaris yang satuannya cm, tetapi kamu memberi angka dalam inci. Hasilnya salah. Excel mengira angkamu radian. RADIANS menerjemahkan derajat ke satuan yang dimengerti Excel.",
    "sintaks": "=SIN(RADIANS(derajat))   =ASIN(nilai)   =DEGREES(radian)",
    "argumen": [
     [
      "derajat",
-     "Sudut dalam derajat"
+     "Sudut dalam derajat."
     ],
     [
      "RADIANS()",
-     "Mengubah derajat menjadi radian"
+     "Mengubah derajat menjadi radian."
     ],
     [
      "DEGREES()",
-     "Mengubah radian menjadi derajat"
+     "Mengubah radian menjadi derajat."
     ]
    ],
    "langkah": [
     "=SIN(RADIANS(30)) menghasilkan 0,5.",
     "=COS(RADIANS(60)) juga menghasilkan 0,5.",
     "=DEGREES(ASIN(0,5)) menghasilkan 30.",
-    "ASIN, ACOS, ATAN adalah fungsi kebalikan dan menghasilkan radian."
+    "ASIN, ACOS, dan ATAN adalah kebalikan dari SIN, COS, dan TAN. Hasilnya dalam radian."
    ],
    "demo": {
     "data": [
@@ -5157,16 +5256,8 @@ window.DATA = {
    },
    "kata": "sin cos tan asin acos atan trigonometri sudut",
    "gambar": [
-    "contoh-data-cos.jpg",
-    "contoh-data-sin.jpg",
-    "contoh-data-tan.jpg",
-    "contoh-rumus-acosasinatan-300x174.jpg",
-    "function-argument-cos.jpg",
-    "function-argument-sin.jpg",
-    "function-argument-tan.jpg",
     "fungsi-asin.jpg",
     "fungsi-asinh-1.jpg",
-    "rumus-asin.jpg",
     "rumus-asinh.jpg"
    ]
   },
@@ -5174,19 +5265,21 @@ window.DATA = {
    "id": "even-odd",
    "cat": "mate",
    "judul": "EVEN, ODD, ISEVEN, ISODD",
-   "ringkas": "EVEN dan ODD membulatkan ke bilangan genap atau ganjil terdekat (menjauhi nol). ISEVEN dan ISODD menjawab benar atau salah.",
+   "ringkas": "EVEN dan ODD membulatkan angka ke bilangan genap atau ganjil terdekat (menjauhi nol). ISEVEN dan ISODD menjawab benar atau salah.",
+   "intinya": "Genap itu habis dibagi 2. Ganjil itu tidak.",
+   "analogi": "Bayangkan membagi permen berdua. Kalau permennya genap, tidak ada sisa. Kalau ganjil, ada satu sisa. ISEVEN memeriksa ada sisa atau tidak.",
    "sintaks": "=EVEN(angka)   =ODD(angka)   =ISEVEN(angka)   =ISODD(angka)",
    "argumen": [
     [
      "angka",
-     "Bilangan yang diperiksa"
+     "Angka yang diperiksa."
     ]
    ],
    "langkah": [
     "=EVEN(3) menghasilkan 4.",
     "=ODD(4) menghasilkan 5.",
-    "=ISEVEN(8) menghasilkan TRUE.",
-    "Pakai =IF(ISEVEN(A2);\"Genap\";\"Ganjil\") untuk teks."
+    "=ISEVEN(8) menghasilkan TRUE (benar).",
+    "Mau tulisan? Pakai =IF(ISEVEN(A2);\"Genap\";\"Ganjil\")."
    ],
    "demo": {
     "data": [
@@ -5245,10 +5338,6 @@ window.DATA = {
    },
    "kata": "even odd genap ganjil",
    "gambar": [
-    "fungsi-argumen-odd.jpg",
-    "fungsi-argument-even-300x137.jpg",
-    "hasil-rumus-even-dan-odd-300x249.jpg",
-    "iseven-1-1024x334.jpg",
     "iseven-2.jpg",
     "isood-1.jpg",
     "isood-2-1024x445.jpg"
@@ -5258,16 +5347,18 @@ window.DATA = {
    "id": "roman",
    "cat": "mate",
    "judul": "ROMAN dan ARABIC: angka Romawi",
-   "ringkas": "ROMAN mengubah angka biasa menjadi Romawi, ARABIC mengubah sebaliknya.",
+   "ringkas": "ROMAN mengubah angka biasa menjadi angka Romawi. ARABIC mengubahnya kembali.",
+   "intinya": "ROMAN = angka jadi Romawi. ARABIC = Romawi jadi angka.",
+   "analogi": "Bayangkan penerjemah di antara dua bahasa. Satu bahasa adalah angka biasa (1, 2, 3), bahasa lain adalah angka Romawi (I, II, III). ROMAN dan ARABIC bolak-balik menerjemahkan.",
    "sintaks": "=ROMAN(angka)   =ARABIC(teks)",
    "argumen": [
     [
      "angka",
-     "Bilangan 0 sampai 3999"
+     "Angka bulat dari 0 sampai 3999."
     ],
     [
      "teks",
-     "Angka Romawi, misalnya \"XIV\""
+     "Angka Romawi dalam tanda kutip, misalnya \"XIV\"."
     ]
    ],
    "langkah": [
@@ -5321,7 +5412,6 @@ window.DATA = {
    "gambar": [
     "arabic-2.jpg",
     "arabic.jpg",
-    "contoh-data-rumus-roman-300x135.jpg",
     "fungsi-argumen-roman-300x165.jpg"
    ]
   },
@@ -5329,18 +5419,19 @@ window.DATA = {
    "id": "fpb-kpk",
    "cat": "mate",
    "judul": "GCD dan LCM: FPB dan KPK",
-   "ringkas": "GCD mencari faktor persekutuan terbesar (FPB), LCM mencari kelipatan persekutuan terkecil (KPK).",
+   "ringkas": "GCD mencari FPB (faktor persekutuan terbesar). LCM mencari KPK (kelipatan persekutuan terkecil).",
+   "intinya": "FPB adalah angka terbesar yang bisa membagi habis keduanya. KPK adalah angka terkecil yang bisa dibagi habis oleh keduanya.",
+   "analogi": "Bayangkan kamu punya 12 permen dan 18 cokelat. Kamu ingin membagi ke beberapa kantong dengan isi yang sama, tanpa sisa. Paling banyak 6 kantong. Itulah FPB. Sedangkan KPK adalah kapan dua lampu yang berkedip tiap 4 detik dan tiap 6 detik menyala bersamaan lagi: pada detik ke-12.",
    "sintaks": "=GCD(a; b; ...)   =LCM(a; b; ...)",
    "argumen": [
     [
      "a, b, ...",
-     "Bilangan bulat positif"
+     "Bilangan bulat positif. Boleh lebih dari dua."
     ]
    ],
    "langkah": [
     "=GCD(12;18) menghasilkan 6.",
-    "=LCM(4;6) menghasilkan 12.",
-    "Keduanya menerima lebih dari dua bilangan."
+    "=LCM(4;6) menghasilkan 12."
    ],
    "demo": {
     "data": [
@@ -5393,13 +5484,8 @@ window.DATA = {
    },
    "kata": "gcd lcm fpb kpk",
    "gambar": [
-    "faktor-persekutuan-1-300x180.jpg",
-    "faktor-persekutuan-2-300x184.jpg",
-    "kelipatan-persekutuan-1-300x194.jpg",
-    "kelipatan-persekutuan-2-300x190.jpg",
     "rumus-fpb-matematika-1.jpg",
     "rumus-fpb-matematika-2.jpg",
-    "rumus-fpb-matematika-3.jpg",
     "rumus-fpb-matematika-4.jpg"
    ]
   },
@@ -5407,22 +5493,28 @@ window.DATA = {
    "id": "matriks",
    "cat": "mate",
    "judul": "MMULT dan matriks",
-   "ringkas": "MMULT mengalikan dua matriks. Hasilnya berupa array, sehingga harus dimasukkan sebagai array formula.",
+   "ringkas": "MMULT mengalikan dua matriks (tabel angka). Hasilnya juga berupa tabel, jadi kamu harus menyorot area hasilnya dulu.",
+   "intinya": "Matriks adalah tabel angka. MMULT mengalikan dua tabel dengan aturan khusus: baris dikali kolom.",
+   "analogi": "Bayangkan dua tabel: harga barang dan jumlah barang yang dibeli beberapa orang. Kamu ingin tahu total belanja tiap orang. MMULT mengalikan baris tabel pertama dengan kolom tabel kedua, lalu menjumlahkannya.",
    "sintaks": "=MMULT(matriks1; matriks2)",
    "argumen": [
     [
      "matriks1",
-     "Matriks pertama"
+     "Tabel angka pertama."
     ],
     [
      "matriks2",
-     "Matriks kedua; jumlah barisnya harus sama dengan jumlah kolom matriks pertama"
+     "Tabel angka kedua. Jumlah barisnya harus sama dengan jumlah kolom tabel pertama."
     ]
    ],
    "langkah": [
-    "Blok area hasil seukuran hasil perkalian (baris matriks 1 x kolom matriks 2).",
-    "Ketik =MMULT( lalu pilih matriks pertama dan kedua.",
-    "Excel 365 langsung menampilkan hasil; versi lama perlu Ctrl+Shift+Enter."
+    "Sorot area hasil. Jumlah barisnya sama dengan baris tabel 1, jumlah kolomnya sama dengan kolom tabel 2.",
+    "Ketik =MMULT( lalu sorot tabel pertama.",
+    "Ketik ; lalu sorot tabel kedua. Tutup dengan ).",
+    "Excel 365 langsung menampilkan hasilnya saat Enter. Excel versi lama perlu menekan Ctrl+Shift+Enter."
+   ],
+   "tips": [
+    "Dua tabel hanya bisa dikalikan kalau jumlah kolom tabel pertama sama dengan jumlah baris tabel kedua."
    ],
    "kuis": {
     "q": "Syarat dua matriks bisa dikalikan adalah...",
@@ -5437,10 +5529,7 @@ window.DATA = {
    },
    "kata": "mmult matriks perkalian",
    "gambar": [
-    "contoh-data-mmult-300x125.jpg",
     "fungsi-argumen-mmult-300x140.jpg",
-    "matrik-excel1.jpg",
-    "matrik-excel2-300x93.jpg",
     "matrik-excel3.jpg",
     "matrik-excel4.jpg"
    ]
@@ -5449,22 +5538,28 @@ window.DATA = {
    "id": "konversi",
    "cat": "mate",
    "judul": "CONVERT dan konversi bilangan",
-   "ringkas": "CONVERT mengubah satuan (misalnya km ke mil). Fungsi DEC2BIN, DEC2OCT, DEC2HEX mengubah bilangan desimal ke sistem bilangan lain.",
+   "ringkas": "CONVERT mengubah satuan, misalnya kilometer ke mil. DEC2BIN, DEC2OCT, dan DEC2HEX mengubah angka biasa ke sistem bilangan lain.",
+   "intinya": "CONVERT = ubah satuan. DEC2BIN dan kawan-kawan = ubah cara menulis angka.",
+   "analogi": "CONVERT seperti kalkulator konversi di ponsel: 10 kilometer sama dengan sekitar 6,2 mil. DEC2BIN seperti menulis angka dengan bahasa komputer yang hanya punya angka 0 dan 1.",
    "sintaks": "=CONVERT(angka; \"dari\"; \"ke\")   =DEC2OCT(angka)",
    "argumen": [
     [
      "angka",
-     "Nilai"
+     "Angka yang diubah."
     ],
     [
-     "dari, ke",
-     "Kode satuan, misalnya \"km\", \"mi\", \"kg\", \"lbm\""
+     "\"dari\", \"ke\"",
+     "Kode satuan di dalam tanda kutip, misalnya \"km\" (kilometer), \"mi\" (mil), \"kg\" (kilogram), \"lbm\" (pon)."
     ]
    ],
    "langkah": [
     "=CONVERT(10;\"km\";\"mi\") menghasilkan sekitar 6,21.",
+    "=DEC2BIN(10) menghasilkan 1010.",
     "=DEC2OCT(64) menghasilkan 100.",
-    "=DEC2BIN(10) menghasilkan 1010, =DEC2HEX(255) menghasilkan FF."
+    "=DEC2HEX(255) menghasilkan FF."
+   ],
+   "tips": [
+    "Kode satuan membedakan huruf besar dan kecil. Tulis persis seperti kodenya."
    ],
    "demo": {
     "data": [
@@ -5527,9 +5622,6 @@ window.DATA = {
    },
    "kata": "convert konversi desimal oktal biner heksa",
    "gambar": [
-    "fungsi-convert-1-300x158.jpg",
-    "fungsi-convert-2-300x160.jpg",
-    "fungsi-convert-3-300x159.jpg",
     "merubah-desimal-ke-oktal-1-300x190.jpg",
     "merubah-desimal-ke-oktal-2-300x189.jpg",
     "merubah-desimal-ke-oktal-3-300x190.jpg"
@@ -5539,30 +5631,33 @@ window.DATA = {
    "id": "dsum-dcount",
    "cat": "db",
    "judul": "DSUM dan DCOUNT: jumlah dan banyak data dengan kriteria",
-   "ringkas": "Fungsi database bekerja pada tabel yang punya baris judul, dan memakai rentang kriteria terpisah yang berisi judul kolom plus syaratnya.",
+   "ringkas": "Fungsi database (D...) bekerja pada tabel berjudul kolom. Syaratnya ditulis di tabel kecil terpisah yang disebut rentang kriteria.",
+   "intinya": "DSUM menjumlahkan dan DCOUNT menghitung, tetapi hanya baris yang cocok dengan kriteria di tabel kecil.",
+   "analogi": "Bayangkan kamu menempelkan kertas catatan di samping tabel: \"Tampilkan hanya yang Pendidikan = S1.\" Fungsi D... membaca catatan itu lalu menghitung hanya baris yang sesuai.",
    "sintaks": "=DSUM(database; field; kriteria)   =DCOUNT(database; field; kriteria)",
    "argumen": [
     [
      "database",
-     "Seluruh tabel termasuk baris judul"
+     "Seluruh tabel, termasuk baris judul."
     ],
     [
      "field",
-     "Kolom yang dihitung: nama judulnya dalam tanda kutip, atau nomor kolom"
+     "Kolom yang dihitung. Tulis judulnya di dalam tanda kutip, misalnya \"Gaji\", atau nomor kolomnya."
     ],
     [
      "kriteria",
-     "Rentang dua baris atau lebih: judul kolom di atas, syarat di bawahnya"
+     "Tabel kecil berisi judul kolom di baris atas dan syarat di bawahnya."
     ]
    ],
    "langkah": [
-    "Buat rentang kriteria di luar tabel. Baris pertama berisi judul kolom yang persis sama dengan tabel, baris di bawahnya berisi syarat.",
-    "Ketik =DSUM( lalu blok tabel termasuk judul.",
-    "Isi field dengan \"Gaji\" dan blok rentang kriteria.",
-    "Syarat pada satu baris dihubungkan dengan DAN; syarat pada baris berbeda dihubungkan dengan ATAU."
+    "Buat tabel kriteria di luar tabel utama. Baris pertama berisi judul kolom yang sama persis dengan judul di tabel utama. Baris di bawahnya berisi syarat.",
+    "Ketik =DSUM( lalu sorot tabel utama termasuk judulnya.",
+    "Ketik ; lalu \"Gaji\" di dalam tanda kutip. Ketik ; lalu sorot tabel kriteria. Tutup dengan ).",
+    "Syarat yang ada di satu baris yang sama berarti DAN (semua harus cocok). Syarat di baris yang berbeda berarti ATAU."
    ],
    "tips": [
-    "DCOUNT hanya menghitung sel berisi angka. Untuk menghitung sel terisi apa pun, pakai DCOUNTA."
+    "DCOUNT hanya menghitung kotak berisi angka. Untuk menghitung kotak terisi apa pun, pakai DCOUNTA.",
+    "Judul di tabel kriteria harus sama persis dengan judul di tabel utama."
    ],
    "demo": {
     "data": [
@@ -5638,9 +5733,6 @@ window.DATA = {
    "kata": "dsum dcount database kriteria",
    "gambar": [
     "contoh-data-dcount-300x182.jpg",
-    "fungsi-argumen-dcount-300x154.jpg",
-    "fungsi-argumen-dsum-300x148.jpg",
-    "hasil-data-n-rumus-dcount-300x112.jpg",
     "rumus-statistik-database-pegawai-1-280x300.jpg",
     "rumus-statistik-database-pegawai-2-280x300.jpg"
    ]
@@ -5649,26 +5741,28 @@ window.DATA = {
    "id": "dmax-dmin",
    "cat": "db",
    "judul": "DMAX dan DMIN: tertinggi dan terendah dengan kriteria",
-   "ringkas": "DMAX dan DMIN mengambil nilai terbesar atau terkecil hanya dari baris yang memenuhi kriteria.",
+   "ringkas": "DMAX dan DMIN mengambil angka terbesar atau terkecil, tetapi hanya dari baris yang cocok dengan kriteria.",
+   "intinya": "Seperti MAX dan MIN, tetapi dengan syarat.",
+   "analogi": "Bayangkan kamu bertanya, \"Siapa yang gajinya paling tinggi di antara yang lulusan S1?\" Kamu tidak peduli lulusan lain. DMAX menjawab pertanyaan itu.",
    "sintaks": "=DMAX(database; field; kriteria)   =DMIN(database; field; kriteria)",
    "argumen": [
     [
      "database",
-     "Tabel beserta judul"
+     "Tabel beserta baris judul."
     ],
     [
      "field",
-     "Kolom angka"
+     "Kolom angka yang dicari."
     ],
     [
      "kriteria",
-     "Rentang kriteria"
+     "Tabel kecil berisi syarat."
     ]
    ],
    "langkah": [
-    "Siapkan rentang kriteria, misalnya Pendidikan = S1.",
-    "Ketik =DMAX( lalu pilih tabel, field, dan kriteria.",
-    "Untuk terendah, ganti fungsi menjadi DMIN."
+    "Siapkan tabel kriteria, misalnya Pendidikan = S1.",
+    "Ketik =DMAX( lalu sorot tabel utama, ketik ; lalu nama kolom di dalam tanda kutip, ketik ; lalu sorot tabel kriteria.",
+    "Tutup dengan ). Untuk yang terendah, ganti DMAX dengan DMIN."
    ],
    "demo": {
     "data": [
@@ -5741,40 +5835,38 @@ window.DATA = {
    "gambar": [
     "contoh-data-dmax-300x184.jpg",
     "data-dmin-300x181.jpg",
-    "fungsi-argumen-dmax-300x149.jpg",
-    "fungsi-argumen-dmin-300x147.jpg",
-    "gambar-2.jpg",
-    "gambar-3.jpg",
-    "gambar-4.jpg",
-    "gambar-6.jpg",
-    "hasil-rumus-dmin-300x102.jpg",
-    "hasil-rumus-n-data-tabel-dmax-300x93.jpg"
+    "gambar-2.jpg"
    ]
   },
   {
    "id": "daverage",
    "cat": "db",
    "judul": "DAVERAGE: rata-rata dengan kriteria",
-   "ringkas": "DAVERAGE menghitung rata-rata kolom angka dari baris yang memenuhi kriteria.",
+   "ringkas": "DAVERAGE menghitung rata-rata kolom angka, tetapi hanya dari baris yang cocok dengan kriteria.",
+   "intinya": "Seperti AVERAGE, tetapi dengan syarat di tabel kecil.",
+   "analogi": "Bayangkan kamu ingin tahu rata-rata gaji khusus lulusan S1. DAVERAGE hanya mengambil baris S1 lalu merata-ratakannya.",
    "sintaks": "=DAVERAGE(database; field; kriteria)",
    "argumen": [
     [
      "database",
-     "Tabel beserta judul"
+     "Tabel beserta baris judul."
     ],
     [
      "field",
-     "Kolom yang dirata-ratakan"
+     "Kolom yang dirata-ratakan."
     ],
     [
      "kriteria",
-     "Rentang kriteria"
+     "Tabel kecil berisi syarat."
     ]
    ],
    "langkah": [
-    "Siapkan rentang kriteria.",
-    "Ketik =DAVERAGE( lalu tabel, field, kriteria.",
-    "Tekan Enter."
+    "Siapkan tabel kriteria di luar tabel utama.",
+    "Ketik =DAVERAGE( lalu sorot tabel, nama kolom, dan tabel kriteria (dipisah ;).",
+    "Tutup dengan ) lalu tekan Enter."
+   ],
+   "tips": [
+    "Kalau tidak ada satu pun baris yang cocok, hasilnya #DIV/0!."
    ],
    "demo": {
     "data": [
@@ -5842,34 +5934,35 @@ window.DATA = {
    "gambar": [
     "contoh-data-300x164.jpg",
     "contoh-data-daverage-300x185.jpg",
-    "fungsi-argumen-daverage-300x154.jpg",
-    "hasil-rumus-daverage-300x56.jpg"
+    "fungsi-argumen-daverage-300x154.jpg"
    ]
   },
   {
    "id": "dget-dvarp",
    "cat": "db",
    "judul": "DGET dan DVARP: mengambil satu nilai dan varians",
-   "ringkas": "DGET mengambil satu nilai dari baris yang cocok dengan kriteria, dan harus ada tepat satu baris cocok. DVARP menghitung varians populasi.",
+   "ringkas": "DGET mengambil satu nilai dari baris yang cocok dengan kriteria. Harus ada tepat satu baris yang cocok. DVARP menghitung varians populasi (ukuran seberapa tersebar angka).",
+   "intinya": "DGET mengambil satu jawaban saja, bukan banyak.",
+   "analogi": "Bayangkan kamu mencari data murid dengan nomor induk tertentu. Nomor induk itu unik, jadi hanya ada satu murid. DGET mengambil data milik murid itu. Kalau ada dua murid dengan nomor yang sama, DGET bingung.",
    "sintaks": "=DGET(database; field; kriteria)",
    "argumen": [
     [
      "database",
-     "Tabel beserta judul"
+     "Tabel beserta baris judul."
     ],
     [
      "field",
-     "Kolom yang diambil"
+     "Kolom yang diambil isinya."
     ],
     [
      "kriteria",
-     "Rentang kriteria yang hanya cocok dengan satu baris"
+     "Tabel kecil berisi syarat. Syaratnya harus cocok dengan tepat satu baris."
     ]
    ],
    "langkah": [
     "Buat kriteria yang unik, misalnya Kode = C.",
-    "Ketik =DGET( lalu tabel, field, kriteria.",
-    "Bila lebih dari satu baris cocok, hasilnya #NUM!; bila tidak ada, #VALUE!."
+    "Ketik =DGET( lalu sorot tabel, nama kolom, dan tabel kriteria (dipisah ;). Tutup dengan ).",
+    "Kalau lebih dari satu baris cocok, hasilnya #NUM!. Kalau tidak ada yang cocok, hasilnya #VALUE!."
    ],
    "demo": {
     "data": [
@@ -5945,37 +6038,39 @@ window.DATA = {
    "id": "pmt",
    "cat": "uang",
    "judul": "PMT: cicilan pinjaman per periode",
-   "ringkas": "PMT menghitung angsuran tetap tiap periode untuk pinjaman dengan bunga tetap.",
+   "ringkas": "PMT menghitung besar cicilan tetap per periode untuk pinjaman dengan bunga tetap.",
+   "intinya": "PMT menjawab: tiap bulan aku harus bayar berapa?",
+   "analogi": "Bayangkan kamu meminjam uang untuk membeli sepeda motor. Kamu ingin tahu cicilan tiap bulan supaya lunas dalam jangka waktu tertentu. PMT menghitungnya.",
    "sintaks": "=PMT(bunga; jumlah_periode; nilai_sekarang; [nilai_akhir]; [tipe])",
    "argumen": [
     [
      "bunga",
-     "Suku bunga per periode (bunga tahunan / 12 untuk cicilan bulanan)"
+     "Bunga per periode. Untuk cicilan bulanan, bagi bunga tahunan dengan 12."
     ],
     [
      "jumlah_periode",
-     "Banyak cicilan"
+     "Banyaknya cicilan. Kalau 3 tahun cicilan bulanan, ada 36."
     ],
     [
      "nilai_sekarang",
-     "Jumlah pinjaman"
+     "Jumlah pinjaman."
     ],
     [
      "nilai_akhir",
-     "Sisa yang diinginkan, default 0"
+     "Tidak wajib. Sisa yang diinginkan di akhir. Kalau kosong, 0."
     ],
     [
      "tipe",
-     "0 = bayar akhir periode, 1 = awal periode"
+     "0 = bayar di akhir periode (bawaan). 1 = bayar di awal periode."
     ]
    ],
    "langkah": [
-    "Pastikan bunga dan jumlah periode memakai satuan yang sama: bunga bulanan untuk cicilan bulanan.",
-    "Ketik =PMT(B2/12;B3*12;B1) bila bunga tahunan di B2, tenor tahun di B3, pinjaman di B1.",
-    "Hasilnya negatif karena itu uang keluar. Tambahkan tanda minus di depan bila ingin angka positif."
+    "Pastikan satuan bunga dan periode sama. Cicilan bulanan berarti bunga bulanan dan jumlah bulan.",
+    "Misalnya bunga tahunan di B2, lama pinjaman (tahun) di B3, pinjaman di B1. Ketik =PMT(B2/12;B3*12;B1).",
+    "Hasilnya negatif karena itu uang yang keluar. Tambahkan tanda minus di depan PMT kalau mau angka positif."
    ],
    "tips": [
-    "Jumlah total yang dibayar = cicilan x jumlah periode."
+    "Total yang dibayar sampai lunas = cicilan x jumlah periode."
    ],
    "demo": {
     "data": [
@@ -6031,40 +6126,37 @@ window.DATA = {
    },
    "kata": "pmt cicilan angsuran pinjaman kredit",
    "gambar": [
-    "fungsi-finansial-pmt-1.jpg",
     "fungsi-finansial-rumus-pmt-2-300x165.jpg",
     "fungsi-finansial-rumus-pmt-3-300x222.jpg",
-    "fungsi-finansial-rumus-pmt-4.jpg",
-    "fungsi-finansial-rumus-pmt-5.jpg",
-    "fungsi-finansial-rumus-pmt-8-300x177.jpg",
-    "fungsi-finansial-rumus-pmt-9-300x157.jpg",
-    "fungsi-finansial-rumus-pmt-61.jpg"
+    "fungsi-finansial-rumus-pmt-8-300x177.jpg"
    ]
   },
   {
    "id": "rate",
    "cat": "uang",
    "judul": "RATE: mencari suku bunga kredit",
-   "ringkas": "RATE menghitung suku bunga per periode bila diketahui cicilan, tenor, dan pinjaman.",
+   "ringkas": "RATE mencari bunga per periode kalau kamu sudah tahu cicilan, jumlah cicilan, dan pinjaman.",
+   "intinya": "RATE menjawab: bunganya berapa?",
+   "analogi": "Bayangkan toko menawarkan cicilan tanpa menyebut bunga. Kamu tahu harga, cicilan, dan berapa kali bayar. RATE membongkar bunga yang tersembunyi di dalamnya.",
    "sintaks": "=RATE(jumlah_periode; cicilan; nilai_sekarang; [nilai_akhir]; [tipe])",
    "argumen": [
     [
      "jumlah_periode",
-     "Banyak cicilan"
+     "Banyaknya cicilan."
     ],
     [
      "cicilan",
-     "Besar cicilan (negatif)"
+     "Besar tiap cicilan. Tulis negatif karena uang keluar."
     ],
     [
      "nilai_sekarang",
-     "Pinjaman"
+     "Jumlah pinjaman."
     ]
    ],
    "langkah": [
     "Ketik =RATE(12;-900000;10000000).",
-    "Hasilnya bunga per bulan; kalikan 12 untuk bunga per tahun.",
-    "Ubah format sel menjadi Percentage."
+    "Hasilnya adalah bunga per bulan. Kalikan 12 untuk bunga per tahun.",
+    "Ubah format kotak menjadi Percentage supaya tampil sebagai persen."
    ],
    "demo": {
     "data": [
@@ -6116,8 +6208,6 @@ window.DATA = {
    "kata": "rate bunga kredit suku bunga",
    "gambar": [
     "menentukan-presentase-bunga-kredit-dengan-excel-1-300x131.jpg",
-    "menentukan-presentase-bunga-kredit-dengan-excel-2-300x109.jpg",
-    "menentukan-presentase-bunga-kredit-dengan-excel-3-300x110.jpg",
     "menentukan-presentase-bunga-kredit-dengan-excel-4-300x108.jpg",
     "menentukan-presentase-bunga-kredit-dengan-excel-5-300x110.jpg"
    ]
@@ -6126,30 +6216,32 @@ window.DATA = {
    "id": "fv-pv",
    "cat": "uang",
    "judul": "FV, PV, NPER: nilai masa depan dan masa kini",
-   "ringkas": "FV menghitung nilai tabungan di masa depan. PV menghitung nilai sekarang. NPER mencari berapa periode yang dibutuhkan.",
+   "ringkas": "FV menghitung nilai tabungan di masa depan. PV menghitung nilai uang sekarang. NPER menghitung berapa periode yang dibutuhkan.",
+   "intinya": "FV = nanti jadi berapa? PV = sekarang senilai berapa? NPER = butuh berapa lama?",
+   "analogi": "Bayangkan kamu menabung 1 juta tiap tahun di bank yang memberi bunga. FV memberi tahu berapa uangmu setelah 10 tahun. Kalau kamu ingin tahu berapa lama sampai tabungan mencapai target, itu NPER.",
    "sintaks": "=FV(bunga; periode; setoran; [nilai_sekarang]; [tipe])",
    "argumen": [
     [
      "bunga",
-     "Bunga per periode"
+     "Bunga per periode."
     ],
     [
      "periode",
-     "Jumlah periode"
+     "Banyaknya periode."
     ],
     [
      "setoran",
-     "Setoran tetap tiap periode (negatif)"
+     "Setoran tetap tiap periode. Tulis negatif karena uang keluar dari kantongmu."
     ],
     [
      "nilai_sekarang",
-     "Saldo awal (negatif)"
+     "Saldo awal. Tulis negatif juga."
     ]
    ],
    "langkah": [
-    "Ketik =FV(5%;10;-1000000) untuk setoran 1 juta per tahun selama 10 tahun.",
-    "Hasil positif karena itu uang yang kamu terima nanti.",
-    "Cari lama menabung dengan NPER, dan nilai kini dengan PV."
+    "Ketik =FV(5%;10;-1000000) untuk setoran 1 juta per tahun selama 10 tahun dengan bunga 5% per tahun.",
+    "Hasilnya positif karena itu uang yang kamu terima nanti.",
+    "Mau tahu lama menabung? Pakai NPER. Mau tahu nilai sekarang? Pakai PV."
    ],
    "demo": {
     "data": [
@@ -6202,33 +6294,34 @@ window.DATA = {
    "gambar": [
     "fungsi-fv.jpg",
     "fungsi-nper.gif",
-    "rumus-fv-fungsi-finansial-1-300x154.jpg",
-    "rumus-fv-fungsi-finansial-2-300x153.jpg",
-    "rumus-fv-fungsi-finansial-3-225x300.jpg",
-    "rumus-fv-fungsi-finansial-4-300x173.jpg",
-    "rumus-fv-fungsi-finansial-5-300x153.jpg"
+    "rumus-fv-fungsi-finansial-3-225x300.jpg"
    ]
   },
   {
    "id": "npv-irr",
    "cat": "uang",
    "judul": "NPV, IRR, MIRR, XIRR: menilai investasi",
-   "ringkas": "NPV menghitung nilai sekarang dari arus kas masa depan. IRR mencari tingkat pengembalian yang membuat NPV nol.",
+   "ringkas": "NPV menghitung nilai sekarang dari uang yang akan masuk di masa depan. IRR mencari tingkat keuntungan dari sebuah investasi.",
+   "intinya": "NPV menjawab: investasi ini layak atau tidak? IRR menjawab: untungnya berapa persen per tahun?",
+   "analogi": "Uang Rp 100 ribu hari ini lebih berharga daripada Rp 100 ribu setahun lagi, karena uang hari ini bisa kamu pakai atau tabung. NPV memperhitungkan itu, lalu memberi tahu apakah semua uang masuk di masa depan sebanding dengan modal yang kamu keluarkan sekarang.",
    "sintaks": "=NPV(tingkat; arus1; arus2; ...)   =IRR(arus; [tebakan])",
    "argumen": [
     [
      "tingkat",
-     "Tingkat diskonto per periode"
+     "Tingkat diskonto per periode. Anggap ini bunga yang kamu harapkan."
     ],
     [
      "arus",
-     "Arus kas; untuk IRR minimal satu negatif dan satu positif"
+     "Daftar uang masuk dan keluar tiap periode. Untuk IRR harus ada minimal satu angka negatif (modal) dan satu angka positif (hasil)."
     ]
    ],
    "langkah": [
-    "NPV hanya menghitung arus kas di akhir tiap periode. Investasi awal ditambahkan terpisah: =NPV(10%;B2:B4)+B1.",
-    "IRR menerima deret arus kas termasuk investasi awal: =IRR(B1:B4).",
-    "XIRR dipakai bila arus kas tidak terjadi pada selang waktu yang sama (ada kolom tanggal)."
+    "NPV hanya menghitung arus kas yang terjadi di akhir tiap periode. Modal awal ditambahkan terpisah: =NPV(10%;B2:B4)+B1.",
+    "IRR menerima seluruh deretan arus kas, termasuk modal awal: =IRR(B1:B4).",
+    "Kalau arus kas tidak terjadi pada selang waktu yang sama (ada kolom tanggal), pakai XIRR."
+   ],
+   "tips": [
+    "Kalau IRR lebih besar dari bunga yang kamu harapkan, investasinya layak dipertimbangkan."
    ],
    "demo": {
     "data": [
@@ -6283,43 +6376,43 @@ window.DATA = {
    },
    "kata": "npv irr mirr xirr investasi",
    "gambar": [
-    "fungsi-irr.jpg",
     "fungsi-mirr.gif",
     "fungsi-mirr.jpg",
-    "fungsi-npv.jpg",
-    "fungsi-xirr-pada-excel.jpg",
-    "fungsi-xirr.jpg"
+    "fungsi-xirr-pada-excel.jpg"
    ]
   },
   {
    "id": "penyusutan",
    "cat": "uang",
    "judul": "Penyusutan aset: SLN, SYD, DDB, DB",
-   "ringkas": "Beberapa fungsi menghitung beban penyusutan aset per periode dengan metode berbeda.",
+   "ringkas": "Beberapa fungsi menghitung penyusutan aset (turunnya nilai barang karena dipakai) tiap periode, dengan cara hitung yang berbeda-beda.",
+   "intinya": "Penyusutan adalah cara membagi harga barang ke beberapa tahun pemakaian.",
+   "analogi": "Bayangkan membeli motor seharga 10 juta. Setelah 5 tahun nilainya tinggal 2 juta. Berarti nilainya turun 8 juta. SLN membagi 8 juta itu sama rata: 1,6 juta per tahun. Metode lain membuat penurunan lebih besar di tahun awal, seperti nilai motor yang memang turun cepat di tahun pertama.",
    "sintaks": "=SLN(biaya; sisa; umur)   =SYD(biaya; sisa; umur; periode)   =DDB(biaya; sisa; umur; periode)",
    "argumen": [
     [
      "biaya",
-     "Harga perolehan"
+     "Harga beli barang."
     ],
     [
      "sisa",
-     "Nilai sisa di akhir umur"
+     "Nilai sisa di akhir umur pakai."
     ],
     [
      "umur",
-     "Umur ekonomis (periode)"
+     "Umur pakai (berapa periode)."
     ],
     [
      "periode",
-     "Periode yang dihitung"
+     "Periode ke berapa yang dihitung."
     ]
    ],
    "langkah": [
-    "SLN: garis lurus, beban sama tiap tahun.",
-    "SYD: jumlah angka tahun, beban lebih besar di awal dan menurun.",
-    "DDB: saldo menurun ganda, beban awal paling besar.",
-    "DB: saldo menurun dengan tarif tetap. AMORDEGRC dan AMORLINC dipakai untuk akuntansi Prancis."
+    "SLN: garis lurus. Beban penyusutan sama setiap tahun.",
+    "SYD: jumlah angka tahun. Beban besar di awal lalu menurun.",
+    "DDB: saldo menurun ganda. Beban di awal paling besar.",
+    "DB: saldo menurun dengan tarif tetap.",
+    "AMORDEGRC dan AMORLINC dipakai untuk akuntansi gaya Prancis. Jarang dipakai."
    ],
    "demo": {
     "data": [
@@ -6382,39 +6475,38 @@ window.DATA = {
    },
    "kata": "sln syd ddb db penyusutan depresiasi",
    "gambar": [
-    "fungsi-amordegrc.gif",
-    "fungsi-amordegrc.jpg",
-    "fungsi-amorlinc.gif",
-    "fungsi-amorlinc.jpg",
     "fungsi-db-1024x576.jpg",
-    "fungsi-ddb.jpg",
     "fungsi-syd.jpg",
-    "rumus-syd.jpg",
-    "sln-1.jpg",
-    "sln-2.jpg"
+    "sln-1.jpg"
    ]
   },
   {
    "id": "bunga-pokok",
    "cat": "uang",
    "judul": "IPMT, PPMT, ISPMT, CUMIPMT, CUMPRINC",
-   "ringkas": "Memisahkan setiap cicilan menjadi bagian bunga dan bagian pokok, atau menjumlahkannya untuk beberapa periode.",
+   "ringkas": "Setiap cicilan terdiri dari dua bagian: bunga dan pokok. Fungsi-fungsi ini memisahkan keduanya.",
+   "intinya": "Bunga adalah ongkos meminjam. Pokok adalah uang pinjaman yang dikembalikan.",
+   "analogi": "Bayangkan cicilanmu Rp 1 juta. Sebagian untuk membayar jasa bank (bunga), sebagian untuk mengurangi utang (pokok). Di awal pinjaman, bagian bunga lebih besar. Makin lama, bagian pokok makin besar.",
    "sintaks": "=IPMT(bunga; periode_ke; jumlah_periode; pinjaman)   =PPMT(...)",
    "argumen": [
     [
      "periode_ke",
-     "Cicilan yang ke berapa"
+     "Cicilan yang ke berapa."
     ],
     [
      "jumlah_periode",
-     "Total cicilan"
+     "Total jumlah cicilan."
+    ],
+    [
+     "pinjaman",
+     "Jumlah uang yang dipinjam."
     ]
    ],
    "langkah": [
-    "IPMT mengembalikan bagian bunga dari cicilan ke-n.",
-    "PPMT mengembalikan bagian pokok.",
-    "IPMT + PPMT = PMT.",
-    "CUMIPMT dan CUMPRINC menjumlahkan bunga atau pokok untuk rentang periode."
+    "IPMT menghasilkan bagian bunga dari cicilan ke sekian.",
+    "PPMT menghasilkan bagian pokok dari cicilan ke sekian.",
+    "IPMT ditambah PPMT sama dengan PMT (total cicilan).",
+    "CUMIPMT dan CUMPRINC menjumlahkan bunga atau pokok untuk beberapa periode sekaligus."
    ],
    "demo": {
     "data": [
@@ -6477,10 +6569,8 @@ window.DATA = {
    },
    "kata": "ipmt ppmt cumipmt cumprinc bunga pokok",
    "gambar": [
-    "fungsi-cumipmt.jpg",
     "fungsi-cumprinc.jpg",
     "fungsi-ipmt.gif",
-    "fungsi-ipmt.jpg",
     "fungsi-ispmt.jpg"
    ]
   },
@@ -6488,22 +6578,27 @@ window.DATA = {
    "id": "bunga-efektif",
    "cat": "uang",
    "judul": "EFFECT, NOMINAL, FVSCHEDULE, DOLLARDE",
-   "ringkas": "Mengubah bunga nominal menjadi efektif dan sebaliknya, serta menghitung pertumbuhan dengan bunga yang berubah-ubah.",
+   "ringkas": "Bunga nominal adalah bunga yang diumumkan. Bunga efektif adalah bunga sebenarnya setelah bunga dihitung berkali-kali dalam setahun.",
+   "intinya": "EFFECT mengubah bunga nominal jadi efektif. NOMINAL mengubah sebaliknya.",
+   "analogi": "Bayangkan bank mengumumkan 12% per tahun, tetapi menambahkan bunga tiap bulan. Bunga bulan depan dihitung juga dari bunga bulan ini. Jadi sebenarnya kamu mendapat sedikit lebih dari 12%.",
    "sintaks": "=EFFECT(nominal; per_tahun)   =NOMINAL(efektif; per_tahun)",
    "argumen": [
     [
      "nominal",
-     "Bunga nominal tahunan"
+     "Bunga nominal per tahun."
     ],
     [
      "per_tahun",
-     "Berapa kali bunga dimajemukkan dalam setahun"
+     "Berapa kali bunga dihitung dalam setahun. Bulanan berarti 12."
     ]
    ],
    "langkah": [
     "=EFFECT(12%;12) menghasilkan bunga efektif sekitar 12,68%.",
-    "=NOMINAL(12,68%;12) mengembalikannya ke 12%.",
-    "FVSCHEDULE menghitung nilai akhir bila bunga tiap tahun berbeda."
+    "=NOMINAL(12,68%;12) mengembalikannya menjadi sekitar 12%.",
+    "FVSCHEDULE menghitung nilai akhir kalau bunga tiap tahun berbeda."
+   ],
+   "tips": [
+    "Bunga efektif selalu sama atau lebih besar dari nominal. Makin sering dihitung, makin besar bedanya."
    ],
    "demo": {
     "data": [
@@ -6547,8 +6642,6 @@ window.DATA = {
    "kata": "effect nominal bunga efektif",
    "gambar": [
     "fungsi-dollarde.jpg",
-    "fungsi-dollarfr.jpg",
-    "fungsi-effect.jpg",
     "fungsi-fvschedule.jpg",
     "fungsi-nominal.jpg"
    ]
@@ -6557,43 +6650,46 @@ window.DATA = {
    "id": "obligasi",
    "cat": "uang",
    "judul": "Fungsi obligasi dan surat berharga",
-   "ringkas": "Kelompok fungsi untuk menghitung harga, imbal hasil, bunga berjalan, dan kupon obligasi serta surat utang jangka pendek.",
+   "ringkas": "Obligasi adalah surat utang. Kelompok fungsi ini menghitung harga, hasil, bunga berjalan, dan kupon obligasi.",
+   "intinya": "Kamu cukup mengisi tanggal, bunga, dan frekuensi. Excel menghitung sisanya.",
+   "analogi": "Bayangkan kamu meminjamkan uang ke pemerintah dan mendapat surat tanda utang. Pemerintah membayar bunga berkala (kupon) lalu mengembalikan uangmu saat jatuh tempo. Fungsi-fungsi ini membantu menghitung nilainya.",
    "sintaks": "=PRICE(penyelesaian; jatuh_tempo; kupon; imbal_hasil; penebusan; frekuensi)",
    "argumen": [
     [
      "penyelesaian",
-     "Tanggal transaksi"
+     "Tanggal transaksi."
     ],
     [
      "jatuh_tempo",
-     "Tanggal obligasi jatuh tempo"
+     "Tanggal obligasi jatuh tempo."
     ],
     [
      "kupon",
-     "Suku bunga kupon tahunan"
+     "Bunga kupon per tahun."
     ],
     [
      "imbal_hasil",
-     "Imbal hasil tahunan"
+     "Imbal hasil per tahun yang diharapkan."
     ],
     [
      "penebusan",
-     "Nilai tebus per nominal 100"
+     "Nilai yang dibayar kembali per nominal 100."
     ],
     [
      "frekuensi",
-     "1 = tahunan, 2 = semesteran, 4 = kuartalan"
+     "1 = tahunan, 2 = semesteran, 4 = kuartalan."
     ]
    ],
    "langkah": [
-    "PRICE: harga per nominal 100. YIELD: imbal hasil dari harga.",
-    "ACCRINT dan ACCRINTM: bunga berjalan.",
-    "COUPNUM, COUPNCD, COUPPCD, COUPDAYS: jumlah dan tanggal kupon.",
-    "TBILLEQ, TBILLPRICE, TBILLYIELD: surat utang jangka pendek.",
-    "Gunakan tangkapan layar di bawah untuk melihat isi argumen tiap fungsi."
+    "PRICE menghitung harga per nominal 100.",
+    "YIELD menghitung imbal hasil dari harga.",
+    "ACCRINT dan ACCRINTM menghitung bunga berjalan.",
+    "COUPNUM, COUPNCD, COUPPCD, dan COUPDAYS menghitung jumlah dan tanggal kupon.",
+    "TBILLEQ, TBILLPRICE, dan TBILLYIELD untuk surat utang jangka pendek.",
+    "Lihat gambar di bawah untuk melihat isi argumen tiap fungsi."
    ],
    "tips": [
-    "Tanggal pada fungsi ini harus diisi dengan DATE(), bukan teks."
+    "Tanggal pada fungsi ini harus ditulis dengan DATE(), bukan sebagai tulisan biasa."
    ],
    "kuis": {
     "q": "Frekuensi 2 pada fungsi obligasi berarti kupon dibayar...",
@@ -6608,50 +6704,29 @@ window.DATA = {
    },
    "kata": "obligasi price yield accrint coup tbill",
    "gambar": [
-    "fungsi-accrint.jpg",
-    "fungsi-accrintm.gif",
-    "fungsi-accrintm.jpg",
-    "fungsi-coupdaybs.jpg",
-    "fungsi-coupdays.jpg",
-    "fungsi-coupdaysnc.jpg",
-    "fungsi-coupncd.jpg",
-    "fungsi-coupnum.jpg",
-    "fungsi-couppcd.jpg",
-    "fungsi-price-pada-excel.jpg",
-    "fungsi-price.jpg",
-    "fungsi-rumus-pricemat.jpg",
-    "fungsi-rumus-received-pada-excel.jpg",
     "pricerdisc-1.jpg",
-    "pricerdisc-2.jpg",
-    "rumus-pricemat.jpg",
     "rumus-received-pada-excel.jpg",
-    "tbilleq.jpg",
-    "tbillprice.jpg",
-    "tbillyield.jpg",
-    "yield-1.jpg",
-    "yield-2.jpg",
-    "yielddisc1.jpg",
-    "yielddisc2.jpg",
-    "yieldmat-1.jpg",
-    "yieldmat-2.jpg"
+    "yielddisc2.jpg"
    ]
   },
   {
    "id": "macro-rekam",
    "cat": "macro",
    "judul": "Merekam macro pertama",
-   "ringkas": "Macro adalah rangkaian langkah yang direkam lalu dijalankan ulang dengan satu klik. Excel menulis kode VBA-nya sendiri selama perekaman.",
+   "ringkas": "Macro adalah rangkaian langkah yang direkam lalu bisa diulang dengan satu klik. Excel menulis kode VBA-nya sendiri selama merekam.",
+   "intinya": "Merekam macro seperti merekam video langkah-langkahmu. Memutarnya ulang melakukan semua langkah itu lagi.",
+   "analogi": "Bayangkan kamu mengajari adikmu merapikan meja: letakkan buku di kiri, pensil di kanan. Kamu merekam semua gerakan. Besok kamu tinggal menekan tombol putar dan meja langsung rapi. Macro bekerja begitu.",
    "langkah": [
-    "Aktifkan tab Developer: File > Options > Customize Ribbon > centang Developer.",
-    "Developer > Record Macro. Beri nama tanpa spasi, misalnya FormatTabel, dan pilih tombol pintas bila perlu.",
-    "Lakukan langkah yang ingin direkam, misalnya menebalkan judul dan memberi warna.",
+    "Aktifkan tab Developer: File, Options, Customize Ribbon, lalu centang Developer.",
+    "Klik Developer lalu Record Macro. Beri nama tanpa spasi, misalnya FormatTabel. Boleh pilih tombol pintas.",
+    "Lakukan langkah yang mau direkam, misalnya menebalkan judul dan mewarnai.",
     "Klik Stop Recording.",
-    "Jalankan lagi lewat Developer > Macros > Run, atau lewat tombol pintas.",
+    "Jalankan ulang: Developer, Macros, pilih nama macro, lalu Run. Atau tekan tombol pintasnya.",
     "Simpan file sebagai Excel Macro-Enabled Workbook (.xlsm)."
    ],
    "tips": [
     "Rekam hanya langkah yang perlu. Gerakan yang salah ikut terekam.",
-    "Aktifkan Use Relative References bila macro harus berlaku di sel mana pun, bukan hanya sel yang direkam."
+    "Aktifkan Use Relative References kalau macro harus bekerja di kotak mana saja, bukan hanya kotak yang direkam."
    ],
    "kuis": {
     "q": "Format file yang menyimpan macro adalah...",
@@ -6666,59 +6741,26 @@ window.DATA = {
    },
    "kata": "macro rekam record developer",
    "gambar": [
-    "1-mengaktifkan-fungsi-macro-excel-273x300.jpg",
-    "1-record-untuk-macro-pada-excel-300x173.jpg",
-    "1-tabel-data-excel-2010-300x244.jpg",
-    "2-fungsi-macro-excel-300x230.jpg",
-    "2-memunculakan-tab-developer-macro-300x117.jpg",
-    "2-tabel-data-excel-2010-300x68.jpg",
-    "3-fungsi-macro-excel-tab-developer-300x106.jpg",
     "3-memunculkan-kotak-isian-macro-pada-excel-300x247.jpg",
-    "3-tabel-data-excel-2010-300x163.jpg",
-    "4-menyambungkan-record-pada-macro-300x117.jpg",
-    "4-tabel-data-excel-2010-300x256.jpg",
-    "5-hasil-mentah-record-macro-300x173.jpg",
-    "5-tabel-data-excel-2010-300x256.jpg",
-    "6-macro-pada-excel-300x173.jpg",
-    "6-tabel-data-excel-2010-300x164.jpg",
-    "7-macor-pada-excel-300x289.jpg",
-    "langkah-membuat-makro.jpg",
-    "langkah-mengatur-rekam-makro.jpg",
-    "macro-excel-1.jpg",
     "macro-excel-2.jpg",
-    "macro-excel-tutorial-2.jpg",
-    "macro-excel-tutorial-3.jpg",
-    "macro-excel-tutorial-5.jpg",
-    "macro-excel-tutorial.jpg",
-    "membuat-macro-di-excel-2010-2.jpg",
-    "membuat-macro-di-excel-2010-3.jpg",
-    "membuat-macro-di-excel-2010-4.jpg",
-    "membuat-macro-di-excel-2010-5.jpg",
-    "membuat-macro-di-excel-2010.jpg",
-    "tutorial-excel-macro-2.jpg",
-    "tutorial-excel-macro-3.jpg",
-    "tutorial-excel-macro-4.jpg",
-    "tutorial-excel-macro-5.jpg",
-    "tutorial-excel-macro-6.jpg",
-    "tutorial-excel-macro-7.jpg",
-    "tutorial-excel-macro.jpg",
-    "tutorial-excelmacro-2.jpg",
-    "tutorial-excelmacro.jpg"
+    "7-macor-pada-excel-300x289.jpg"
    ]
   },
   {
    "id": "macro-error",
    "cat": "macro",
    "judul": "Mengatasi macro yang error",
-   "ringkas": "Pesan seperti 'Macros have been disabled' atau galat saat dijalankan biasanya disebabkan pengaturan keamanan atau kode yang salah.",
+   "ringkas": "Pesan seperti \"Macros have been disabled\" atau error saat macro berjalan biasanya disebabkan oleh pengaturan keamanan atau kode yang salah.",
+   "intinya": "Ada dua sumber masalah: Excel memblokir macro (keamanan), atau kodenya yang salah.",
+   "analogi": "Bayangkan satpam yang menahan tamu di pintu karena belum dikenal. Itulah pengaturan keamanan. Setelah kamu bilang, \"Dia tamuku,\" baru boleh masuk. Kalau tamunya sudah masuk tetapi salah jalan, itu kesalahan kode.",
    "langkah": [
-    "Buka File > Options > Trust Center > Trust Center Settings > Macro Settings.",
-    "Pilih Disable all macros with notification agar muncul pilihan Enable Content saat file dibuka.",
-    "Untuk galat dalam kode, klik Debug; baris bermasalah akan disorot kuning.",
-    "Perbaiki baris tersebut lalu tekan F5 untuk melanjutkan atau tombol Reset untuk berhenti."
+    "Buka File, Options, Trust Center, Trust Center Settings, lalu Macro Settings.",
+    "Pilih Disable all macros with notification. Saat file dibuka, muncul tombol Enable Content yang bisa kamu klik.",
+    "Kalau ada error pada kode, klik Debug. Baris yang bermasalah disorot kuning.",
+    "Perbaiki baris itu. Tekan F5 untuk melanjutkan, atau tombol Reset untuk berhenti."
    ],
    "tips": [
-    "Hanya aktifkan macro dari file yang kamu percayai."
+    "Hanya aktifkan macro dari file yang kamu percaya."
    ],
    "kuis": {
     "q": "Tombol yang membawa kamu ke baris kode yang bermasalah adalah...",
@@ -6734,27 +6776,27 @@ window.DATA = {
    "kata": "macro error galat trust center",
    "gambar": [
     "mengatasi-program-macro-excel-yang-error-2.jpg",
-    "mengatasi-program-macro-excel-yang-error-3.jpg",
     "mengatasi-program-macro-excel-yang-error-4.jpg",
-    "mengatasi-program-macro-excel-yang-error-5.jpg",
-    "mengatasi-program-macro-excel-yang-error.jpg"
+    "mengatasi-program-macro-excel-yang-error-5.jpg"
    ]
   },
   {
    "id": "vba-editor",
    "cat": "macro",
    "judul": "Mengenal editor VBA",
-   "ringkas": "Editor VBA (Alt+F11) adalah tempat menulis, membaca, dan mengubah kode macro.",
+   "ringkas": "Editor VBA adalah tempat menulis, membaca, dan mengubah kode macro. Buka dengan Alt+F11.",
+   "intinya": "Macro tersimpan sebagai kode. Editor VBA adalah buku catatan untuk kode itu.",
+   "analogi": "Bayangkan macro itu resep. Kamu merekamnya seperti memotret masakan. Editor VBA seperti buku resep tempat kamu bisa membaca langkah-langkahnya dan mengubahnya.",
    "sintaks": "Sub NamaMacro()\n    ' kode di sini\nEnd Sub",
    "langkah": [
     "Tekan Alt+F11 untuk membuka editor.",
-    "Pilih Insert > Module untuk membuat modul kosong.",
-    "Tulis kode di antara Sub dan End Sub.",
-    "Tekan F5 untuk menjalankan, atau jalankan dari Developer > Macros.",
-    "Contoh: Range(\"A1\").Value = \"Halo\" mengisi sel A1."
+    "Klik Insert lalu Module untuk membuat lembar kode kosong.",
+    "Tulis kode di antara baris Sub dan End Sub.",
+    "Tekan F5 untuk menjalankan, atau jalankan lewat Developer lalu Macros.",
+    "Contoh: Range(\"A1\").Value = \"Halo\" mengisi kotak A1 dengan tulisan Halo."
    ],
    "tips": [
-    "Komentar diawali tanda apostrof ' dan diabaikan saat dijalankan."
+    "Tanda apostrof (') membuat sisa baris menjadi komentar. Komentar diabaikan saat kode berjalan."
    ],
    "kuis": {
     "q": "Pintasan untuk membuka editor VBA adalah...",
@@ -6769,54 +6811,27 @@ window.DATA = {
    },
    "kata": "vba editor modul sub alt f11",
    "gambar": [
-    "belajar-vba-excel-2.gif",
-    "belajar-vba-excel-3.gif",
-    "belajar-vba-excel.gif",
-    "macro-vba-excel-2.gif",
-    "macro-vba-excel-3.gif",
-    "macro-vba-excel-3.jpg",
-    "macro-vba-excel-4.gif",
-    "macro-vba-excel-5.gif",
-    "macro-vba-excel-5.jpg",
-    "macro-vba-excel-6.gif",
-    "macro-vba-excel-7.gif",
-    "macro-vba-excel-7.jpg",
-    "macro-vba-excel-8.gif",
     "macro-vba-excel.gif",
-    "menggunakan-macro-vba-excel-2.gif",
-    "menggunakan-macro-vba-excel-3.gif",
-    "menggunakan-macro-vba-excel-4.gif",
-    "menggunakan-macro-vba-excel-4.jpg",
-    "menggunakan-macro-vba-excel.gif",
-    "menggunakan-macro-vba-excel.jpg",
-    "vba-excel-2007-2.gif",
-    "vba-excel-2007-2.jpg",
-    "vba-excel-2007-3.jpg",
-    "vba-excel-2007-4.jpg",
-    "vba-excel-2007.jpg",
-    "vba-macro-excel-2.gif",
-    "vba-macro-excel-3.gif",
-    "vba-macro-excel-programming.gif",
-    "vba-macro-excel-programming.jpg",
-    "vba-macro-excel.gif",
-    "visual-basic-appliction-pada-excel-2.jpg",
-    "visual-basic-appliction-pada-excel-3.jpg"
+    "belajar-vba-excel-2.gif",
+    "macro-vba-excel-8.gif"
    ]
   },
   {
    "id": "vba-variabel",
    "cat": "macro",
    "judul": "Variabel dan Option Explicit",
-   "ringkas": "Variabel menyimpan nilai sementara. Option Explicit memaksa setiap variabel dideklarasikan sehingga salah ketik langsung ketahuan.",
+   "ringkas": "Variabel adalah tempat menyimpan nilai sementara. Option Explicit memaksa kamu mendeklarasikan setiap variabel sehingga salah ketik langsung ketahuan.",
+   "intinya": "Variabel itu seperti kotak berlabel. Kamu memberi nama pada kotak, lalu menyimpan sesuatu di dalamnya.",
+   "analogi": "Bayangkan kotak penyimpanan dengan label \"umur\". Kamu menaruh angka 17 di dalamnya. Nanti, kamu menyebut \"umur\" dan VBA tahu kamu maksud angka 17. Option Explicit seperti aturan: semua kotak harus diberi label sebelum dipakai, supaya kamu tidak tersesat gara-gara salah menulis nama.",
    "sintaks": "Dim nama As String\nDim umur As Integer",
    "langkah": [
     "Tulis Option Explicit di baris pertama modul.",
-    "Deklarasikan variabel dengan Dim nama As Tipe.",
+    "Buat variabel dengan Dim nama As Tipe, misalnya Dim umur As Integer.",
     "Variabel di dalam Sub hanya berlaku di Sub itu (lokal).",
-    "Variabel di bagian atas modul berlaku untuk semua Sub di modul itu; Public berlaku untuk seluruh proyek."
+    "Variabel di bagian atas modul berlaku untuk semua Sub di modul itu. Public berlaku untuk seluruh proyek."
    ],
    "tips": [
-    "Tipe umum: String (teks), Integer dan Long (bilangan bulat), Double (desimal), Boolean (benar/salah)."
+    "Tipe yang umum: String (tulisan), Integer dan Long (bilangan bulat), Double (angka desimal), Boolean (benar atau salah)."
    ],
    "kuis": {
     "q": "Fungsi Option Explicit adalah...",
@@ -6833,28 +6848,21 @@ window.DATA = {
    "gambar": [
     "mengenal-apa-itu-option-explicit-pada-macro-vba-excel-2.jpg",
     "mengenal-apa-itu-option-explicit-pada-macro-vba-excel-3.jpg",
-    "mengenal-apa-itu-option-explicit-pada-macro-vba-excel-4.jpg",
-    "mengenal-apa-itu-option-explicit-pada-macro-vba-excel-5.jpg",
-    "mengenal-apa-itu-option-explicit-pada-macro-vba-excel.jpg",
-    "mengenal-ruang-lingkup-variabel-pada-vba-macro-excel-2.jpg",
-    "mengenal-ruang-lingkup-variabel-pada-vba-macro-excel-3.jpg",
-    "mengenal-ruang-lingkup-variabel-pada-vba-macro-excel-4.jpg",
-    "mengenal-ruang-lingkup-variabel-pada-vba-macro-excel-5.jpg",
-    "mengenal-ruang-lingkup-variabel-pada-vba-macro-excel-6.jpg",
-    "mengenal-ruang-lingkup-variabel-pada-vba-macro-excel-9.jpg",
-    "mengenal-ruang-lingkup-variabel-pada-vba-macro-excel.jpg"
+    "mengenal-apa-itu-option-explicit-pada-macro-vba-excel-5.jpg"
    ]
   },
   {
    "id": "vba-debug",
    "cat": "macro",
    "judul": "Debugging: menelusuri kesalahan kode",
-   "ringkas": "Debugging menjalankan kode langkah demi langkah untuk menemukan sumber masalah.",
+   "ringkas": "Debugging adalah menjalankan kode pelan-pelan, satu baris demi satu baris, untuk menemukan di mana letak kesalahannya.",
+   "intinya": "Kamu menghentikan kode di tengah jalan supaya bisa mengintip isinya.",
+   "analogi": "Bayangkan kamu mencari kesalahan dalam sebuah resep. Daripada menunggu masakan jadi, kamu berhenti di tiap langkah dan mencicipi. Titik berhentimu adalah breakpoint.",
    "langkah": [
-    "Klik di margin kiri baris kode untuk memasang breakpoint (titik merah).",
-    "Jalankan macro; eksekusi berhenti di breakpoint.",
+    "Klik di margin abu-abu sebelah kiri baris kode. Muncul titik merah (breakpoint).",
+    "Jalankan macro. Kode berhenti di titik merah.",
     "Tekan F8 untuk maju satu baris.",
-    "Arahkan kursor ke variabel untuk melihat nilainya, atau buka Debug > Add Watch.",
+    "Arahkan mouse ke sebuah variabel untuk melihat isinya. Atau buka Debug lalu Add Watch.",
     "Tekan F5 untuk melanjutkan sampai selesai."
    ],
    "kuis": {
@@ -6871,8 +6879,6 @@ window.DATA = {
    "kata": "debug breakpoint f8 watch",
    "gambar": [
     "mengenal-debugging-pada-vba-macro-excel-programming-2.jpg",
-    "mengenal-debugging-pada-vba-macro-excel-programming-3.jpg",
-    "mengenal-debugging-pada-vba-macro-excel-programming-4.jpg",
     "mengenal-debugging-pada-vba-macro-excel-programming.jpg"
    ]
   },
@@ -6880,16 +6886,18 @@ window.DATA = {
    "id": "vba-loop",
    "cat": "macro",
    "judul": "Perulangan: For Next dan Do While",
-   "ringkas": "Loop mengulangi sekumpulan perintah. For cocok bila jumlah ulangan diketahui, Do While bila bergantung pada syarat.",
+   "ringkas": "Loop (perulangan) menjalankan sekumpulan perintah berkali-kali. For dipakai kalau jumlah ulangannya sudah diketahui. Do While dipakai kalau berhenti tergantung syarat.",
+   "intinya": "Loop menyuruh komputer: ulangi ini sampai selesai.",
+   "analogi": "Bayangkan kamu disuruh menulis angka 1 sampai 10 di buku. Kamu tidak mau menulis perintah sepuluh kali. Kamu cukup bilang, \"Tulis angka, ulangi sepuluh kali.\" For Next adalah perintah itu.",
    "sintaks": "For i = 1 To 10\n    Cells(i, 1).Value = i\nNext i",
    "langkah": [
-    "For i = 1 To 10 mengulang 10 kali dengan i = 1, 2, ..., 10.",
-    "Cells(baris, kolom) menunjuk sel berdasarkan angka.",
-    "Loop bersarang (di dalam loop) dipakai untuk mengisi tabel dua dimensi.",
-    "Do While syarat ... Loop mengulang selama syarat benar; pastikan syarat suatu saat menjadi salah."
+    "For i = 1 To 10 mengulang 10 kali. Nilai i berubah dari 1 sampai 10.",
+    "Cells(baris, kolom) menunjuk kotak lewat nomor baris dan nomor kolom.",
+    "Loop di dalam loop dipakai untuk mengisi tabel dua arah (baris dan kolom).",
+    "Do While syarat ... Loop mengulang selama syaratnya masih benar. Pastikan suatu saat syaratnya menjadi salah."
    ],
    "tips": [
-    "Loop tanpa akhir dapat dihentikan dengan Ctrl+Break."
+    "Kalau loop tidak mau berhenti, tekan Ctrl+Break untuk menghentikannya."
    ],
    "kuis": {
     "q": "Berapa kali loop For i = 1 To 5 berjalan?",
@@ -6905,21 +6913,25 @@ window.DATA = {
    "kata": "loop for next do while perulangan",
    "gambar": [
     "tutorial-excel-bagaimana-membuat-loop-menggunakan-vba-2.jpg",
-    "tutorial-excel-bagaimana-membuat-loop-menggunakan-vba.jpg",
-    "tutorial-vba-excel-untuk-triple-loop-dan-do-while-loop.jpg"
+    "tutorial-excel-bagaimana-membuat-loop-menggunakan-vba.jpg"
    ]
   },
   {
    "id": "vba-inputbox",
    "cat": "macro",
    "judul": "InputBox dan MsgBox",
-   "ringkas": "InputBox meminta pengguna mengetik sesuatu, MsgBox menampilkan pesan.",
+   "ringkas": "InputBox meminta pengguna mengetik sesuatu. MsgBox menampilkan pesan di layar.",
+   "intinya": "InputBox = bertanya. MsgBox = memberi tahu.",
+   "analogi": "Bayangkan petugas loket. Ia bertanya, \"Siapa namamu?\" (itu InputBox). Kamu menjawab, lalu ia berkata, \"Halo, Budi!\" (itu MsgBox).",
    "sintaks": "nama = InputBox(\"Siapa namamu?\")\nMsgBox \"Halo \" & nama",
    "langkah": [
-    "Buat Sub baru di modul.",
-    "Isi variabel dengan hasil InputBox.",
-    "Tampilkan dengan MsgBox atau tulis ke sel: Range(\"A1\").Value = nama.",
-    "Jalankan dengan F5."
+    "Buat Sub baru di sebuah modul.",
+    "Simpan jawaban InputBox ke sebuah variabel, misalnya nama = InputBox(\"Siapa namamu?\").",
+    "Tampilkan dengan MsgBox, atau tulis ke kotak: Range(\"A1\").Value = nama.",
+    "Tekan F5 untuk menjalankan."
+   ],
+   "tips": [
+    "Hasil InputBox selalu berupa tulisan (String), walaupun yang diketik angka."
    ],
    "kuis": {
     "q": "InputBox menghasilkan nilai bertipe...",
@@ -6936,27 +6948,22 @@ window.DATA = {
    "gambar": [
     "belajar-vba-excel-untuk-membuat-input-box-2.jpg",
     "belajar-vba-excel-untuk-membuat-input-box-3.jpg",
-    "belajar-vba-excel-untuk-membuat-input-box-4.jpg",
-    "belajar-vba-excel-untuk-membuat-input-box.jpg",
-    "input-box-1.jpg",
-    "input-box-2-300x244.jpg",
-    "input-box-3-300x174.jpg",
-    "input-box-4.jpg",
-    "input-box-5-300x127.jpg",
-    "input-box-6-300x93.jpg"
+    "input-box-5-300x127.jpg"
    ]
   },
   {
    "id": "vba-tanggal",
    "cat": "macro",
    "judul": "VBA untuk tanggal dan waktu",
-   "ringkas": "VBA punya fungsi Date, Time, Now, Format, DateAdd, dan DateDiff.",
+   "ringkas": "VBA punya beberapa fungsi tanggal dan waktu: Date, Time, Now, Format, DateAdd, dan DateDiff.",
+   "intinya": "Date = tanggal hari ini. Time = jam sekarang. Now = tanggal dan jam sekarang.",
+   "analogi": "Bayangkan jam dan kalender di dinding. Date melihat kalender. Time melihat jam. Now melihat keduanya sekaligus. Format menentukan bagaimana tulisannya ditampilkan.",
    "sintaks": "Range(\"A1\").Value = Format(Now, \"dd/mm/yyyy hh:mm\")",
    "langkah": [
-    "Date mengembalikan tanggal hari ini, Time jam sekarang, Now keduanya.",
-    "Format(nilai, pola) mengatur tampilan.",
-    "DateAdd(\"d\", 7, Date) menambah 7 hari.",
-    "DateDiff(\"d\", awal, akhir) menghitung selisih hari."
+    "Date mengembalikan tanggal hari ini. Time mengembalikan jam sekarang. Now mengembalikan keduanya.",
+    "Format(nilai, pola) mengatur tampilan, misalnya Format(Now, \"dd/mm/yyyy hh:mm\").",
+    "DateAdd(\"d\", 7, Date) menambah 7 hari ke hari ini.",
+    "DateDiff(\"d\", awal, akhir) menghitung selisih hari antara dua tanggal."
    ],
    "kuis": {
     "q": "Fungsi VBA yang mengembalikan tanggal dan jam sekaligus adalah...",
@@ -6971,24 +6978,25 @@ window.DATA = {
    },
    "kata": "vba tanggal waktu now date format",
    "gambar": [
-    "contoh-vba-excel-untuk-membuat-tanggal-dan-waktu-2.jpg",
-    "contoh-vba-excel-untuk-membuat-tanggal-dan-waktu-3.jpg",
-    "contoh-vba-excel-untuk-membuat-tanggal-dan-waktu-4.jpg",
-    "contoh-vba-excel-untuk-membuat-tanggal-dan-waktu-5.jpg",
-    "contoh-vba-excel-untuk-membuat-tanggal-dan-waktu-6.jpg",
-    "contoh-vba-excel-untuk-membuat-tanggal-dan-waktu.jpg"
+    "contoh-vba-excel-untuk-membuat-tanggal-dan-waktu-3.jpg"
    ]
   },
   {
    "id": "vba-string",
    "cat": "macro",
    "judul": "VBA untuk teks (manipulasi string)",
-   "ringkas": "Fungsi teks VBA mirip dengan di lembar kerja: Left, Right, Mid, Len, UCase, LCase, Trim, Replace.",
+   "ringkas": "Fungsi teks di VBA mirip dengan yang ada di lembar kerja: Left, Right, Mid, Len, UCase, LCase, Trim, dan Replace.",
+   "intinya": "Kalau kamu sudah bisa fungsi teks di Excel, di VBA hampir sama.",
+   "analogi": "Bayangkan gunting dan lem untuk tulisan. Left memotong dari kiri. Mid memotong dari tengah. UCase mengubah jadi huruf besar. Replace mengganti sebagian tulisan.",
    "sintaks": "MsgBox UCase(\"hi tim\")",
    "langkah": [
-    "Left(\"Excel\", 2) mengembalikan Ex.",
-    "Replace(teks, lama, baru) mengganti bagian teks.",
-    "Gunakan & untuk menyambung dan vbCrLf untuk baris baru dalam MsgBox."
+    "Left(\"Excel\", 2) menghasilkan Ex.",
+    "UCase(\"hi tim\") menghasilkan HI TIM.",
+    "Replace(teks, lama, baru) mengganti bagian tulisan.",
+    "Pakai & untuk menyambung tulisan. Pakai vbCrLf untuk membuat baris baru di dalam MsgBox."
+   ],
+   "tips": [
+    "UCase di VBA sama dengan UPPER di Excel. LCase sama dengan LOWER."
    ],
    "kuis": {
     "q": "Padanan VBA untuk UPPER di lembar kerja adalah...",
@@ -7003,24 +7011,22 @@ window.DATA = {
    },
    "kata": "vba string teks ucase left mid",
    "gambar": [
-    "manipulasi-string-2.jpg",
-    "manipulasi-string-3.jpg",
-    "manipulasi-string-4.jpg",
-    "manipulasi-string-5.jpg",
-    "manipulasi-string-6.jpg",
-    "manipulasi-string.jpg"
+    "manipulasi-string-2.jpg"
    ]
   },
   {
    "id": "vba-formula",
    "cat": "macro",
    "judul": "Menulis rumus lewat VBA (Formula dan FormulaR1C1)",
-   "ringkas": "VBA bisa menuliskan rumus ke sel. FormulaR1C1 memakai alamat relatif, berguna untuk rumus yang disalin ke banyak sel.",
+   "ringkas": "VBA bisa menuliskan rumus ke dalam kotak. FormulaR1C1 memakai alamat relatif (jarak dari kotak itu sendiri), berguna untuk rumus yang akan disalin ke banyak kotak.",
+   "intinya": "Formula = alamat biasa seperti B3. FormulaR1C1 = alamat berupa jarak, misalnya \"satu baris ke atas\".",
+   "analogi": "Alamat biasa seperti \"Rumah nomor 5, Jalan Mawar\". Alamat relatif seperti \"dua rumah ke kiri dari sini\". Kalau kamu berpindah, alamat biasa tetap, sedangkan alamat relatif ikut bergeser.",
    "sintaks": "Range(\"D4\").Formula = \"=B3*10\"\nRange(\"D4\").FormulaR1C1 = \"=R[-1]C[-2]*10\"",
    "langkah": [
-    "Formula memakai alamat gaya A1.",
-    "FormulaR1C1 memakai R untuk baris dan C untuk kolom; angka dalam kurung siku adalah selisih relatif.",
-    "R[-1]C[-2] berarti satu baris ke atas dan dua kolom ke kiri."
+    "Formula memakai alamat biasa: Range(\"D4\").Formula = \"=B3*10\".",
+    "FormulaR1C1 memakai R untuk baris (row) dan C untuk kolom (column).",
+    "Angka di dalam kurung siku adalah jarak. R[-1]C[-2] berarti satu baris ke atas dan dua kolom ke kiri.",
+    "R[-1]C[0] menunjuk kotak tepat di atasnya."
    ],
    "kuis": {
     "q": "R[-1]C[0] menunjuk sel...",
@@ -7036,26 +7042,26 @@ window.DATA = {
    "kata": "formula formular1c1 r1c1",
    "gambar": [
     "fungsi-formular1c1-2.jpg",
-    "fungsi-formular1c1-3.jpg",
-    "fungsi-formular1c1-4.jpg",
-    "fungsi-formular1c1.jpg"
+    "fungsi-formular1c1-4.jpg"
    ]
   },
   {
    "id": "vba-tombol",
    "cat": "macro",
    "judul": "Tombol macro dan form isian data",
-   "ringkas": "Command Button di lembar kerja menjalankan macro ketika diklik. UserForm menyajikan formulir isian data yang rapi.",
+   "ringkas": "Command Button adalah tombol di lembar kerja. Saat diklik, macro berjalan. UserForm adalah formulir isian yang rapi untuk memasukkan data.",
+   "intinya": "Tombol menjalankan macro. Formulir memudahkan orang mengisi data tanpa menyentuh tabel.",
+   "analogi": "Bayangkan mesin ATM. Kamu tidak perlu tahu cara kerja bank di dalamnya. Kamu hanya menekan tombol dan mengisi layar. Tombol dan formulir VBA membuat Excel-mu semudah itu bagi orang lain.",
    "langkah": [
-    "Developer > Insert > Command Button (ActiveX Control), gambar di lembar kerja.",
-    "Klik ganda tombol untuk membuka editor dan menulis kode Click-nya.",
+    "Buka Developer, Insert, lalu Command Button (ActiveX Control). Gambar tombol di lembar kerja.",
+    "Klik ganda tombol itu. Editor VBA terbuka dan kamu bisa menulis kode untuk klik tombol.",
     "Contoh tombol hapus: Range(\"A2:C100\").ClearContents.",
-    "Untuk formulir, di editor pilih Insert > UserForm, tambahkan TextBox dan tombol Simpan.",
-    "Kode Simpan menulis isi TextBox ke baris kosong berikutnya.",
-    "Matikan Design Mode agar tombol bisa diklik."
+    "Untuk formulir: di editor klik Insert lalu UserForm. Tambahkan TextBox untuk isian dan tombol Simpan.",
+    "Kode tombol Simpan menulis isi TextBox ke baris kosong berikutnya.",
+    "Matikan Design Mode supaya tombol bisa diklik."
    ],
    "tips": [
-    "Tombol ActiveX hanya bekerja di Excel Windows."
+    "Tombol ActiveX hanya bekerja di Excel untuk Windows."
    ],
    "kuis": {
     "q": "Mode yang harus dimatikan agar tombol ActiveX bisa diklik adalah...",
@@ -7070,46 +7076,26 @@ window.DATA = {
    },
    "kata": "tombol button userform isian data",
    "gambar": [
-    "data-vba-1-300x148.jpg",
-    "data-vba-2-300x155.jpg",
     "data-vba-3.jpg",
-    "data-vba-4-300x142.jpg",
-    "data-vba-5-300x84.jpg",
-    "isian-data-1-300x157.jpg",
-    "isian-data-2.jpg",
-    "isian-data-3-300x191.jpg",
-    "isian-data-4-300x121.jpg",
-    "isian-data-5-300x208.jpg",
-    "isian-data-6-300x189.jpg",
-    "isian-data-7-300x178.jpg",
-    "isian-data-8.jpg",
     "isian-data-9-300x213.jpg",
-    "isian-data-10-300x191.jpg",
-    "tombol-acak-1.jpg",
-    "tombol-acak-2.jpg",
-    "tombol-acak-3-300x203.jpg",
-    "tombol-acak-4-300x158.jpg",
-    "tombol-acak-5.jpg",
-    "tombol-acak-6-300x277.jpg",
-    "tombol-acak-7-300x273.jpg",
-    "tombol-hapus-vba-1-300x134.jpg",
-    "tombol-hapus-vba-2.jpg",
-    "tombol-hapus-vba-3-300x172.jpg",
-    "tombol-hapus-vba-4-300x84.jpg",
-    "tombol-hapus-vba-5-300x100.jpg",
-    "tombol-hapus-vba-6-300x170.jpg"
+    "isian-data-10-300x191.jpg"
    ]
   },
   {
    "id": "barcode",
    "cat": "macro",
    "judul": "Membuat kode barcode di Excel",
-   "ringkas": "Barcode dibuat dengan menginstal font barcode lalu mengubah format teks kode menjadi font tersebut.",
+   "ringkas": "Barcode dibuat dengan memasang font barcode, lalu mengubah huruf kode menjadi font itu.",
+   "intinya": "Barcode di Excel sebenarnya hanya tulisan yang memakai huruf khusus.",
+   "analogi": "Bayangkan huruf-huruf yang bentuknya garis-garis tebal dan tipis, bukan huruf biasa. Kode yang kamu ketik tampil sebagai garis-garis itu. Pemindai di kasir bisa membacanya.",
    "langkah": [
-    "Instal font barcode (misalnya Code 39) di komputer.",
-    "Ketik kode di sel, untuk Code 39 awali dan akhiri dengan tanda bintang: *12345*.",
-    "Ubah font sel menjadi font barcode.",
-    "Perbesar ukuran huruf agar mudah dipindai."
+    "Pasang font barcode (misalnya Code 39) di komputermu.",
+    "Ketik kode di sebuah kotak. Untuk Code 39, awali dan akhiri dengan tanda bintang: *12345*.",
+    "Ubah font kotak itu menjadi font barcode.",
+    "Perbesar ukuran huruf supaya mudah dipindai."
+   ],
+   "tips": [
+    "Font barcode harus terpasang di komputer yang membuka file. Kalau tidak, barcode tampil sebagai huruf biasa."
    ],
    "kuis": {
     "q": "Pada Code 39, kode diawali dan diakhiri dengan tanda...",
@@ -7133,13 +7119,15 @@ window.DATA = {
    "id": "kasus-gaji",
    "cat": "kasus",
    "judul": "Menghitung gaji karyawan",
-   "ringkas": "Gaji dihitung dari gaji pokok, tunjangan, lembur, dan potongan. Tunjangan sering bergantung pada golongan, sehingga VLOOKUP atau IF sangat membantu.",
+   "ringkas": "Gaji dihitung dari gaji pokok, tunjangan, lembur, dan potongan. Tunjangan sering bergantung pada golongan, jadi VLOOKUP atau IF sangat membantu.",
+   "intinya": "Tabel golongan adalah daftar harga. VLOOKUP adalah cara melihat daftar itu.",
+   "analogi": "Bayangkan slip gaji. Setiap golongan punya gaji pokok yang berbeda, seperti daftar harga di warung. Kamu menyebut golongan, lalu VLOOKUP membaca harganya.",
    "langkah": [
-    "Susun tabel golongan berisi gaji pokok dan tunjangan.",
+    "Siapkan tabel golongan yang berisi gaji pokok dan tunjangan.",
     "Ambil gaji pokok dengan VLOOKUP berdasarkan golongan.",
-    "Hitung tunjangan, misalnya persen dari gaji pokok.",
+    "Hitung tunjangan, misalnya sekian persen dari gaji pokok.",
     "Total = gaji pokok + tunjangan + lembur - potongan.",
-    "Format hasil sebagai Currency."
+    "Ubah format hasil menjadi Currency."
    ],
    "demo": {
     "data": [
@@ -7213,10 +7201,7 @@ window.DATA = {
    "kata": "gaji karyawan payroll tunjangan",
    "gambar": [
     "menghitung-gaji-dengan-excel-1-300x106.jpg",
-    "menghitung-gaji-dengan-excel-2-300x105.jpg",
-    "menghitung-gaji-dengan-excel-3-300x105.jpg",
     "menghitung-gaji-dengan-excel-4-300x106.jpg",
-    "menghitung-gaji-dengan-excel-5-300x105.jpg",
     "menghitung-gaji-dengan-excel-6-300x106.jpg"
    ]
   },
@@ -7224,13 +7209,18 @@ window.DATA = {
    "id": "kasus-ipk",
    "cat": "kasus",
    "judul": "Menghitung IPK dan nilai raport",
-   "ringkas": "IPK adalah rata-rata nilai mutu berbobot SKS. SUMPRODUCT dan SUM menghitungnya dalam satu rumus.",
+   "ringkas": "IPK adalah rata-rata nilai mutu yang memperhitungkan bobot SKS. SUMPRODUCT dan SUM menghitungnya dalam satu rumus.",
+   "intinya": "Mata kuliah dengan SKS besar lebih berpengaruh pada IPK.",
+   "analogi": "Bayangkan nilai olahraga (1 SKS) dan nilai matematika (4 SKS). Matematika lebih \"berat\", jadi nilainya lebih menentukan. Rata-rata biasa menganggap semua sama berat. IPK tidak.",
    "sintaks": "=SUMPRODUCT(SKS; Nilai_mutu)/SUM(SKS)",
    "langkah": [
-    "Ubah nilai huruf menjadi bobot (A = 4, B = 3, C = 2, D = 1) dengan VLOOKUP.",
+    "Ubah nilai huruf menjadi angka bobot (A = 4, B = 3, C = 2, D = 1) dengan VLOOKUP.",
     "Kalikan bobot dengan SKS tiap mata kuliah.",
-    "Bagi jumlah hasil perkalian dengan jumlah SKS.",
-    "Bulatkan dengan ROUND(…;2)."
+    "Bagi jumlah hasil kali itu dengan jumlah SKS.",
+    "Bulatkan dengan ROUND(...;2) supaya dua angka di belakang koma."
+   ],
+   "tips": [
+    "Rumus lengkapnya ada di bagian sintaks di atas."
    ],
    "demo": {
     "data": [
@@ -7297,11 +7287,7 @@ window.DATA = {
    "gambar": [
     "contoh-format-raport-300x208.jpg",
     "menghitung-ipk-dengan-excel-1-300x178.jpg",
-    "menghitung-ipk-dengan-excel-2-300x194.jpg",
-    "menghitung-ipk-dengan-excel-3-300x177.jpg",
-    "menghitung-ipk-dengan-excel-4-300x177.jpg",
-    "menghitung-ipk-dengan-excel-5-300x178.jpg",
-    "menghitung-ipk-dengan-excel-6-300x177.jpg"
+    "menghitung-ipk-dengan-excel-2-300x194.jpg"
    ]
   },
   {
@@ -7309,12 +7295,14 @@ window.DATA = {
    "cat": "kasus",
    "judul": "Absensi siswa",
    "ringkas": "Rekap kehadiran memakai COUNTIF untuk menghitung jumlah hadir, sakit, izin, dan alpa tiap siswa.",
+   "intinya": "COUNTIF menghitung berapa kali huruf tertentu muncul di baris.",
+   "analogi": "Bayangkan buku absensi. Setiap hari guru menulis huruf: H (hadir), S (sakit), I (izin), atau A (alpa). Di akhir bulan guru menghitung berapa huruf H. COUNTIF membantu guru menghitungnya dengan cepat.",
    "langkah": [
-    "Isi kolom tanggal dengan kode: H (hadir), S (sakit), I (izin), A (alpa).",
+    "Isi kolom tanggal dengan kode H, S, I, atau A.",
     "Hitung hadir dengan =COUNTIF(B2:AF2;\"H\").",
     "Ulangi untuk S, I, dan A.",
-    "Persentase kehadiran: =hadir/COUNTA(B2:AF2).",
-    "Tambahkan Data Validation bagian List agar kode hanya H, S, I, atau A."
+    "Persentase hadir: =jumlah_hadir/COUNTA(B2:AF2).",
+    "Tambahkan Data Validation tipe List supaya yang bisa diisi hanya H, S, I, atau A."
    ],
    "demo": {
     "data": [
@@ -7383,30 +7371,26 @@ window.DATA = {
    "kata": "absensi kehadiran siswa countif",
    "gambar": [
     "absensi-siswa-dengan-excel-1-300x253.jpg",
-    "absensi-siswa-dengan-excel-2-300x102.jpg",
     "absensi-siswa-dengan-excel-3-300x254.jpg",
-    "absensi-siswa-dengan-excel-4.jpg",
-    "absensi-siswa-dengan-excel-5-300x246.jpg",
-    "absensi-siswa-dengan-excel-6-300x224.jpg",
-    "absensi-siswa-dengan-excel-7-300x240.jpg",
-    "absensi-siswa-dengan-excel-8-300x225.jpg",
-    "absensi-siswa-dengan-excel-9-300x225.jpg"
+    "absensi-siswa-dengan-excel-5-300x246.jpg"
    ]
   },
   {
    "id": "kasus-pajak",
    "cat": "kasus",
    "judul": "Menghitung pajak penghasilan (PPh 21)",
-   "ringkas": "PPh 21 dihitung bertingkat: setiap bagian penghasilan dikenai tarif berbeda. Tabel tarif dan SUMPRODUCT atau IF bertingkat menghitung semuanya.",
+   "ringkas": "PPh 21 dihitung bertingkat. Setiap bagian penghasilan dikenai tarif yang berbeda. Tabel tarif dan SUMPRODUCT (atau IF bertingkat) bisa menghitung semuanya.",
+   "intinya": "Tarif yang lebih tinggi hanya dikenakan pada bagian penghasilan yang masuk ke lapisan itu, bukan pada seluruh penghasilan.",
+   "analogi": "Bayangkan tangga dengan beberapa anak tangga. Anak tangga pertama harganya murah. Anak tangga kedua lebih mahal, dan seterusnya. Kamu hanya membayar harga anak tangga tinggi untuk anak tangga yang benar-benar kamu injak.",
    "langkah": [
-    "Hitung Penghasilan Kena Pajak (PKP) = penghasilan setahun - PTKP.",
-    "Siapkan tabel lapisan tarif (batas bawah, batas atas, persen).",
-    "Untuk setiap lapisan, hitung bagian PKP yang masuk lapisan itu lalu kalikan dengan persennya.",
-    "Jumlahkan semua lapisan.",
-    "Periksa ketentuan tarif terbaru di situs resmi DJP karena dapat berubah."
+    "Hitung Penghasilan Kena Pajak (PKP) = penghasilan setahun dikurangi PTKP.",
+    "Siapkan tabel lapisan tarif: batas bawah, batas atas, dan persen.",
+    "Untuk setiap lapisan, hitung bagian PKP yang masuk ke lapisan itu, lalu kalikan dengan persentasenya.",
+    "Jumlahkan hasil semua lapisan.",
+    "Cek aturan tarif terbaru di situs resmi DJP karena bisa berubah."
    ],
    "tips": [
-    "Tabel pada tangkapan layar adalah contoh dari materi sumber; selalu cek tarif yang berlaku saat ini."
+    "Tabel di gambar hanyalah contoh. Selalu cek tarif yang berlaku saat ini."
    ],
    "demo": {
     "data": [
@@ -7460,8 +7444,6 @@ window.DATA = {
    "gambar": [
     "menghitung-pajak-dengan-excel-1.jpg",
     "menghitung-pajak-dengan-excel-2.jpg",
-    "menghitung-pajak-dengan-excel-3.jpg",
-    "menghitung-pajak-dengan-excel-4.jpg",
     "menghitung-pajak-dengan-excel-6.jpg"
    ]
   },
@@ -7469,14 +7451,16 @@ window.DATA = {
    "id": "kasus-invoice",
    "cat": "kasus",
    "judul": "Invoice dan billing",
-   "ringkas": "Invoice menghitung subtotal tiap barang, diskon, pajak, dan total yang harus dibayar.",
+   "ringkas": "Invoice (faktur) menghitung subtotal tiap barang, diskon, pajak, dan total yang harus dibayar.",
+   "intinya": "Invoice = daftar belanja yang sudah dihitung rapi.",
+   "analogi": "Bayangkan struk belanja di minimarket. Tiap barang punya jumlah dan harga. Di bawahnya ada total, diskon, pajak, dan jumlah yang harus dibayar. Kamu membuat struk itu sendiri di Excel.",
    "langkah": [
     "Buat kolom barang, jumlah, harga satuan, dan subtotal (=jumlah*harga).",
-    "Total = SUM subtotal.",
-    "Diskon = total x persen; PPN = (total - diskon) x 11%.",
+    "Total = SUM semua subtotal.",
+    "Diskon = total x persen. PPN = (total - diskon) x 11%.",
     "Total bayar = total - diskon + PPN.",
-    "Ambil harga barang dari tabel harga dengan VLOOKUP agar tidak mengetik ulang.",
-    "Atur area cetak agar muat satu halaman."
+    "Ambil harga dari tabel harga memakai VLOOKUP supaya tidak mengetik ulang.",
+    "Atur area cetak supaya invoice muat di satu halaman."
    ],
    "demo": {
     "data": [
@@ -7557,29 +7541,23 @@ window.DATA = {
    },
    "kata": "invoice billing faktur tagihan ppn",
    "gambar": [
-    "billing-excel-1-300x149.jpg",
-    "billing-excel-2-300x146.jpg",
-    "billing-excel-3-300x147.jpg",
-    "billing-excel-4-300x146.jpg",
-    "excel-untuk-invoice-pembayaran-1-300x185.jpg",
-    "excel-untuk-invoice-pembayaran-2-300x124.jpg",
     "excel-untuk-invoice-pembayaran-3.jpg",
-    "excel-untuk-invoice-pembayaran-4.jpg",
     "excel-untuk-invoice-pembayaran-5-300x187.jpg",
-    "excel-untuk-invoice-pembayaran-6-300x186.jpg",
-    "excel-untuk-invoice-pembayaran-7-300x185.jpg"
+    "excel-untuk-invoice-pembayaran-6-300x186.jpg"
    ]
   },
   {
    "id": "kasus-kartu-ujian",
    "cat": "kasus",
    "judul": "Kartu ujian otomatis",
-   "ringkas": "Satu lembar data siswa diubah menjadi kartu ujian yang berubah otomatis saat nomor peserta dipilih, memakai VLOOKUP.",
+   "ringkas": "Satu lembar data siswa bisa diubah menjadi kartu ujian yang isinya berganti otomatis saat nomor peserta dipilih. Kuncinya VLOOKUP.",
+   "intinya": "Pilih nomor peserta, lalu nama, kelas, dan ruang muncul sendiri.",
+   "analogi": "Bayangkan buku daftar murid. Kamu menyebut nomor absen, lalu seseorang membacakan nama, kelas, dan ruang. VLOOKUP adalah orang yang membacakan itu.",
    "langkah": [
-    "Siapkan sheet data berisi nomor peserta, nama, kelas, ruang.",
-    "Di sheet kartu, sediakan sel nomor peserta (bisa dengan Data Validation List).",
-    "Isi nama dengan =VLOOKUP(nomor; Data!A:D; 2; FALSE), dan seterusnya untuk kolom lain.",
-    "Atur area cetak agar satu kartu per halaman atau beberapa kartu per halaman."
+    "Siapkan sheet data berisi nomor peserta, nama, kelas, dan ruang.",
+    "Di sheet kartu, sediakan satu kotak untuk nomor peserta (bisa pakai Data Validation tipe List).",
+    "Isi nama dengan =VLOOKUP(nomor;Data!A:D;2;FALSE). Lakukan hal yang sama untuk kolom lain, ganti angka 2 dengan nomor kolom yang sesuai.",
+    "Atur area cetak supaya satu kartu per halaman, atau beberapa kartu per halaman."
    ],
    "demo": {
     "data": [
@@ -7657,23 +7635,22 @@ window.DATA = {
    "gambar": [
     "excel-untuk-kartu-ujian-1-300x199.jpg",
     "excel-untuk-kartu-ujian-2-300x215.jpg",
-    "excel-untuk-kartu-ujian-3-300x91.jpg",
-    "excel-untuk-kartu-ujian-4-300x84.jpg",
-    "excel-untuk-kartu-ujian-5.jpg",
-    "excel-untuk-kartu-ujian-6-300x95.jpg"
+    "excel-untuk-kartu-ujian-5.jpg"
    ]
   },
   {
    "id": "kasus-jam-kerja",
    "cat": "kasus",
    "judul": "Menghitung jam kerja dan lembur",
-   "ringkas": "Selisih dua jam dihitung dengan pengurangan lalu dikalikan 24 untuk mendapat jam desimal.",
+   "ringkas": "Selisih dua jam dihitung dengan pengurangan, lalu dikali 24 supaya menjadi angka jam biasa.",
+   "intinya": "Excel menyimpan jam sebagai pecahan dari satu hari. Karena itu hasilnya harus dikali 24.",
+   "analogi": "Bayangkan satu hari adalah satu kue utuh. Jam 12 siang adalah setengah kue (0,5). Untuk mengubah pecahan kue menjadi jumlah jam, kalikan dengan 24.",
    "sintaks": "=(jam_pulang - jam_masuk) * 24",
    "langkah": [
-    "Ketik jam masuk dan jam pulang dalam format 08:00 dan 17:00.",
-    "Selisih: =C2-B2 dengan format [h]:mm.",
+    "Ketik jam masuk dan jam pulang, misalnya 08:00 dan 17:00.",
+    "Selisih: =C2-B2. Ubah format hasilnya menjadi [h]:mm.",
     "Dalam jam desimal: =(C2-B2)*24.",
-    "Lembur: =MAX(0;(C2-B2)*24-8) bila jam normal 8 jam."
+    "Lembur kalau jam normal 8 jam: =MAX(0;(C2-B2)*24-8)."
    ],
    "demo": {
     "data": [
@@ -7722,7 +7699,6 @@ window.DATA = {
    },
    "kata": "jam kerja lembur selisih waktu",
    "gambar": [
-    "menghitung-jam-kerja-dengan-excel-2-300x151.jpg",
     "menghitung-jam-kerja-dengan-excel-3-300x153.jpg",
     "nenghitung-jam-kerja-dengan-excel-1-300x152.jpg"
    ]
@@ -7731,13 +7707,18 @@ window.DATA = {
    "id": "kasus-kalender",
    "cat": "kasus",
    "judul": "Membuat kalender dengan Excel",
-   "ringkas": "Kalender bulanan dibuat dengan kombinasi DATE, WEEKDAY, dan rumus yang mengisi tanggal otomatis berdasarkan bulan dan tahun yang dipilih.",
+   "ringkas": "Kalender bulanan bisa dibuat dengan DATE, WEEKDAY, dan rumus yang mengisi tanggal otomatis sesuai bulan dan tahun yang kamu pilih.",
+   "intinya": "Kamu mengganti bulan dan tahun, lalu seluruh kalender berubah sendiri.",
+   "analogi": "Bayangkan kalender dinding yang kertasnya bisa kamu ganti dengan sekali ketuk. Rumus mencari hari pertama bulan itu jatuh di hari apa, lalu mengisi tanggal ke kotak-kotak berikutnya.",
    "langkah": [
-    "Sediakan sel tahun dan bulan.",
-    "Tanggal awal bulan: =DATE(tahun;bulan;1).",
-    "Tentukan kolom hari pertama dengan WEEKDAY.",
-    "Isi tiap sel dengan tanggal dengan rumus yang menambah 1 hari, dan sembunyikan tanggal di luar bulan memakai IF(MONTH(...)=bulan; ...; \"\").",
-    "Gunakan Conditional Formatting untuk menandai hari Minggu atau hari ini."
+    "Sediakan kotak untuk tahun dan kotak untuk bulan.",
+    "Tanggal pertama bulan itu: =DATE(tahun;bulan;1).",
+    "Cari hari pertama jatuh di kolom mana dengan WEEKDAY.",
+    "Isi tiap kotak dengan tanggal berikutnya (tambah 1 hari). Sembunyikan tanggal di luar bulan itu dengan IF(MONTH(...)=bulan;...;\"\").",
+    "Pakai Conditional Formatting untuk mewarnai hari Minggu atau hari ini."
+   ],
+   "tips": [
+    "EOMONTH memberi tanggal terakhir sebuah bulan. Berguna untuk mengetahui jumlah hari."
    ],
    "demo": {
     "data": [
@@ -7793,26 +7774,25 @@ window.DATA = {
    "kata": "kalender date weekday tanggal",
    "gambar": [
     "membuat-kalender-dengan-excel-1.jpg",
-    "membuat-kalender-dengan-excel-2-300x270.jpg",
-    "membuat-kalender-dengan-excel-3-300x148.jpg",
-    "membuat-kalender-dengan-excel-4.jpg",
-    "membuat-kalender-dengan-excel-5.jpg",
     "membuat-kalender-dengan-excel-6.jpg",
-    "membuat-kalender-dengan-excel-7.jpg",
-    "membuat-kalender-dengan-excel-8-300x149.jpg",
-    "membuat-kalender-dengan-excel-9.jpg"
+    "membuat-kalender-dengan-excel-7.jpg"
    ]
   },
   {
    "id": "kasus-dvd",
    "cat": "kasus",
    "judul": "Menghitung biaya sewa",
-   "ringkas": "Tarif sewa dihitung dari lama sewa dengan tarif per hari, denda keterlambatan, dan diskon langganan.",
+   "ringkas": "Biaya sewa dihitung dari lama sewa dikali tarif per hari, ditambah denda kalau terlambat.",
+   "intinya": "Lama sewa adalah selisih tanggal kembali dan tanggal pinjam.",
+   "analogi": "Bayangkan menyewa buku di perpustakaan. Tiap hari ada tarifnya. Kalau terlambat mengembalikan, kamu membayar denda untuk tiap hari terlambat. Kamu menghitung semua itu dengan rumus.",
    "langkah": [
-    "Hitung lama sewa: =tanggal_kembali - tanggal_pinjam.",
+    "Hitung lama sewa: =tanggal_kembali-tanggal_pinjam.",
     "Biaya = lama x tarif per hari.",
-    "Denda: =MAX(0;lama - batas)*denda_per_hari.",
+    "Denda: =MAX(0;lama-batas)*denda_per_hari.",
     "Total = biaya + denda."
+   ],
+   "tips": [
+    "MAX(0; ...) dipakai supaya denda tidak pernah negatif. Kalau tidak terlambat, dendanya 0."
    ],
    "demo": {
     "data": [
@@ -7896,13 +7876,15 @@ window.DATA = {
    "id": "kasus-koreksi",
    "cat": "kasus",
    "judul": "Mengoreksi soal pilihan ganda",
-   "ringkas": "Jawaban siswa dibandingkan dengan kunci jawaban, lalu skor dihitung dengan IF dan SUM atau SUMPRODUCT.",
+   "ringkas": "Jawaban siswa dibandingkan dengan kunci jawaban. Skornya dihitung dengan IF dan SUM, atau dengan SUMPRODUCT.",
+   "intinya": "Cocok dengan kunci berarti 1 poin. Tidak cocok berarti 0.",
+   "analogi": "Bayangkan guru memeriksa ujian pilihan ganda dengan lembar kunci di sebelah. Ia mencocokkan satu per satu: benar atau salah. Excel melakukannya sangat cepat.",
    "langkah": [
-    "Letakkan kunci jawaban di satu baris dan jawaban siswa di baris berikutnya.",
-    "Benar: =IF(B3=B$2;1;0).",
+    "Taruh kunci jawaban di satu baris, dan jawaban siswa di baris berikutnya.",
+    "Benar atau salah: =IF(B3=B$2;1;0).",
     "Skor: =SUM(B4:K4)*10 untuk 10 soal.",
-    "Atau satu rumus: =SUMPRODUCT(--(B3:K3=B2:K2))*10.",
-    "Kunci jawaban dikunci dengan $ agar tidak bergeser."
+    "Atau pakai satu rumus: =SUMPRODUCT(--(B3:K3=B2:K2))*10.",
+    "Kunci dengan tanda $ supaya tetap menunjuk baris kunci saat rumus disalin ke bawah."
    ],
    "demo": {
     "data": [
@@ -7959,24 +7941,23 @@ window.DATA = {
    "kata": "koreksi pilihan ganda ujian skor",
    "gambar": [
     "koreksi-soal-pilihan-ganda-dengan-excel-1.jpg",
-    "koreksi-soal-pilihan-ganda-dengan-excel-2-300x133.jpg",
     "koreksi-soal-pilihan-ganda-dengan-excel-3.jpg",
-    "koreksi-soal-pilihan-ganda-dengan-excel-4.jpg",
-    "koreksi-soal-pilihan-ganda-dengan-excel-5.jpg",
-    "koreksi-soal-pilihan-ganda-dengan-excel-6-300x221.jpg"
+    "koreksi-soal-pilihan-ganda-dengan-excel-4.jpg"
    ]
   },
   {
    "id": "kasus-ttd",
    "cat": "kasus",
    "judul": "Kolom tanda tangan",
-   "ringkas": "Membuat kolom tanda tangan berjenjang pada laporan, dengan sel digabung dan garis batas.",
+   "ringkas": "Kolom tanda tangan dibuat dengan menggabungkan beberapa kotak dan memberi garis batas.",
+   "intinya": "Merge & Center menyatukan beberapa kotak menjadi satu kotak besar.",
+   "analogi": "Bayangkan beberapa kotak kecil di kertas berpetak. Kamu menghapus garis di antaranya sehingga menjadi satu kotak besar. Di kotak besar itu orang bisa menandatangani.",
    "langkah": [
-    "Blok sel yang akan menjadi kotak tanda tangan.",
-    "Home > Merge & Center untuk menyatukan.",
-    "Atur tinggi baris agar cukup untuk tanda tangan.",
-    "Beri garis batas lewat Borders.",
-    "Tambahkan nama dan jabatan di baris bawahnya."
+    "Sorot kotak-kotak yang akan jadi tempat tanda tangan.",
+    "Buka tab Home lalu klik Merge & Center.",
+    "Atur tinggi baris supaya cukup untuk tanda tangan.",
+    "Beri garis batas dengan Borders.",
+    "Tulis nama dan jabatan di baris bawahnya."
    ],
    "kuis": {
     "q": "Tombol yang menyatukan beberapa sel menjadi satu adalah...",
@@ -7991,7 +7972,6 @@ window.DATA = {
    },
    "kata": "tanda tangan merge sel laporan",
    "gambar": [
-    "membuat-kolom-tanda-tangan-dengan-excel-1-300x189.jpg",
     "membuat-kolom-tanda-tangan-dengan-excel-2-300x190.jpg",
     "membuat-kolom-tanda-tangan-dengan-excel-3-300x192.jpg"
    ]
@@ -8000,12 +7980,17 @@ window.DATA = {
    "id": "kasus-laporan",
    "cat": "kasus",
    "judul": "Menyusun laporan keuangan",
-   "ringkas": "Laporan keuangan sederhana: pemasukan, pengeluaran, dan saldo yang dijumlahkan dengan SUM dan SUMIF.",
+   "ringkas": "Laporan keuangan sederhana memuat pemasukan, pengeluaran, dan saldo. Semuanya dihitung dengan SUM dan SUMIF.",
+   "intinya": "Saldo adalah uang yang masuk dikurangi uang yang keluar.",
+   "analogi": "Bayangkan buku catatan uang jajan. Kamu mencatat uang masuk dan uang keluar. Sisa uang adalah saldo. SUMIF membantumu menjawab, \"Berapa total yang kuhabiskan untuk makanan?\"",
    "langkah": [
     "Catat transaksi: tanggal, keterangan, kategori, pemasukan, pengeluaran.",
-    "Saldo berjalan: =saldo_sebelumnya + pemasukan - pengeluaran.",
+    "Saldo berjalan: =saldo_sebelumnya+pemasukan-pengeluaran.",
     "Ringkasan per kategori dengan SUMIF.",
     "Buat grafik dari ringkasan kategori."
+   ],
+   "tips": [
+    "Saldo akhir sama dengan total masuk dikurangi total keluar. Gunakan ini untuk memeriksa hasilmu."
    ],
    "demo": {
     "data": [

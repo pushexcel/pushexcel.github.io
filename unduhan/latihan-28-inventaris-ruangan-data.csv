@@ -1,0 +1,28 @@
+﻿Kode,Nama Barang,Ruangan,Baik,Rusak Ringan,Rusak Berat,Harga Satuan
+INV-001,Meja Siswa,Kelas VII A,20,6,1,185000
+INV-002,Kursi Siswa,Kelas VII A,17,5,3,120000
+INV-003,Papan Tulis,Kelas VII A,1,0,1,650000
+INV-004,Kipas Dinding,Kelas VII A,3,0,0,280000
+INV-005,Meja Siswa,Kelas VII B,24,7,0,185000
+INV-006,Kursi Siswa,Kelas VII B,17,3,2,120000
+INV-007,Papan Tulis,Kelas VII B,4,0,0,650000
+INV-008,Kipas Dinding,Kelas VII B,1,1,1,280000
+INV-009,Meja Siswa,Kelas VIII A,20,7,1,185000
+INV-010,Kursi Siswa,Kelas VIII A,22,1,1,120000
+INV-011,Papan Tulis,Kelas VIII A,3,0,1,650000
+INV-012,Kipas Dinding,Kelas VIII A,4,1,1,280000
+INV-013,Komputer,Laboratorium Komputer,6,0,0,5200000
+INV-014,Monitor,Laboratorium Komputer,3,0,2,1350000
+INV-015,Proyektor,Laboratorium Komputer,5,0,1,3900000
+INV-016,Kipas Dinding,Laboratorium Komputer,2,0,1,280000
+INV-017,Meja Siswa,Laboratorium Komputer,32,1,0,185000
+INV-018,Rak Buku,Perpustakaan,4,0,2,850000
+INV-019,Meja Siswa,Perpustakaan,20,0,0,185000
+INV-020,Kursi Siswa,Perpustakaan,14,4,3,120000
+INV-021,Kipas Dinding,Perpustakaan,1,1,1,280000
+INV-022,Printer,Perpustakaan,2,0,1,1750000
+INV-023,Lemari Arsip,Ruang Guru,4,1,0,1450000
+INV-024,Meja Guru,Ruang Guru,3,0,1,540000
+INV-025,Printer,Ruang Guru,0,1,1,1750000
+INV-026,Dispenser,Ruang Guru,3,0,1,520000
+INV-027,Kipas Dinding,Ruang Guru,3,1,1,280000

@@ -1,0 +1,33 @@
+﻿Kode Armada,Jenis Armada,Sopir,Tanggal,Km Awal,Km Akhir,Liter BBM
+AR-01,Pickup,Dian Putra,2026-10-04,104300,104395,7.0
+AR-01,Pickup,Dian Putra,2026-10-06,104410,104620,20.8
+AR-01,Pickup,Dian Putra,2026-10-12,104629,104889,24.3
+AR-01,Pickup,Dian Putra,2026-10-14,104912,105082,13.2
+AR-02,Truk Engkel,Hadi Permana,2026-10-04,31800,31880,17.5
+AR-02,Truk Engkel,Hadi Permana,2026-10-08,31900,31980,15.2
+AR-02,Truk Engkel,Hadi Permana,2026-10-13,32006,32216,36.4
+AR-02,Truk Engkel,Hadi Permana,2026-10-15,32227,32307,11.6
+AR-03,Minibus,Novi Putra,2026-10-01,81500,81565,6.1
+AR-03,Minibus,Novi Putra,2026-10-07,81589,81669,8.2
+AR-03,Minibus,Novi Putra,2026-10-09,81692,81862,15.7
+AR-03,Minibus,Novi Putra,2026-10-13,81877,81972,9.8
+AR-04,Pickup,Vina Yulianto,2026-10-01,22000,22120,8.6
+AR-04,Pickup,Vina Yulianto,2026-10-04,22147,22292,14.4
+AR-04,Pickup,Vina Yulianto,2026-10-09,22304,22369,6.4
+AR-04,Pickup,Vina Yulianto,2026-10-15,22392,22537,10.3
+AR-05,Truk Engkel,Dewi Maharani,2026-10-04,119100,119165,6.8
+AR-05,Truk Engkel,Dewi Maharani,2026-10-08,119195,119243,6.9
+AR-05,Truk Engkel,Dewi Maharani,2026-10-11,119271,119531,27.4
+AR-05,Truk Engkel,Dewi Maharani,2026-10-15,119540,119660,13.7
+AR-06,Minibus,Irfan Putra,2026-10-02,124300,124470,20.0
+AR-06,Minibus,Irfan Putra,2026-10-04,124498,124668,13.6
+AR-06,Minibus,Irfan Putra,2026-10-08,124681,124746,7.9
+AR-06,Minibus,Irfan Putra,2026-10-10,124755,124835,8.5
+AR-07,Pickup,Fajar Wijaya,2026-10-01,70700,70748,5.5
+AR-07,Pickup,Fajar Wijaya,2026-10-04,70763,70973,26.7
+AR-07,Pickup,Fajar Wijaya,2026-10-07,70976,71056,9.2
+AR-07,Pickup,Fajar Wijaya,2026-10-10,71061,71231,18.3
+AR-08,Truk Engkel,Indah Utomo,2026-10-03,20200,20345,19.1
+AR-08,Truk Engkel,Indah Utomo,2026-10-09,20362,20482,17.3
+AR-08,Truk Engkel,Indah Utomo,2026-10-15,20511,20681,27.6
+AR-08,Truk Engkel,Indah Utomo,2026-10-20,20696,20841,23.0

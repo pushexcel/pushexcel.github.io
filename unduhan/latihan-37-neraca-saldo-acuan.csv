@@ -1,0 +1,13 @@
+﻿Kode Akun,Nama Akun,Tipe Akun
+1101,Kas,Aset
+1102,Bank,Aset
+1201,Piutang Usaha,Aset
+1301,Persediaan Barang,Aset
+2101,Utang Usaha,Utang
+3101,Modal Pemilik,Modal
+4101,Penjualan,Pendapatan
+5101,Harga Pokok Penjualan,Beban
+5201,Beban Gaji,Beban
+5202,Beban Listrik dan Air,Beban
+5203,Beban Sewa,Beban
+5204,Beban Perlengkapan,Beban

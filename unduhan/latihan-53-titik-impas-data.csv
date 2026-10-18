@@ -1,0 +1,21 @@
+﻿Produk,Kategori,Harga Jual,Biaya Variabel,Biaya Tetap,Unit Terjual
+Roti Tawar,Roti,25000,13000,1200000,142
+Roti Cokelat,Roti,45000,24000,2000000,111
+Roti Keju,Roti,10000,6500,700000,225
+Roti Sosis,Roti,15000,9000,1500000,175
+Roti Gandum,Roti,8000,5500,700000,446
+Brownies,Kue,45000,28000,2000000,116
+Bolu Pandan,Kue,28000,15000,2000000,123
+Kue Lapis,Kue,12000,7000,700000,98
+Cheesecake,Kue,35000,17000,1500000,102
+Kue Lumpur,Kue,35000,20500,2500000,171
+Kopi Susu,Minuman,8000,4500,2000000,656
+Teh Tarik,Minuman,28000,13500,3200000,330
+Jus Alpukat,Minuman,10000,6000,900000,260
+Cokelat Panas,Minuman,10000,6500,1500000,471
+Es Lemon Tea,Minuman,10000,5500,1200000,501
+Pisang Goreng,Camilan,22000,11500,1500000,89
+Risoles,Camilan,35000,19000,2000000,75
+Pastel,Camilan,15000,6500,1500000,114
+Donat Mini,Camilan,35000,18500,1200000,48
+Kroket,Camilan,18000,8000,1200000,156

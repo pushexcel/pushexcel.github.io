@@ -1,0 +1,29 @@
+﻿Kode,Nama Aset,Kategori,Tanggal Perolehan,Harga Perolehan,Umur (Tahun),Nilai Sisa
+AST-01,Pendingin ruangan,Peralatan Kantor,2023-02-07,14000000,4,8000000
+AST-02,Komputer kasir,Peralatan Kantor,2024-06-02,25000000,5,10000000
+AST-03,Printer warna,Peralatan Kantor,2025-01-08,15000000,5,10000000
+AST-04,Mesin press label,Mesin Produksi,2022-07-23,33500000,5,1000000
+AST-05,Timbangan digital,Peralatan Gudang,2022-11-26,34000000,4,4000000
+AST-06,Generator listrik,Mesin Produksi,2019-04-14,78500000,5,6000000
+AST-07,Mesin jahit industri,Mesin Produksi,2022-06-16,74000000,10,4000000
+AST-08,Pallet plastik,Peralatan Gudang,2021-06-11,19000000,4,9000000
+AST-09,Kompresor angin,Mesin Produksi,2020-06-01,116000000,5,1000000
+AST-10,Forklift mini,Peralatan Gudang,2022-10-10,57000000,4,5000000
+AST-11,Troli angkut,Peralatan Gudang,2024-10-15,21000000,5,6000000
+AST-12,Rak besi bertingkat,Peralatan Gudang,2025-02-22,97000000,8,1000000
+AST-13,Proyektor rapat,Peralatan Kantor,2024-07-28,32000000,4,2000000
+AST-14,Pickup bak terbuka,Kendaraan,2024-05-19,146500000,5,29000000
+AST-15,Mobil niaga kecil,Kendaraan,2021-10-25,81000000,4,25000000
+AST-16,Mesin fotokopi,Peralatan Kantor,2023-01-05,39000000,5,4000000
+AST-17,Mesin obras,Mesin Produksi,2024-09-15,113000000,10,8000000
+AST-18,Mobil boks pengiriman,Kendaraan,2025-06-22,337000000,8,21000000
+AST-19,Truk ringan,Kendaraan,2019-02-13,340000000,8,8000000
+AST-20,Meja dan kursi kerja,Peralatan Kantor,2019-11-15,20500000,5,3000000
+AST-21,Motor roda tiga,Kendaraan,2022-10-24,60000000,4,8000000
+AST-22,Lemari arsip,Peralatan Kantor,2025-10-25,16000000,5,6000000
+AST-23,Laptop admin,Peralatan Kantor,2022-12-21,40000000,4,10000000
+AST-24,Mesin bordir,Mesin Produksi,2025-05-06,186000000,8,6000000
+AST-25,Mesin pengikat kardus,Peralatan Gudang,2020-11-24,30000000,4,10000000
+AST-26,Motor operasional,Kendaraan,2023-01-09,240000000,5,20000000
+AST-27,Mesin pengemas,Mesin Produksi,2023-12-20,54000000,10,4000000
+AST-28,Mesin potong kain,Mesin Produksi,2018-01-23,30500000,5,3000000

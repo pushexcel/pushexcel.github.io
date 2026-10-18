@@ -1,0 +1,31 @@
+﻿Kode Aset,Peralatan,Lokasi,Perawatan Terakhir,Interval (bulan),Biaya per Perawatan
+AST-001,AC Ruang Rapat,Lantai 1,2026-09-08,3,350000
+AST-002,AC Ruang Direktur,Lantai 2,2026-09-11,3,350000
+AST-003,AC Ruang Staf,Lantai 1,2026-09-08,3,450000
+AST-004,Genset 20 kVA,Halaman Belakang,2026-08-22,6,1800000
+AST-005,Printer Multifungsi,Ruang Administrasi,2026-06-11,6,275000
+AST-006,Mesin Fotokopi,Ruang Administrasi,2026-09-25,3,600000
+AST-007,Dispenser Air,Pantry,2026-06-17,6,150000
+AST-008,Pompa Air,Halaman Belakang,2026-03-13,6,400000
+AST-009,APAR Lantai 1,Lantai 1,2026-02-03,12,120000
+AST-010,APAR Lantai 2,Lantai 2,2026-03-09,12,120000
+AST-011,CCTV Gedung,Pos Satpam,2026-05-07,6,500000
+AST-012,Lift Barang,Gudang,2026-06-04,3,1500000
+AST-013,UPS Server,Ruang Server,2026-09-03,12,650000
+AST-014,Router dan Switch,Ruang Server,2026-03-18,12,300000
+AST-015,Proyektor Ruang Rapat,Lantai 1,2025-11-25,12,250000
+AST-016,Mesin Absensi,Lobi,2026-05-08,12,200000
+AST-017,Kulkas Pantry,Pantry,2025-09-24,12,180000
+AST-018,Panel Listrik Utama,Ruang Panel,2026-04-21,6,900000
+AST-019,Penangkal Petir,Atap Gedung,2026-01-10,12,750000
+AST-020,Water Heater,Mess Karyawan,2026-02-10,12,160000
+AST-021,AC Ruang Server,Ruang Server,2026-08-03,3,500000
+AST-022,Mesin Pemotong Kertas,Ruang Administrasi,2026-03-27,6,140000
+AST-023,Kompresor Bengkel,Bengkel,2026-08-25,6,380000
+AST-024,Timbangan Digital,Gudang,2026-08-06,12,220000
+AST-025,Lampu Darurat,Lantai 1,2026-04-18,6,130000
+AST-026,Mesin Cuci Seragam,Mess Karyawan,2026-03-25,12,210000
+AST-027,Kipas Exhaust,Gudang,2026-03-25,6,175000
+AST-028,Pintu Otomatis,Lobi,2026-06-22,6,850000
+AST-029,Sound System Aula,Aula,2026-06-13,12,320000
+AST-030,Hydrant Halaman,Halaman Depan,2025-10-17,12,480000

@@ -1,0 +1,27 @@
+﻿Tanggal,Ruang,Peminjam,Jenis Peminjam,Jam Mulai,Jam Selesai,Peserta
+2026-09-15,Aula,Vendor Pelatihan,Eksternal,16:30,19:00,138
+2026-09-16,Aula,Divisi Pemasaran,Internal,09:00,12:00,48
+2026-09-17,Ruang Diskusi,Bagian SDM,Internal,08:30,09:30,6
+2026-09-22,Aula,Divisi Keuangan,Internal,14:00,16:00,72
+2026-09-23,Ruang Diskusi,Bagian SDM,Internal,16:00,18:00,9
+2026-09-24,Aula,Tim Proyek Alfa,Internal,10:30,12:30,72
+2026-09-26,Ruang Diskusi,Mitra Konsultan,Eksternal,16:30,18:30,4
+2026-09-29,Aula,Vendor Pelatihan,Eksternal,16:30,19:00,138
+2026-09-30,Ruang Rapat Besar,Divisi Keuangan,Internal,08:00,09:30,34
+2026-10-06,Ruang Diskusi,Vendor Pelatihan,Eksternal,08:30,09:30,8
+2026-10-07,Ruang Rapat Kecil,Divisi Pemasaran,Internal,09:00,12:00,13
+2026-10-08,Ruang Rapat Kecil,Bagian SDM,Internal,14:00,15:30,13
+2026-10-08,Ruang Diskusi,Vendor Pelatihan,Eksternal,15:00,17:00,9
+2026-10-09,Aula,Bagian SDM,Internal,09:30,12:00,138
+2026-10-13,Ruang Rapat Besar,Mitra Konsultan,Eksternal,14:30,18:30,30
+2026-10-14,Ruang Rapat Kecil,Klien Eksternal,Eksternal,10:30,13:30,9
+2026-10-14,Aula,Klien Eksternal,Eksternal,10:30,12:00,96
+2026-10-15,Ruang Rapat Kecil,Tim Proyek Alfa,Internal,16:30,19:30,13
+2026-10-16,Ruang Rapat Besar,Tim Proyek Alfa,Internal,09:30,11:30,24
+2026-10-17,Aula,Vendor Pelatihan,Eksternal,09:30,12:00,108
+2026-10-20,Ruang Rapat Besar,Klien Eksternal,Eksternal,09:30,12:00,24
+2026-10-20,Ruang Rapat Besar,Divisi Produksi,Internal,09:30,11:00,12
+2026-10-21,Ruang Rapat Besar,Divisi Keuangan,Internal,09:30,12:30,18
+2026-10-21,Ruang Rapat Kecil,Divisi Keuangan,Internal,10:30,13:30,12
+2026-10-22,Ruang Rapat Besar,Vendor Pelatihan,Eksternal,10:30,11:30,30
+2026-10-24,Ruang Rapat Kecil,Mitra Konsultan,Eksternal,14:30,15:30,7
