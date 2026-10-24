@@ -700,3 +700,25 @@ h1[tabindex="-1"]:focus, #app:focus, main:focus { outline: none; }
 .ad-slot .ad-label { display: block; margin: 0 0 .25rem; color: var(--muted); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; line-height: 1.2; }
 .ad-slot:has(ins[data-ad-status="unfilled"]) { display: none; }
 .ad-wrap { max-width: 1040px; margin: 0 auto; padding: 0 1rem; }
+
+/* ---- Bagian tambahan pada halaman materi ---- */
+.doc.lesson h2 { margin-top: 2rem; }
+.tscroll { overflow-x: auto; margin: .8rem 0; -webkit-overflow-scrolling: touch; }
+.sample, .hasiltbl { border-collapse: collapse; width: auto; min-width: 60%; font-size: .93rem; background: var(--panel); border: 1px solid var(--grid); }
+.sample caption, .hasiltbl caption { caption-side: top; text-align: left; padding: 0 0 .35rem; color: var(--muted); font-size: .85rem; }
+.sample th, .sample td, .hasiltbl th, .hasiltbl td { padding: .4rem .7rem; border: 1px solid var(--grid); text-align: left; vertical-align: top; }
+.sample thead th, .sample tbody th { background: var(--head); color: var(--muted); font-weight: 600; text-align: center; width: auto; font: 600 .82rem var(--mono); }
+.sample td { font-variant-numeric: tabular-nums; }
+.hasiltbl { width: 100%; }
+.hasiltbl thead th { background: var(--head); width: auto; font: 600 .85rem var(--sans); color: var(--ink); }
+.hasiltbl td.hasil { font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.hasiltbl td.galat { color: var(--bad); }
+.doc.lesson > p code, .galat-list code, .faq code, .quiz-static code { padding: 0 .3em; border-radius: 4px; background: var(--head); overflow-wrap: anywhere; }
+.galat-list { list-style: none; padding: 0; margin: .6rem 0; max-width: 70ch; display: grid; gap: .7rem; }
+.galat-list li { padding: .75rem .95rem; background: var(--panel); border: 1px solid var(--grid); border-left: 4px solid var(--bad); border-radius: 12px; }
+.galat-list li p { margin: .3rem 0 0; font-size: .95rem; }
+.galat-list li span { font-weight: 600; color: var(--muted); }
+.quiz-static, details.faq { max-width: 70ch; padding: .8rem 1rem; margin: .6rem 0; background: var(--panel); border: 1px solid var(--grid); border-radius: 12px; }
+.quiz-static ol { margin: .4rem 0 .6rem 1.4rem; padding: 0; }
+.quiz-static summary, details.faq summary { cursor: pointer; font-weight: 600; }
+details.faq p, .quiz-static details p { margin: .5rem 0 0; }
