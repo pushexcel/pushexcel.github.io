@@ -722,3 +722,32 @@ h1[tabindex="-1"]:focus, #app:focus, main:focus { outline: none; }
 .quiz-static ol { margin: .4rem 0 .6rem 1.4rem; padding: 0; }
 .quiz-static summary, details.faq summary { cursor: pointer; font-weight: 600; }
 details.faq p, .quiz-static details p { margin: .5rem 0 0; }
+
+/* ---- Lapisan kedua: konten untuk pemula ---- */
+.istilah { max-width: 70ch; margin: .6rem 0; display: grid; gap: .5rem; }
+.istilah > div { padding: .6rem .9rem; background: var(--panel); border: 1px solid var(--grid); border-radius: 12px; }
+.istilah dt { font-weight: 700; }
+.istilah dd { margin: .2rem 0 0; color: var(--ink); font-size: .95rem; }
+.istilah code, .rinci code, .tipslist code, .cek code, .latihan code, .hasiltbl code, .doc.lesson h3 + p code { padding: 0 .3em; border-radius: 4px; background: var(--head); overflow-wrap: anywhere; }
+.rinci { max-width: 70ch; margin: .6rem 0; padding: 0; list-style: none; counter-reset: rinci; display: grid; gap: .7rem; }
+.rinci > li { counter-increment: rinci; position: relative; padding: .7rem .95rem .7rem 3.1rem; background: var(--panel); border: 1px solid var(--grid); border-radius: 12px; }
+.rinci > li::before { content: counter(rinci); position: absolute; left: .8rem; top: .7rem; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: var(--acc); color: #fff; font-weight: 700; font-size: .9rem; display: grid; place-items: center; }
+.rinci > li p { margin: .25rem 0 0; font-size: .96rem; }
+.doc.lesson h3 { margin: 1.4rem 0 .4rem; font-size: 1.12rem; }
+.latihan { max-width: 70ch; padding: .8rem 1rem; margin: .8rem 0; background: var(--panel); border: 1px solid var(--grid); border-left: 4px solid var(--acc); border-radius: 12px; }
+.latihan h3 { margin-top: 0; }
+.latihan .petunjuk { color: var(--muted); font-size: .94rem; }
+.latihan details summary { cursor: pointer; font-weight: 600; }
+.latihan details p { margin: .5rem 0 0; }
+.tipslist, .cek { max-width: 70ch; margin: .6rem 0; padding: 0; list-style: none; display: grid; gap: .6rem; }
+.tipslist > li { padding: .7rem .95rem; background: var(--warn-bg); color: var(--warn-ink); border-radius: 12px; box-shadow: inset 5px 0 0 var(--hi); }
+.tipslist li p { margin: .25rem 0 0; font-size: .95rem; }
+.cek > li { position: relative; padding: .45rem .8rem .45rem 2.3rem; background: var(--panel); border: 1px solid var(--grid); border-radius: 10px; }
+.cek > li::before { content: ""; position: absolute; left: .8rem; top: .62rem; width: 1rem; height: 1rem; border: 2px solid var(--acc); border-radius: 4px; }
+
+/* Tabel data: jangan pecah per huruf; geser ke samping bila lebar */
+.sample { width: max-content; max-width: none; }
+.sample th, .sample td { overflow-wrap: normal; word-break: normal; white-space: nowrap; min-width: 2.2rem; }
+.sample td { max-width: 18rem; white-space: normal; }
+.hasiltbl td, .hasiltbl th { overflow-wrap: anywhere; }
+.hasiltbl { min-width: 100%; }
